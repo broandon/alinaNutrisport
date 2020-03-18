@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CFA22AA92422850E0036DB71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA22AA82422850E0036DB71 /* AppDelegate.swift */; };
-		CFA22AAB2422850E0036DB71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA22AAA2422850E0036DB71 /* SceneDelegate.swift */; };
 		CFA22AAD2422850E0036DB71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA22AAC2422850E0036DB71 /* ViewController.swift */; };
 		CFA22AB02422850E0036DB71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AAE2422850E0036DB71 /* Main.storyboard */; };
 		CFA22AB2242285110036DB71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AB1242285110036DB71 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		CFA22AA52422850E0036DB71 /* alinaNutrisport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alinaNutrisport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA22AA82422850E0036DB71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CFA22AAA2422850E0036DB71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CFA22AAC2422850E0036DB71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CFA22AAF2422850E0036DB71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFA22AB1242285110036DB71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				CFA22AA82422850E0036DB71 /* AppDelegate.swift */,
-				CFA22AAA2422850E0036DB71 /* SceneDelegate.swift */,
 				CFA22AAC2422850E0036DB71 /* ViewController.swift */,
 				CFA22AAE2422850E0036DB71 /* Main.storyboard */,
 				CFA22AB1242285110036DB71 /* Assets.xcassets */,
@@ -140,7 +137,6 @@
 			files = (
 				CFA22AAD2422850E0036DB71 /* ViewController.swift in Sources */,
 				CFA22AA92422850E0036DB71 /* AppDelegate.swift in Sources */,
-				CFA22AAB2422850E0036DB71 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +283,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +291,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = easycode.alinaNutrisport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +302,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +310,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = easycode.alinaNutrisport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
