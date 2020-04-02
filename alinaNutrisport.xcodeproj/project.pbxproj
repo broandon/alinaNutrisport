@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DC948662432928100D65573 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC948652432928100D65573 /* loginViewController.swift */; };
+		9DC948692432996000D65573 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC948682432996000D65573 /* Extensions.swift */; };
+		9DC9486C2432E53300D65573 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9486B2432E53300D65573 /* mainViewController.swift */; };
+		9DDC26E02435C1B1002FAC0D /* sectionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDC26DE2435C1B1002FAC0D /* sectionsCollectionViewCell.swift */; };
+		9DDC26E12435C1B1002FAC0D /* sectionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DDC26DF2435C1B1002FAC0D /* sectionsCollectionViewCell.xib */; };
 		CFA22AA92422850E0036DB71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA22AA82422850E0036DB71 /* AppDelegate.swift */; };
-		CFA22AAD2422850E0036DB71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA22AAC2422850E0036DB71 /* ViewController.swift */; };
 		CFA22AB02422850E0036DB71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AAE2422850E0036DB71 /* Main.storyboard */; };
 		CFA22AB2242285110036DB71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AB1242285110036DB71 /* Assets.xcassets */; };
 		CFA22AB5242285110036DB71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AB3242285110036DB71 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9DC948652432928100D65573 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		9DC948682432996000D65573 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9DC9486B2432E53300D65573 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		9DDC26DE2435C1B1002FAC0D /* sectionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sectionsCollectionViewCell.swift; sourceTree = "<group>"; };
+		9DDC26DF2435C1B1002FAC0D /* sectionsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sectionsCollectionViewCell.xib; sourceTree = "<group>"; };
 		CFA22AA52422850E0036DB71 /* alinaNutrisport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alinaNutrisport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA22AA82422850E0036DB71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CFA22AAC2422850E0036DB71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CFA22AAF2422850E0036DB71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFA22AB1242285110036DB71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFA22AB4242285110036DB71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,9 +43,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9DC948642432925400D65573 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9DC948652432928100D65573 /* loginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9DC948672432993B00D65573 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				9DC948682432996000D65573 /* Extensions.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		9DC9486A2432E08C00D65573 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9DC9486B2432E53300D65573 /* mainViewController.swift */,
+				9DDC26DE2435C1B1002FAC0D /* sectionsCollectionViewCell.swift */,
+				9DDC26DF2435C1B1002FAC0D /* sectionsCollectionViewCell.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		CFA22A9C2422850E0036DB71 = {
 			isa = PBXGroup;
 			children = (
+				9DC9486A2432E08C00D65573 /* Main */,
+				9DC948672432993B00D65573 /* Misc */,
+				9DC948642432925400D65573 /* Login */,
 				CFA22AA72422850E0036DB71 /* alinaNutrisport */,
 				CFA22AA62422850E0036DB71 /* Products */,
 			);
@@ -55,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				CFA22AA82422850E0036DB71 /* AppDelegate.swift */,
-				CFA22AAC2422850E0036DB71 /* ViewController.swift */,
 				CFA22AAE2422850E0036DB71 /* Main.storyboard */,
 				CFA22AB1242285110036DB71 /* Assets.xcassets */,
 				CFA22AB3242285110036DB71 /* LaunchScreen.storyboard */,
@@ -124,6 +160,7 @@
 			files = (
 				CFA22AB5242285110036DB71 /* LaunchScreen.storyboard in Resources */,
 				CFA22AB2242285110036DB71 /* Assets.xcassets in Resources */,
+				9DDC26E12435C1B1002FAC0D /* sectionsCollectionViewCell.xib in Resources */,
 				CFA22AB02422850E0036DB71 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFA22AAD2422850E0036DB71 /* ViewController.swift in Sources */,
+				9DDC26E02435C1B1002FAC0D /* sectionsCollectionViewCell.swift in Sources */,
 				CFA22AA92422850E0036DB71 /* AppDelegate.swift in Sources */,
+				9DC9486C2432E53300D65573 /* mainViewController.swift in Sources */,
+				9DC948662432928100D65573 /* loginViewController.swift in Sources */,
+				9DC948692432996000D65573 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
