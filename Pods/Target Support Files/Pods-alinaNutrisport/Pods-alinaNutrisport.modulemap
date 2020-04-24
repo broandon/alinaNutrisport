@@ -1,0 +1,6 @@
+framework module Pods_alinaNutrisport {
+  umbrella header "Pods-alinaNutrisport-umbrella.h"
+
+  export *
+  module * { export * }
+}

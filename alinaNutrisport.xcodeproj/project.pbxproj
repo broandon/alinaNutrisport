@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DBD90E52453483E00191361 /* recoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD90E42453483E00191361 /* recoverViewController.swift */; };
+		9DBD90E724534A1300191361 /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD90E624534A1300191361 /* settingsViewController.swift */; };
 		9DC948662432928100D65573 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC948652432928100D65573 /* loginViewController.swift */; };
 		9DC948692432996000D65573 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC948682432996000D65573 /* Extensions.swift */; };
 		9DC9486C2432E53300D65573 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9486B2432E53300D65573 /* mainViewController.swift */; };
@@ -16,9 +18,13 @@
 		CFA22AB02422850E0036DB71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AAE2422850E0036DB71 /* Main.storyboard */; };
 		CFA22AB2242285110036DB71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AB1242285110036DB71 /* Assets.xcassets */; };
 		CFA22AB5242285110036DB71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AB3242285110036DB71 /* LaunchScreen.storyboard */; };
+		D07DC06300A92527C1268613 /* Pods_alinaNutrisport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3981F0BA7DE4729637684D /* Pods_alinaNutrisport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B3981F0BA7DE4729637684D /* Pods_alinaNutrisport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alinaNutrisport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DBD90E42453483E00191361 /* recoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recoverViewController.swift; sourceTree = "<group>"; };
+		9DBD90E624534A1300191361 /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 		9DC948652432928100D65573 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		9DC948682432996000D65573 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9DC9486B2432E53300D65573 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +36,8 @@
 		CFA22AB1242285110036DB71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFA22AB4242285110036DB71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFA22AB6242285110036DB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D04420D567BEBB68DFC6DA44 /* Pods-alinaNutrisport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alinaNutrisport.debug.xcconfig"; path = "Target Support Files/Pods-alinaNutrisport/Pods-alinaNutrisport.debug.xcconfig"; sourceTree = "<group>"; };
+		DD4F44EF06094672521FD45E /* Pods-alinaNutrisport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alinaNutrisport.release.xcconfig"; path = "Target Support Files/Pods-alinaNutrisport/Pods-alinaNutrisport.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07DC06300A92527C1268613 /* Pods_alinaNutrisport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				9DC948652432928100D65573 /* loginViewController.swift */,
+				9DBD90E42453483E00191361 /* recoverViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -65,8 +75,19 @@
 				9DC9486B2432E53300D65573 /* mainViewController.swift */,
 				9DDC26DE2435C1B1002FAC0D /* sectionsCollectionViewCell.swift */,
 				9DDC26DF2435C1B1002FAC0D /* sectionsCollectionViewCell.xib */,
+				9DBD90E624534A1300191361 /* settingsViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		B58967FC3F7F1D5D90362EDE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D04420D567BEBB68DFC6DA44 /* Pods-alinaNutrisport.debug.xcconfig */,
+				DD4F44EF06094672521FD45E /* Pods-alinaNutrisport.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		CFA22A9C2422850E0036DB71 = {
@@ -77,6 +98,8 @@
 				9DC948642432925400D65573 /* Login */,
 				CFA22AA72422850E0036DB71 /* alinaNutrisport */,
 				CFA22AA62422850E0036DB71 /* Products */,
+				B58967FC3F7F1D5D90362EDE /* Pods */,
+				F316AEDCE62E4D64D148C91F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +123,14 @@
 			path = alinaNutrisport;
 			sourceTree = "<group>";
 		};
+		F316AEDCE62E4D64D148C91F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B3981F0BA7DE4729637684D /* Pods_alinaNutrisport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFA22AB9242285110036DB71 /* Build configuration list for PBXNativeTarget "alinaNutrisport" */;
 			buildPhases = (
+				E73ACD8CCB4B626AEB3C6B1B /* [CP] Check Pods Manifest.lock */,
 				CFA22AA12422850E0036DB71 /* Sources */,
 				CFA22AA22422850E0036DB71 /* Frameworks */,
 				CFA22AA32422850E0036DB71 /* Resources */,
+				5C4A05BB13E09081B48FD0DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,16 +200,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C4A05BB13E09081B48FD0DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-alinaNutrisport/Pods-alinaNutrisport-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-alinaNutrisport/Pods-alinaNutrisport-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-alinaNutrisport/Pods-alinaNutrisport-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E73ACD8CCB4B626AEB3C6B1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-alinaNutrisport-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CFA22AA12422850E0036DB71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9DDC26E02435C1B1002FAC0D /* sectionsCollectionViewCell.swift in Sources */,
+				9DBD90E52453483E00191361 /* recoverViewController.swift in Sources */,
 				CFA22AA92422850E0036DB71 /* AppDelegate.swift in Sources */,
 				9DC9486C2432E53300D65573 /* mainViewController.swift in Sources */,
 				9DC948662432928100D65573 /* loginViewController.swift in Sources */,
 				9DC948692432996000D65573 /* Extensions.swift in Sources */,
+				9DBD90E724534A1300191361 /* settingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +395,7 @@
 		};
 		CFA22ABA242285110036DB71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D04420D567BEBB68DFC6DA44 /* Pods-alinaNutrisport.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -337,6 +415,7 @@
 		};
 		CFA22ABB242285110036DB71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD4F44EF06094672521FD45E /* Pods-alinaNutrisport.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

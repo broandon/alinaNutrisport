@@ -2,8 +2,8 @@
 //  mainViewController.swift
 //  alinaNutrisport
 //
-//  Created by Brandon Gonzalez on 30/03/20.
-//  Copyright © 2020 Easycode. All rights reserved.
+//  Created by Brandon Gonzalez on 2020.
+//  Copyright © 2020. All rights reserved.
 //
 
 import UIKit
@@ -107,6 +107,13 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "settingsViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
         
         print("Selected")
         
