@@ -105,20 +105,7 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return UIEdgeInsets(top: 0, left: edgeInsets, bottom: 0, right: edgeInsets)
         
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-
-
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "settingsViewController")
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
-        
-        print("Selected")
-        
-    }
-    
 }
 
 extension mainViewController: UICollectionViewDelegateFlowLayout {

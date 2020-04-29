@@ -25,5 +25,6 @@ target 'alinaNutrisport' do
   pod 'IQKeyboardManagerSwift'
   pod 'TableViewReloadAnimation'
   pod 'NVActivityIndicatorView'
+  pod 'BetterSegmentedControl', '~> 1.3'
 
 end

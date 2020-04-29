@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9DBD90E52453483E00191361 /* recoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD90E42453483E00191361 /* recoverViewController.swift */; };
-		9DBD90E724534A1300191361 /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD90E624534A1300191361 /* settingsViewController.swift */; };
+		9DC0956F2458EC1200ED6B59 /* Recover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0956E2458EC1200ED6B59 /* Recover.swift */; };
+		9DC095712458ED1C00ED6B59 /* baseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC095702458ED1C00ED6B59 /* baseURL.swift */; };
 		9DC948662432928100D65573 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC948652432928100D65573 /* loginViewController.swift */; };
 		9DC948692432996000D65573 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC948682432996000D65573 /* Extensions.swift */; };
 		9DC9486C2432E53300D65573 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9486B2432E53300D65573 /* mainViewController.swift */; };
@@ -24,7 +25,8 @@
 /* Begin PBXFileReference section */
 		9B3981F0BA7DE4729637684D /* Pods_alinaNutrisport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alinaNutrisport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DBD90E42453483E00191361 /* recoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recoverViewController.swift; sourceTree = "<group>"; };
-		9DBD90E624534A1300191361 /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
+		9DC0956E2458EC1200ED6B59 /* Recover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recover.swift; sourceTree = "<group>"; };
+		9DC095702458ED1C00ED6B59 /* baseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseURL.swift; sourceTree = "<group>"; };
 		9DC948652432928100D65573 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		9DC948682432996000D65573 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9DC9486B2432E53300D65573 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9DC0956D2458EBFE00ED6B59 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9DC0956E2458EC1200ED6B59 /* Recover.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9DC948642432925400D65573 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				9DC948682432996000D65573 /* Extensions.swift */,
+				9DC095702458ED1C00ED6B59 /* baseURL.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -75,7 +86,6 @@
 				9DC9486B2432E53300D65573 /* mainViewController.swift */,
 				9DDC26DE2435C1B1002FAC0D /* sectionsCollectionViewCell.swift */,
 				9DDC26DF2435C1B1002FAC0D /* sectionsCollectionViewCell.xib */,
-				9DBD90E624534A1300191361 /* settingsViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -86,13 +96,13 @@
 				D04420D567BEBB68DFC6DA44 /* Pods-alinaNutrisport.debug.xcconfig */,
 				DD4F44EF06094672521FD45E /* Pods-alinaNutrisport.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		CFA22A9C2422850E0036DB71 = {
 			isa = PBXGroup;
 			children = (
+				9DC0956D2458EBFE00ED6B59 /* Models */,
 				9DC9486A2432E08C00D65573 /* Main */,
 				9DC948672432993B00D65573 /* Misc */,
 				9DC948642432925400D65573 /* Login */,
@@ -253,7 +263,8 @@
 				9DC9486C2432E53300D65573 /* mainViewController.swift in Sources */,
 				9DC948662432928100D65573 /* loginViewController.swift in Sources */,
 				9DC948692432996000D65573 /* Extensions.swift in Sources */,
-				9DBD90E724534A1300191361 /* settingsViewController.swift in Sources */,
+				9DC095712458ED1C00ED6B59 /* baseURL.swift in Sources */,
+				9DC0956F2458EC1200ED6B59 /* Recover.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
