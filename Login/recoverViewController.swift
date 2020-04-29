@@ -73,13 +73,15 @@ class recoverViewController: UIViewController {
             
         }
         
+        view.endEditing(true)
+        
         let alert = UIAlertController(title: nil, message: "   Espera un momento...", preferredStyle: .alert)
-
+        
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
         loadingIndicator.style = UIActivityIndicatorView.Style.gray
         loadingIndicator.startAnimating();
-
+        
         alert.view.addSubview(loadingIndicator)
         present(alert, animated: true, completion: nil)
         
@@ -110,17 +112,21 @@ class recoverViewController: UIViewController {
                         
                         DispatchQueue.main.async {
                             
-                            self.dismiss(animated: true, completion: nil)
-                            
-                            let alert = UIAlertController(title: "¡Éxito!", message: "A tu correo llegará un enlace para recuperar tu contraseña", preferredStyle: .alert)
-                            
-                            alert.addAction(UIAlertAction(title: "Entendido", style: .cancel, handler: { action in
+                            self.dismiss(animated: true, completion: {
                                 
-                                self.dismiss(animated: true, completion: nil)
+                                let alert = UIAlertController(title: "¡Éxito!", message: "A tu correo llegará un enlace para recuperar tu contraseña", preferredStyle: .alert)
                                 
-                            }))
+                                alert.addAction(UIAlertAction(title: "Entendido", style: .cancel, handler: { action in
+                                    
+                                    self.dismiss(animated: true, completion: nil)
+                                    
+                                }))
+                                
+                                self.present(alert, animated: true)
+                                
+                            })
                             
-                            self.present(alert, animated: true)
+                            
                             
                         }
                         
@@ -128,15 +134,17 @@ class recoverViewController: UIViewController {
                         
                         DispatchQueue.main.async {
                             
-                            self.dismiss(animated: true, completion: nil)
-                            
-                            let alert = UIAlertController(title: "Error", message: "Ha habido un error en el servidor o no hemos encontrado tu correo", preferredStyle: .alert)
-                            
-                            alert.addAction(UIAlertAction(title: "Reintentar", style: .default, handler: nil))
-                            
-                            self.present(alert, animated: true)
-                            
-                            return
+                            self.dismiss(animated: true, completion: {
+                                
+                                let alert = UIAlertController(title: "Error", message: "Ha habido un error en el servidor o no hemos encontrado tu correo", preferredStyle: .alert)
+                                
+                                alert.addAction(UIAlertAction(title: "Reintentar", style: .default, handler: nil))
+                                
+                                self.present(alert, animated: true)
+                                
+                                return
+                                
+                            })
                             
                         }
                         

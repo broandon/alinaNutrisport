@@ -32,12 +32,35 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loginStatusCheck()
         setupView()
         setupCollectionview()
+        
         
     }
     
     //MARK: Funcs
+    
+    func loginStatusCheck() {
+        
+        if UserDefaults.standard.bool(forKey: "LoggedStatus") == false {
+            
+            resetRoot()
+            
+        }
+        
+    }
+    
+    func resetRoot() {
+    
+        guard let rootVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginViewController") as? loginViewController else {
+            return
+        }
+        
+        
+        UIApplication.shared.windows.first?.rootViewController = rootVC
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
     
     func setupCollectionview() {
         
@@ -105,7 +128,7 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return UIEdgeInsets(top: 0, left: edgeInsets, bottom: 0, right: edgeInsets)
         
     }
-        
+    
 }
 
 extension mainViewController: UICollectionViewDelegateFlowLayout {

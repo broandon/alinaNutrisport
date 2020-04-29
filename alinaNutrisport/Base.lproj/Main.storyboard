@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7TV-H7-wS5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -109,7 +109,6 @@
                                         </state>
                                         <connections>
                                             <action selector="logIn:" destination="7TV-H7-wS5" eventType="touchUpInside" id="yTo-BP-H2r"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="YbK-aP-PqW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ui7-rz-n3a">
@@ -119,8 +118,7 @@
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="forgotPassword:" destination="7TV-H7-wS5" eventType="touchUpInside" id="NcA-Pi-31F"/>
-                                            <segue destination="PVn-pd-Cjz" kind="show" id="v9w-HC-tMn"/>
+                                            <action selector="forgotAccount:" destination="7TV-H7-wS5" eventType="touchUpInside" id="Usu-G4-xze"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -171,11 +169,11 @@
             <objects>
                 <viewController storyboardIdentifier="recoverViewController" id="PVn-pd-Cjz" customClass="recoverViewController" customModule="alinaNutrisport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fVK-g7-p13">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuperar Contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtq-d8-f8z">
-                                <rect key="frame" x="47" y="63" width="320" height="55"/>
+                                <rect key="frame" x="47" y="107" width="320" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="WkA-oE-N3F"/>
                                 </constraints>
@@ -184,7 +182,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo Electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAA-4v-CuH">
-                                <rect key="frame" x="20" y="173" width="374" height="50"/>
+                                <rect key="frame" x="20" y="217" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hvp-Xc-PVw"/>
                                 </constraints>
@@ -192,7 +190,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqo-fY-2pX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ett-Vp-P0q">
                                         <rect key="frame" x="23" y="8" width="200" height="39"/>
@@ -217,7 +215,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CP2-WO-Etk">
-                                <rect key="frame" x="20" y="260" width="374" height="46"/>
+                                <rect key="frame" x="20" y="304" width="374" height="46"/>
                                 <color key="backgroundColor" name="Main Green"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="bd8-3w-p0v"/>
