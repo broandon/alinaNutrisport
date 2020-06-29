@@ -3,12 +3,6 @@ PODS:
   - AlamofireImage (4.0.3):
     - Alamofire (< 6.0.0, >= 5.0.2)
   - BetterSegmentedControl (1.3.0)
-  - Charts (3.4.0):
-    - Charts/Core (= 3.4.0)
-  - Charts/Core (3.4.0)
-  - ChartsRealm (3.4.0):
-    - Charts (~> 3.4.0)
-    - RealmSwift (~> 3.18.0)
   - DateTimePicker (2.4.1)
   - ExpandableCell (1.3.0)
   - Firebase/Core (6.21.0):
@@ -101,11 +95,6 @@ PODS:
   - NVActivityIndicatorView/Presenter (4.8.0)
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.4)
-  - Realm (3.18.0):
-    - Realm/Headers (= 3.18.0)
-  - Realm/Headers (3.18.0)
-  - RealmSwift (3.18.0):
-    - Realm (= 3.18.0)
   - RevealingSplashView (0.6.0)
   - SDWebImage (5.6.1):
     - SDWebImage/Core (= 5.6.1)
@@ -118,8 +107,6 @@ DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - BetterSegmentedControl (~> 1.3)
-  - Charts
-  - ChartsRealm
   - DateTimePicker
   - ExpandableCell
   - Firebase/Core
@@ -140,8 +127,6 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - BetterSegmentedControl
-    - Charts
-    - ChartsRealm
     - DateTimePicker
     - ExpandableCell
     - Firebase
@@ -165,8 +150,6 @@ SPEC REPOS:
     - NVActivityIndicatorView
     - PromisesObjC
     - Protobuf
-    - Realm
-    - RealmSwift
     - RevealingSplashView
     - SDWebImage
     - TableViewReloadAnimation
@@ -177,8 +160,6 @@ SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   AlamofireImage: 3d1a2010519e58675318735580eb856e88840ff7
   BetterSegmentedControl: 85d1b0343a09603b098884d527f550dfc8e6cdd9
-  Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
-  ChartsRealm: 2ae8bf478211a94b3b6dd20738db0b9b132eb66b
   DateTimePicker: 997176ea28954f3c18817b9565a53b28ee4400b8
   ExpandableCell: 69ca7d71971c171473a7a30964d2127f4c6ceaf6
   Firebase: f378c80340dd41c0ad0914af740c021eb282a04b
@@ -202,14 +183,12 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
-  Realm: 7b3d04740facf45e958a514b466a32b04f1113d6
-  RealmSwift: c817b5f374668cf08f649afb05f55d92a787649c
   RevealingSplashView: 40c5a770894459736acdc95655eeba0dd30ce91c
   SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
   TableViewReloadAnimation: f3a4c4048efbc56331be98075f26a2e533a14c16
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
   YNExpandableCell: f71457eddc5f2d607de5a2aef545325b0b7622e4
 
-PODFILE CHECKSUM: 791a0c8a09148ceb3fed94f4e9071b6ad298430f
+PODFILE CHECKSUM: ccb9644341af476edd380bf096de4c98b74efb23
 
 COCOAPODS: 1.9.1

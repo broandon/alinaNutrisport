@@ -20,8 +20,6 @@ target 'alinaNutrisport' do
   pod 'Firebase/Messaging'
   pod 'ExpandableCell'
   pod 'Hero'
-  pod 'Charts'
-  pod 'ChartsRealm'
   pod 'IQKeyboardManagerSwift'
   pod 'TableViewReloadAnimation'
   pod 'NVActivityIndicatorView'

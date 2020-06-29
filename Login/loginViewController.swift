@@ -24,94 +24,64 @@ class loginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupView()
-        
     }
     
     //MARK: Funcs
     
     func setupView() {
-        
         greenIconsBacgrounds2.layer.cornerRadius = greenIconsBacgrounds2.bounds.height / 2
         greenIconsBackgrounds.layer.cornerRadius = greenIconsBackgrounds.bounds.height / 2
-        
         passTF.addLine(position: .LINE_POSITION_BOTTOM, color: UIColor(named: "Main Green") ?? UIColor.red, width: 1)
-        
         mailTF.addLine(position: .LINE_POSITION_BOTTOM, color: UIColor(named: "Main Green") ?? UIColor.red, width: 1)
         mailTF.attributedPlaceholder = NSAttributedString(string: "E-MAIL", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "Main Blue")!])
         
         passTF.attributedPlaceholder = NSAttributedString(string: "CONTRASEÑA", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "Main Blue")!])
-        
         loginButton.layer.cornerRadius = 15
-        
     }
     
     //MARK: Buttons
     
     @IBAction func forgotAccount(_ sender: Any) {
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "recoverViewController")
         self.present(controller, animated: true, completion: nil)
-        
     }
     
     
     @IBAction func logIn(_ sender: Any) {
-        
         if mailTF.text?.isEmpty == true {
-            
             let alert = UIAlertController(title: "El campo de correo no puede estar vacío", message: "Ingresa tu correo electrónico.", preferredStyle: .alert)
-            
             alert.addAction(UIAlertAction(title: "Reintentar", style: .default, handler: nil))
-            
             self.present(alert, animated: true)
-            
             return
-            
         }
         
         if passTF.text?.isEmpty == true {
-            
             let alert = UIAlertController(title: "El campo de contraseña no puede estar vacío", message: "Ingresa tu contraseña.", preferredStyle: .alert)
-            
             alert.addAction(UIAlertAction(title: "Reintentar", style: .default, handler: nil))
-            
             self.present(alert, animated: true)
-            
             return
-            
         }
         
         view.endEditing(true)
-        
         let alert = UIAlertController(title: nil, message: "   Iniciando sesión...", preferredStyle: .alert)
-        
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
         loadingIndicator.style = UIActivityIndicatorView.Style.gray
         loadingIndicator.startAnimating();
-        
         alert.view.addSubview(loadingIndicator)
         present(alert, animated: true, completion: nil)
-        
         let url = URL(string: http.baseURL())!
-        
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
         request.httpMethod = "POST" // Metodo
-        
         let postString = "funcion=login&email="+mailTF.text!+"&password="+passTF.text!
-        
         request.httpBody = postString.data(using: .utf8)
-        
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
             if let data = data {
-                
                 do {
-                    
                     let recoverResponse = try? JSONDecoder().decode(Login.self, from: data)
                     
                     print("This is the status Message")
