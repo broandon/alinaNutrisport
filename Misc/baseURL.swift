@@ -12,17 +12,10 @@ class HTTPViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
     }
     
     func baseURL() -> String {
-        
         let URLString = "http://alinanutrisport.com.mx/sistema/webservice/controller_last.php"
-        
         return URLString
-        
     }
-    
 }

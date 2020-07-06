@@ -16,13 +16,10 @@ class sectionsCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setupView()
-        
     }
     
     func setupView() {
-        
         background.layer.backgroundColor = UIColor.white.cgColor
         background.layer.borderColor = UIColor.lightGray.cgColor
         background.layer.borderWidth = 0.0
@@ -32,7 +29,5 @@ class sectionsCollectionViewCell: UICollectionViewCell {
         background.layer.shadowColor = UIColor.gray.cgColor
         background.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         background.layer.shadowOpacity = 1.0
-        
     }
-    
 }

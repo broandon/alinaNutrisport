@@ -31,51 +31,35 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loginStatusCheck()
         setupView()
         setupCollectionview()
-        
-        
     }
     
     //MARK: Funcs
     
     func loginStatusCheck() {
-        
         if UserDefaults.standard.bool(forKey: "LoggedStatus") == false {
-            
             resetRoot()
-            
         }
-        
     }
     
     func resetRoot() {
-    
         guard let rootVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginViewController") as? loginViewController else {
             return
         }
-        
-        
         UIApplication.shared.windows.first?.rootViewController = rootVC
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
     
     func setupCollectionview() {
-        
         let documentXib = UINib(nibName: "sectionsCollectionViewCell", bundle: nil)
-        
         mainCollection.dataSource = self
         mainCollection.delegate = self
         mainCollection.register(documentXib, forCellWithReuseIdentifier: reuseDocument)
-        
     }
     
     func setupView() {
-        
-        // Change UIView to the name of selected UIView. Is only ptional when there is three viewcontrollers in the swme swift file. Otherwise apply bang.
-        
         logoBackground.layer.backgroundColor = UIColor.white.cgColor
         logoBackground.layer.borderColor = UIColor.lightGray.cgColor
         logoBackground.layer.borderWidth = 0.0
@@ -85,7 +69,6 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         logoBackground.layer.shadowColor = UIColor.gray.cgColor
         logoBackground.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         logoBackground.layer.shadowOpacity = 1.0
-        
     }
     
     //MARK: Collectionview Data
@@ -94,41 +77,38 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return 7
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let pickedSections = Sections[indexPath.row]
-        
+        let sectionID = pickedSections["ID"] as! String
+        if sectionID == "1" {
+            self.hero.isEnabled = true
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileViewController") as! profileViewController
+            newViewController.hero.modalAnimationType = .pageIn(direction: .left)
+            self.hero.replaceViewController(with: newViewController)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let pickedSections = Sections[indexPath.row]
         let sectionImage = pickedSections["Imagen"] as! UIImage
         let sectionTitle = pickedSections["Titulo"] as! String
-        
         let cell = mainCollection.dequeueReusableCell(withReuseIdentifier: reuseDocument, for: indexPath)
-        
         if let cell = cell as? sectionsCollectionViewCell {
-            
             DispatchQueue.main.async {
-                
                 cell.sectionImage.image = sectionImage
                 cell.sectionLabel.text = sectionTitle
-                
             }
-            
         }
-        
         return cell
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
         let cellWidth : CGFloat = 300
-        
         let numberOfCells = floor(self.view.frame.size.width / cellWidth)
         let edgeInsets = (self.view.frame.size.width - (numberOfCells * cellWidth)) / (numberOfCells + 1.5)
-        
         return UIEdgeInsets(top: 0, left: edgeInsets, bottom: 0, right: edgeInsets)
-        
     }
-    
 }
 
 extension mainViewController: UICollectionViewDelegateFlowLayout {
@@ -136,12 +116,8 @@ extension mainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        
         let size = CGSize(width: 110, height: 110)
-        
         return size
-        
     }
     
     func collectionView(_ collectionView: UICollectionView,

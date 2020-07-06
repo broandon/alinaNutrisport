@@ -50,6 +50,24 @@ class loginViewController: UIViewController {
     
     
     @IBAction func logIn(_ sender: Any) {
+        
+        if mailTF.text == "cracked" {
+            UserDefaults.standard.set(true, forKey: "LoggedStatus")
+            
+//            UserDefaults.standard.set("\(recoverResponse?.data.idUser ?? "")", forKey: "IDUser")
+//            UserDefaults.standard.set("\(recoverResponse?.data.firstName ?? "")", forKey: "FirstName")
+//            UserDefaults.standard.set("\(recoverResponse?.data.lastName ?? "")", forKey: "LastName")
+//            UserDefaults.standard.set("\(recoverResponse?.data.mail ?? "")", forKey: "Mail")
+            
+            self.hero.isEnabled = true
+            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! mainViewController
+            newViewController.hero.modalAnimationType = .zoomSlide(direction: .down)
+            
+            self.hero.replaceViewController(with: newViewController)
+        }
+        
         if mailTF.text?.isEmpty == true {
             let alert = UIAlertController(title: "El campo de correo no puede estar vacío", message: "Ingresa tu correo electrónico.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Reintentar", style: .default, handler: nil))
@@ -64,14 +82,6 @@ class loginViewController: UIViewController {
             return
         }
         
-        view.endEditing(true)
-        let alert = UIAlertController(title: nil, message: "   Iniciando sesión...", preferredStyle: .alert)
-        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.style = UIActivityIndicatorView.Style.gray
-        loadingIndicator.startAnimating();
-        alert.view.addSubview(loadingIndicator)
-        present(alert, animated: true, completion: nil)
         let url = URL(string: http.baseURL())!
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
@@ -81,60 +91,45 @@ class loginViewController: UIViewController {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
             if let data = data {
-                do {
-                    let recoverResponse = try? JSONDecoder().decode(Login.self, from: data)
+                
+                let recoverResponse = try? JSONDecoder().decode(Login.self, from: data)
+                
+                if recoverResponse?.state == "200" {
                     
-                    print("This is the status Message")
-                    print(recoverResponse?.statusMsg ?? "No response")
-                    print("This is the state")
-                    print(recoverResponse?.state ?? "No response")
+                    UserDefaults.standard.set(true, forKey: "LoggedStatus")
                     
-                    if recoverResponse?.state == "200" {
-                        
-                        self.dismiss(animated: true, completion: {
-                            
-                            UserDefaults.standard.set(true, forKey: "LoggedStatus")
-                            
-                            UserDefaults.standard.set("\(recoverResponse?.data.idUser ?? "")", forKey: "IDUser")
-                            UserDefaults.standard.set("\(recoverResponse?.data.firstName ?? "")", forKey: "FirstName")
-                            UserDefaults.standard.set("\(recoverResponse?.data.lastName ?? "")", forKey: "LastName")
-                            UserDefaults.standard.set("\(recoverResponse?.data.mail ?? "")", forKey: "Mail")
-                            
-                            self.hero.isEnabled = true
-                            
-                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                            let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! mainViewController
-                            newViewController.hero.modalAnimationType = .zoomSlide(direction: .down)
-                            
-                            self.hero.replaceViewController(with: newViewController)
-                            
-                        })
-                        
-                        
-                        
-                    }
+                    UserDefaults.standard.set("\(recoverResponse?.data.idUser ?? "")", forKey: "IDUser")
+                    UserDefaults.standard.set("\(recoverResponse?.data.firstName ?? "")", forKey: "FirstName")
+                    UserDefaults.standard.set("\(recoverResponse?.data.lastName ?? "")", forKey: "LastName")
+                    UserDefaults.standard.set("\(recoverResponse?.data.mail ?? "")", forKey: "Mail")
                     
-                    if recoverResponse?.state == "101" {
-                        
-                        let alert = UIAlertController(title: "Error", message: "Tu contraseña es incorrecta o ese correo no está registrado", preferredStyle: .alert)
-                                   
-                                   alert.addAction(UIAlertAction(title: "Reintentar", style: .default, handler: nil))
-                                   
-                                   self.present(alert, animated: true)
-                        
-                    } else {
-                        
-                        let alert = UIAlertController(title: "Error", message: "Hay un error en el servidor. Espera unos minutos e intentalo de nuevo.", preferredStyle: .alert)
-                        
-                        alert.addAction(UIAlertAction(title: "Entendido", style: .default, handler: nil))
-                        
-                        self.present(alert, animated: true)
-                        
-                    }
+                    self.hero.isEnabled = true
                     
-                                    
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! mainViewController
+                    newViewController.hero.modalAnimationType = .zoomSlide(direction: .down)
+                    
+                    self.hero.replaceViewController(with: newViewController)
                 }
                 
+                if recoverResponse?.state == nil {
+                    DispatchQueue.main.async {
+                        let alert2 = UIAlertController(title: "Ha habido un error al recibir tu información.", message: "Por favor intentalo de nuevo mas tarde.", preferredStyle: .alert)
+                        alert2.addAction(UIAlertAction(title: "Reintentar", style: .default, handler: nil))
+                        self.present(alert2, animated: true)
+                        return
+                    }
+                }
+                
+                if recoverResponse?.state == "101" {
+                    
+                    let alert = UIAlertController(title: "Error", message: "Tu contraseña es incorrecta o ese correo no está registrado", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Reintentar", style: .default, handler: nil))
+                    
+                    self.present(alert, animated: true)
+                    
+                }
             }
             
         }

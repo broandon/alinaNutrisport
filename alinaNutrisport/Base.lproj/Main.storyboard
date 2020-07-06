@@ -328,11 +328,80 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="QF5-dl-yVO">
+            <objects>
+                <viewController storyboardIdentifier="profileViewController" modalPresentationStyle="fullScreen" id="rnC-rC-T2a" customClass="profileViewController" customModule="alinaNutrisport" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oHW-Ga-Y3q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upperCircle" translatesAutoresizingMaskIntoConstraints="NO" id="sBk-bf-HzX">
+                                <rect key="frame" x="-122" y="-81" width="658" height="359"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="359" id="3bm-JC-7bY"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYt-x5-Q6I">
+                                <rect key="frame" x="122.5" y="175" width="169" height="169"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-1494790108377-be9c29b29330" translatesAutoresizingMaskIntoConstraints="NO" id="Pmh-pi-l29">
+                                        <rect key="frame" x="5" y="5" width="159" height="159"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Pmh-pi-l29" secondAttribute="trailing" constant="5" id="5KA-Lh-WvU"/>
+                                    <constraint firstAttribute="width" secondItem="dYt-x5-Q6I" secondAttribute="height" multiplier="1:1" id="6A6-w8-YFw"/>
+                                    <constraint firstItem="Pmh-pi-l29" firstAttribute="leading" secondItem="dYt-x5-Q6I" secondAttribute="leading" constant="5" id="9bC-Nd-jTA"/>
+                                    <constraint firstAttribute="width" constant="169" id="laQ-cf-qVy"/>
+                                    <constraint firstItem="Pmh-pi-l29" firstAttribute="top" secondItem="dYt-x5-Q6I" secondAttribute="top" constant="5" id="pB7-Iv-otk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pmh-pi-l29" secondAttribute="bottom" constant="5" id="r6j-Nv-qVv"/>
+                                    <constraint firstAttribute="height" constant="169" id="y9S-I7-cf1"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" bouncesZoom="NO" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CvW-tE-HdZ">
+                                <rect key="frame" x="20" y="384" width="374" height="438"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="54K-UM-uY8">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dYt-x5-Q6I" firstAttribute="centerX" secondItem="oHW-Ga-Y3q" secondAttribute="centerX" id="9YM-yy-TGR"/>
+                            <constraint firstItem="dYt-x5-Q6I" firstAttribute="top" secondItem="GH5-hn-Ni1" secondAttribute="top" constant="131" id="HVX-Z2-CXa"/>
+                            <constraint firstAttribute="trailing" secondItem="sBk-bf-HzX" secondAttribute="trailing" constant="-122" id="J0P-0n-3m5"/>
+                            <constraint firstItem="GH5-hn-Ni1" firstAttribute="bottom" secondItem="CvW-tE-HdZ" secondAttribute="bottom" constant="40" id="Nco-rx-HBd"/>
+                            <constraint firstItem="CvW-tE-HdZ" firstAttribute="top" secondItem="dYt-x5-Q6I" secondAttribute="bottom" constant="40" id="QK5-GA-qgg"/>
+                            <constraint firstItem="sBk-bf-HzX" firstAttribute="leading" secondItem="oHW-Ga-Y3q" secondAttribute="leading" constant="-122" id="Rfl-t9-5AN"/>
+                            <constraint firstItem="GH5-hn-Ni1" firstAttribute="trailing" secondItem="CvW-tE-HdZ" secondAttribute="trailing" constant="20" id="SUT-sP-dtH"/>
+                            <constraint firstItem="sBk-bf-HzX" firstAttribute="top" secondItem="oHW-Ga-Y3q" secondAttribute="top" constant="-81" id="Xyx-DS-x0N"/>
+                            <constraint firstItem="CvW-tE-HdZ" firstAttribute="leading" secondItem="GH5-hn-Ni1" secondAttribute="leading" constant="20" id="iyU-Zw-7su"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GH5-hn-Ni1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OL8-rs-H32"/>
+                    <connections>
+                        <outlet property="logoBackground" destination="dYt-x5-Q6I" id="TGE-Rd-ecv"/>
+                        <outlet property="profileImage" destination="Pmh-pi-l29" id="4Al-Nb-M5o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQe-EE-B3p" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029" y="139"/>
+        </scene>
     </scenes>
     <resources>
         <image name="iconos-contraseña" width="400" height="400"/>
         <image name="iconos-usuario" width="400" height="400"/>
         <image name="logoAlinaNutrisport" width="1000" height="1000"/>
+        <image name="photo-1494790108377-be9c29b29330" width="756" height="757"/>
         <image name="upperCircle" width="1200" height="689"/>
         <namedColor name="Main Blue">
             <color red="0.32156862745098042" green="0.54509803921568623" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
