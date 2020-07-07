@@ -80,6 +80,7 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let pickedSections = Sections[indexPath.row]
         let sectionID = pickedSections["ID"] as! String
+        
         if sectionID == "1" {
             self.hero.isEnabled = true
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -87,6 +88,24 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             newViewController.hero.modalAnimationType = .pageIn(direction: .left)
             self.hero.replaceViewController(with: newViewController)
         }
+        
+        if sectionID == "2" {
+            self.hero.isEnabled = true
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "dietsViewController") as! dietsViewController
+            newViewController.hero.modalAnimationType = .pageIn(direction: .left)
+            self.hero.replaceViewController(with: newViewController)
+        }
+        
+        if sectionID == "7" {
+            self.hero.isEnabled = true
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "settingsViewController") as! settingsViewController
+            newViewController.hero.modalAnimationType = .pageIn(direction: .left)
+            self.hero.replaceViewController(with: newViewController)
+        }
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

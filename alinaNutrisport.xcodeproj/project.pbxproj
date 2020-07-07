@@ -18,6 +18,10 @@
 		9DC9486C2432E53300D65573 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9486B2432E53300D65573 /* mainViewController.swift */; };
 		9DDC26E02435C1B1002FAC0D /* sectionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDC26DE2435C1B1002FAC0D /* sectionsCollectionViewCell.swift */; };
 		9DDC26E12435C1B1002FAC0D /* sectionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DDC26DF2435C1B1002FAC0D /* sectionsCollectionViewCell.xib */; };
+		CF0A403924B4E108008F583B /* dietsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A403824B4E108008F583B /* dietsViewController.swift */; };
+		CF0A404024B4E27F008F583B /* dietsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A403E24B4E27F008F583B /* dietsCollectionViewCell.swift */; };
+		CF0A404124B4E27F008F583B /* dietsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A403F24B4E27F008F583B /* dietsCollectionViewCell.xib */; };
+		CF0A404324B4EBB5008F583B /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A404224B4EBB5008F583B /* settingsViewController.swift */; };
 		CFA22AA92422850E0036DB71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA22AA82422850E0036DB71 /* AppDelegate.swift */; };
 		CFA22AB02422850E0036DB71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AAE2422850E0036DB71 /* Main.storyboard */; };
 		CFA22AB2242285110036DB71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AB1242285110036DB71 /* Assets.xcassets */; };
@@ -38,6 +42,10 @@
 		9DC9486B2432E53300D65573 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		9DDC26DE2435C1B1002FAC0D /* sectionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sectionsCollectionViewCell.swift; sourceTree = "<group>"; };
 		9DDC26DF2435C1B1002FAC0D /* sectionsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sectionsCollectionViewCell.xib; sourceTree = "<group>"; };
+		CF0A403824B4E108008F583B /* dietsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dietsViewController.swift; sourceTree = "<group>"; };
+		CF0A403E24B4E27F008F583B /* dietsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dietsCollectionViewCell.swift; sourceTree = "<group>"; };
+		CF0A403F24B4E27F008F583B /* dietsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dietsCollectionViewCell.xib; sourceTree = "<group>"; };
+		CF0A404224B4EBB5008F583B /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 		CFA22AA52422850E0036DB71 /* alinaNutrisport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alinaNutrisport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA22AA82422850E0036DB71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFA22AAF2422850E0036DB71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */,
+				CF0A404224B4EBB5008F583B /* settingsViewController.swift */,
 			);
 			path = profileViewController;
 			sourceTree = "<group>";
@@ -107,6 +116,9 @@
 				9DC9486B2432E53300D65573 /* mainViewController.swift */,
 				9DDC26DE2435C1B1002FAC0D /* sectionsCollectionViewCell.swift */,
 				9DDC26DF2435C1B1002FAC0D /* sectionsCollectionViewCell.xib */,
+				CF0A403824B4E108008F583B /* dietsViewController.swift */,
+				CF0A403E24B4E27F008F583B /* dietsCollectionViewCell.swift */,
+				CF0A403F24B4E27F008F583B /* dietsCollectionViewCell.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -217,6 +229,7 @@
 			files = (
 				CFA22AB5242285110036DB71 /* LaunchScreen.storyboard in Resources */,
 				CFA22AB2242285110036DB71 /* Assets.xcassets in Resources */,
+				CF0A404124B4E27F008F583B /* dietsCollectionViewCell.xib in Resources */,
 				9DDC26E12435C1B1002FAC0D /* sectionsCollectionViewCell.xib in Resources */,
 				CFA22AB02422850E0036DB71 /* Main.storyboard in Resources */,
 			);
@@ -277,7 +290,10 @@
 				9DC9486C2432E53300D65573 /* mainViewController.swift in Sources */,
 				9DC948662432928100D65573 /* loginViewController.swift in Sources */,
 				9DC948692432996000D65573 /* Extensions.swift in Sources */,
+				CF0A404324B4EBB5008F583B /* settingsViewController.swift in Sources */,
+				CF0A403924B4E108008F583B /* dietsViewController.swift in Sources */,
 				9DC095732459312800ED6B59 /* Login.swift in Sources */,
+				CF0A404024B4E27F008F583B /* dietsCollectionViewCell.swift in Sources */,
 				9DC095712458ED1C00ED6B59 /* baseURL.swift in Sources */,
 				9D498C7024B2DC5D00ADF7F2 /* profileViewController.swift in Sources */,
 				9DC0956F2458EC1200ED6B59 /* Recover.swift in Sources */,
