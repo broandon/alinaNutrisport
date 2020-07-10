@@ -22,6 +22,18 @@
 		CF0A404024B4E27F008F583B /* dietsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A403E24B4E27F008F583B /* dietsCollectionViewCell.swift */; };
 		CF0A404124B4E27F008F583B /* dietsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A403F24B4E27F008F583B /* dietsCollectionViewCell.xib */; };
 		CF0A404324B4EBB5008F583B /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A404224B4EBB5008F583B /* settingsViewController.swift */; };
+		CF0A404524B4F7E0008F583B /* datesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A404424B4F7E0008F583B /* datesViewController.swift */; };
+		CF0A404824B4FBB0008F583B /* datesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A404624B4FBB0008F583B /* datesTableViewCell.swift */; };
+		CF0A404924B4FBB0008F583B /* datesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A404724B4FBB0008F583B /* datesTableViewCell.xib */; };
+		CF0A404C24B506B6008F583B /* documentosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A404B24B506B6008F583B /* documentosViewController.swift */; };
+		CF0A404E24B50A2E008F583B /* documentosGenericosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A404D24B50A2E008F583B /* documentosGenericosViewController.swift */; };
+		CF0A405024B50A3C008F583B /* documentosPersonalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A404F24B50A3C008F583B /* documentosPersonalesViewController.swift */; };
+		CF0A405324B50A5C008F583B /* genericosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A405124B50A5C008F583B /* genericosTableViewCell.swift */; };
+		CF0A405424B50A5C008F583B /* genericosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A405224B50A5C008F583B /* genericosTableViewCell.xib */; };
+		CF0A405724B50A6D008F583B /* personalesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A405524B50A6D008F583B /* personalesTableViewCell.swift */; };
+		CF0A405824B50A6D008F583B /* personalesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A405624B50A6D008F583B /* personalesTableViewCell.xib */; };
+		CF88052E24B8DE87001DD622 /* profileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88052D24B8DE87001DD622 /* profileInfo.swift */; };
+		CF88053024B8E66B001DD622 /* updatedProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88052F24B8E66B001DD622 /* updatedProfile.swift */; };
 		CFA22AA92422850E0036DB71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA22AA82422850E0036DB71 /* AppDelegate.swift */; };
 		CFA22AB02422850E0036DB71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AAE2422850E0036DB71 /* Main.storyboard */; };
 		CFA22AB2242285110036DB71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AB1242285110036DB71 /* Assets.xcassets */; };
@@ -46,6 +58,18 @@
 		CF0A403E24B4E27F008F583B /* dietsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dietsCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF0A403F24B4E27F008F583B /* dietsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dietsCollectionViewCell.xib; sourceTree = "<group>"; };
 		CF0A404224B4EBB5008F583B /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
+		CF0A404424B4F7E0008F583B /* datesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datesViewController.swift; sourceTree = "<group>"; };
+		CF0A404624B4FBB0008F583B /* datesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datesTableViewCell.swift; sourceTree = "<group>"; };
+		CF0A404724B4FBB0008F583B /* datesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = datesTableViewCell.xib; sourceTree = "<group>"; };
+		CF0A404B24B506B6008F583B /* documentosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = documentosViewController.swift; sourceTree = "<group>"; };
+		CF0A404D24B50A2E008F583B /* documentosGenericosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = documentosGenericosViewController.swift; sourceTree = "<group>"; };
+		CF0A404F24B50A3C008F583B /* documentosPersonalesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = documentosPersonalesViewController.swift; sourceTree = "<group>"; };
+		CF0A405124B50A5C008F583B /* genericosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = genericosTableViewCell.swift; sourceTree = "<group>"; };
+		CF0A405224B50A5C008F583B /* genericosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = genericosTableViewCell.xib; sourceTree = "<group>"; };
+		CF0A405524B50A6D008F583B /* personalesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalesTableViewCell.swift; sourceTree = "<group>"; };
+		CF0A405624B50A6D008F583B /* personalesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = personalesTableViewCell.xib; sourceTree = "<group>"; };
+		CF88052D24B8DE87001DD622 /* profileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileInfo.swift; sourceTree = "<group>"; };
+		CF88052F24B8E66B001DD622 /* updatedProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updatedProfile.swift; sourceTree = "<group>"; };
 		CFA22AA52422850E0036DB71 /* alinaNutrisport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alinaNutrisport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA22AA82422850E0036DB71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFA22AAF2422850E0036DB71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +103,9 @@
 			children = (
 				9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */,
 				CF0A404224B4EBB5008F583B /* settingsViewController.swift */,
+				CF0A404424B4F7E0008F583B /* datesViewController.swift */,
+				CF0A404624B4FBB0008F583B /* datesTableViewCell.swift */,
+				CF0A404724B4FBB0008F583B /* datesTableViewCell.xib */,
 			);
 			path = profileViewController;
 			sourceTree = "<group>";
@@ -88,6 +115,8 @@
 			children = (
 				9DC0956E2458EC1200ED6B59 /* Recover.swift */,
 				9DC095722459312800ED6B59 /* Login.swift */,
+				CF88052D24B8DE87001DD622 /* profileInfo.swift */,
+				CF88052F24B8E66B001DD622 /* updatedProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,9 +161,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CF0A404A24B5068E008F583B /* Documentos */ = {
+			isa = PBXGroup;
+			children = (
+				CF0A404B24B506B6008F583B /* documentosViewController.swift */,
+				CF0A404D24B50A2E008F583B /* documentosGenericosViewController.swift */,
+				CF0A405124B50A5C008F583B /* genericosTableViewCell.swift */,
+				CF0A405224B50A5C008F583B /* genericosTableViewCell.xib */,
+				CF0A404F24B50A3C008F583B /* documentosPersonalesViewController.swift */,
+				CF0A405524B50A6D008F583B /* personalesTableViewCell.swift */,
+				CF0A405624B50A6D008F583B /* personalesTableViewCell.xib */,
+			);
+			path = Documentos;
+			sourceTree = "<group>";
+		};
 		CFA22A9C2422850E0036DB71 = {
 			isa = PBXGroup;
 			children = (
+				CF0A404A24B5068E008F583B /* Documentos */,
 				9D498C6E24B2DC3800ADF7F2 /* profileViewController */,
 				9DC0956D2458EBFE00ED6B59 /* Models */,
 				9DC9486A2432E08C00D65573 /* Main */,
@@ -228,8 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFA22AB5242285110036DB71 /* LaunchScreen.storyboard in Resources */,
+				CF0A404924B4FBB0008F583B /* datesTableViewCell.xib in Resources */,
 				CFA22AB2242285110036DB71 /* Assets.xcassets in Resources */,
+				CF0A405824B50A6D008F583B /* personalesTableViewCell.xib in Resources */,
 				CF0A404124B4E27F008F583B /* dietsCollectionViewCell.xib in Resources */,
+				CF0A405424B50A5C008F583B /* genericosTableViewCell.xib in Resources */,
 				9DDC26E12435C1B1002FAC0D /* sectionsCollectionViewCell.xib in Resources */,
 				CFA22AB02422850E0036DB71 /* Main.storyboard in Resources */,
 			);
@@ -288,11 +335,20 @@
 				9DBD90E52453483E00191361 /* recoverViewController.swift in Sources */,
 				CFA22AA92422850E0036DB71 /* AppDelegate.swift in Sources */,
 				9DC9486C2432E53300D65573 /* mainViewController.swift in Sources */,
+				CF0A404524B4F7E0008F583B /* datesViewController.swift in Sources */,
 				9DC948662432928100D65573 /* loginViewController.swift in Sources */,
+				CF0A404824B4FBB0008F583B /* datesTableViewCell.swift in Sources */,
+				CF88053024B8E66B001DD622 /* updatedProfile.swift in Sources */,
+				CF0A405724B50A6D008F583B /* personalesTableViewCell.swift in Sources */,
 				9DC948692432996000D65573 /* Extensions.swift in Sources */,
 				CF0A404324B4EBB5008F583B /* settingsViewController.swift in Sources */,
+				CF0A404C24B506B6008F583B /* documentosViewController.swift in Sources */,
+				CF0A404E24B50A2E008F583B /* documentosGenericosViewController.swift in Sources */,
+				CF0A405024B50A3C008F583B /* documentosPersonalesViewController.swift in Sources */,
 				CF0A403924B4E108008F583B /* dietsViewController.swift in Sources */,
 				9DC095732459312800ED6B59 /* Login.swift in Sources */,
+				CF0A405324B50A5C008F583B /* genericosTableViewCell.swift in Sources */,
+				CF88052E24B8DE87001DD622 /* profileInfo.swift in Sources */,
 				CF0A404024B4E27F008F583B /* dietsCollectionViewCell.swift in Sources */,
 				9DC095712458ED1C00ED6B59 /* baseURL.swift in Sources */,
 				9D498C7024B2DC5D00ADF7F2 /* profileViewController.swift in Sources */,
@@ -442,6 +498,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -449,7 +506,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = easycode.alinaNutrisport;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easycode.alinaNutrisport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -462,6 +520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -469,7 +528,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = easycode.alinaNutrisport;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easycode.alinaNutrisport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

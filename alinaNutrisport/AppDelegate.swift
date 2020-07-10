@@ -19,5 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "Listo"
         return true
     }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        print("Enterede Background")
+        UserDefaults.standard.set(true, forKey: "firstTimer")
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        print("Terminating app")
+        UserDefaults.standard.set(true, forKey: "firstTimer")
+    }
+    
 }
 

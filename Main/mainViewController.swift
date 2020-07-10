@@ -15,6 +15,7 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var logoBackground: UIView!
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var mainCollection: UICollectionView!
+    @IBOutlet weak var upperCircle: UIImageView!
     
     let reuseDocument = "sectionsCellStores"
     
@@ -69,6 +70,10 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         logoBackground.layer.shadowColor = UIColor.gray.cgColor
         logoBackground.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         logoBackground.layer.shadowOpacity = 1.0
+        if UserDefaults.standard.bool(forKey: "firstTimer") == true {
+            upperCircle.slideInFromTop()
+            UserDefaults.standard.set(false, forKey: "firstTimer")
+        }
     }
     
     //MARK: Collectionview Data
@@ -105,7 +110,21 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             self.hero.replaceViewController(with: newViewController)
         }
         
+        if sectionID == "3" {
+            self.hero.isEnabled = true
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "datesViewController") as! datesViewController
+            newViewController.hero.modalAnimationType = .pageIn(direction: .left)
+            self.hero.replaceViewController(with: newViewController)
+        }
         
+        if sectionID == "4" {
+            self.hero.isEnabled = true
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "documentosViewController") as! documentosViewController
+            newViewController.hero.modalAnimationType = .pageIn(direction: .left)
+            self.hero.replaceViewController(with: newViewController)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

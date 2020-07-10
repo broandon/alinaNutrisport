@@ -51,23 +51,6 @@ class loginViewController: UIViewController {
     
     @IBAction func logIn(_ sender: Any) {
         
-        if mailTF.text == "cracked" {
-            UserDefaults.standard.set(true, forKey: "LoggedStatus")
-            
-//            UserDefaults.standard.set("\(recoverResponse?.data.idUser ?? "")", forKey: "IDUser")
-//            UserDefaults.standard.set("\(recoverResponse?.data.firstName ?? "")", forKey: "FirstName")
-//            UserDefaults.standard.set("\(recoverResponse?.data.lastName ?? "")", forKey: "LastName")
-//            UserDefaults.standard.set("\(recoverResponse?.data.mail ?? "")", forKey: "Mail")
-            
-            self.hero.isEnabled = true
-            
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! mainViewController
-            newViewController.hero.modalAnimationType = .zoomSlide(direction: .down)
-            
-            self.hero.replaceViewController(with: newViewController)
-        }
-        
         if mailTF.text?.isEmpty == true {
             let alert = UIAlertController(title: "El campo de correo no puede estar vacío", message: "Ingresa tu correo electrónico.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Reintentar", style: .default, handler: nil))
@@ -81,7 +64,6 @@ class loginViewController: UIViewController {
             self.present(alert, animated: true)
             return
         }
-        
         let url = URL(string: http.baseURL())!
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
@@ -91,25 +73,30 @@ class loginViewController: UIViewController {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
             if let data = data {
-                
                 let recoverResponse = try? JSONDecoder().decode(Login.self, from: data)
                 
                 if recoverResponse?.state == "200" {
-                    
-                    UserDefaults.standard.set(true, forKey: "LoggedStatus")
-                    
-                    UserDefaults.standard.set("\(recoverResponse?.data.idUser ?? "")", forKey: "IDUser")
-                    UserDefaults.standard.set("\(recoverResponse?.data.firstName ?? "")", forKey: "FirstName")
-                    UserDefaults.standard.set("\(recoverResponse?.data.lastName ?? "")", forKey: "LastName")
-                    UserDefaults.standard.set("\(recoverResponse?.data.mail ?? "")", forKey: "Mail")
-                    
-                    self.hero.isEnabled = true
-                    
-                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! mainViewController
-                    newViewController.hero.modalAnimationType = .zoomSlide(direction: .down)
-                    
-                    self.hero.replaceViewController(with: newViewController)
+                    DispatchQueue.main.async {
+                        UserDefaults.standard.set(true, forKey: "LoggedStatus")
+                        UserDefaults.standard.set("\(recoverResponse?.data.idUser ?? "")", forKey: "IDUser")
+                        UserDefaults.standard.set("\(recoverResponse?.data.firstName ?? "")", forKey: "FirstName")
+                        UserDefaults.standard.set("\(recoverResponse?.data.lastName ?? "")", forKey: "LastName")
+                        UserDefaults.standard.set("\(recoverResponse?.data.mail ?? "")", forKey: "Mail")
+                        
+                        print("THIS IS THE INFO****************************")
+                        print(UserDefaults.standard.string(forKey: "IDUser"))
+                        print(UserDefaults.standard.string(forKey: "FirstName"))
+                        print(UserDefaults.standard.string(forKey: "LastName"))
+                        print(UserDefaults.standard.string(forKey: "Mail"))
+                        print(UserDefaults.standard.bool(forKey: "LoggedStatus"))
+                        print("********************************************")
+                        
+                        self.hero.isEnabled = true
+                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! mainViewController
+                        newViewController.hero.modalAnimationType = .zoomSlide(direction: .down)
+                        self.hero.replaceViewController(with: newViewController)
+                    }
                 }
                 
                 if recoverResponse?.state == nil {
