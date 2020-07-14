@@ -12,7 +12,6 @@ class documentosViewController: UIViewController {
     
     @IBOutlet weak var behindLogoView: UIView!
     @IBOutlet weak var logoImage: UIImageView!
-    
     @IBOutlet weak var documentosGenericos: UIView!
     @IBOutlet weak var documentosPersonales: UIView!
     
@@ -31,7 +30,6 @@ class documentosViewController: UIViewController {
         behindLogoView?.layer.shadowColor = UIColor.gray.cgColor
         behindLogoView?.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         behindLogoView?.layer.shadowOpacity = 1.0
-        
         logoImage?.layer.backgroundColor = UIColor.white.cgColor
         logoImage?.layer.borderColor = UIColor.lightGray.cgColor
         logoImage?.layer.borderWidth = 0.0
@@ -41,18 +39,15 @@ class documentosViewController: UIViewController {
         logoImage?.layer.shadowColor = UIColor.gray.cgColor
         logoImage?.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         logoImage?.layer.shadowOpacity = 1.0
-        
         documentosPersonales.alpha = 1
         documentosGenericos.alpha = 0
     }
     
     @IBAction func getOut(_ sender: Any) {
         self.hero.isEnabled = true
-        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! mainViewController
         newViewController.hero.modalAnimationType = .pageOut(direction: .right)
-        
         self.hero.replaceViewController(with: newViewController)
     }
     
@@ -70,6 +65,4 @@ class documentosViewController: UIViewController {
             documentosGenericos.alpha = 1
         }
     }
-    
-    
 }

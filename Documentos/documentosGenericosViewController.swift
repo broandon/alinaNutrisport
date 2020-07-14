@@ -13,7 +13,6 @@ class documentosGenericosViewController: UIViewController {
     var appointments: [Dictionary<String, Any>] = []
     let reuseDocument = "DocumentCell3"
     
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -39,6 +38,7 @@ class documentosGenericosViewController: UIViewController {
                 return
             }
             let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            
             if let dictionary = json as? Dictionary<String, Any> {
                 for d in dictionary["data"] as! [Dictionary<String, Any>] {
                     print(d)

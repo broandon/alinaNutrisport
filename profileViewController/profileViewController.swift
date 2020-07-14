@@ -23,6 +23,7 @@ class profileViewController: UIViewController {
     @IBOutlet weak var apellidoTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var segmentIndicator: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +99,11 @@ class profileViewController: UIViewController {
         }
         
         if sender.selectedSegmentIndex == 2 {
+            self.hero.isEnabled = true
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profleOtherViewController") as! profleOtherViewController
+            newViewController.hero.modalAnimationType = .none
+            self.hero.replaceViewController(with: newViewController)
             profileImage.image = UIImage(named: "fotos1")
             profileDataView.alpha = 0
             statisticsDataView.alpha = 0

@@ -16,7 +16,6 @@ class personalesTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         backgroundBorderView.layer.borderWidth = 1
         backgroundBorderView.layer.borderColor = UIColor.lightGray.cgColor
         backgroundBorderView.layer.cornerRadius = 13
@@ -24,8 +23,6 @@ class personalesTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

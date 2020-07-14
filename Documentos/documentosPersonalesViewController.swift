@@ -10,10 +10,10 @@ import UIKit
 
 class documentosPersonalesViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     var appointments: [Dictionary<String, Any>] = []
     let reuseDocument = "DocumentCell3"
-    
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class documentosPersonalesViewController: UIViewController {
         tableView!.separatorStyle = .none
         tableView!.allowsSelection = true
     }
-
+    
     func downloadJSON() {
         let url = URL(string: "http://alinanutrisport.com.mx/sistema/webservice/controller_last.php")!
         var request = URLRequest(url: url)
@@ -37,27 +37,28 @@ class documentosPersonalesViewController: UIViewController {
             guard let data = data, error == nil, response != nil else {
                 return
             }
-                let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-                if let dictionary = json as? Dictionary<String, Any> {
-                    for d in dictionary["data"] as! [Dictionary<String, Any>] {
-                        print(d)
-                        self.appointments.append(d)
-                        
-                    }
+            let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            
+            if let dictionary = json as? Dictionary<String, Any> {
+                for d in dictionary["data"] as! [Dictionary<String, Any>] {
+                    print(d)
+                    self.appointments.append(d)
+                    
                 }
-                DispatchQueue.main.async {
-                 
-                    if self.appointments.count > 0 {
-                        self.tableView?.reloadData()
-                    }
+            }
+            DispatchQueue.main.async {
+                
+                if self.appointments.count > 0 {
+                    self.tableView?.reloadData()
                 }
+            }
         }.resume()
     }
 }
 
 extension documentosPersonalesViewController: UITableViewDelegate, UITableViewDataSource {
     
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         appointments.count
     }
     
@@ -67,8 +68,8 @@ extension documentosPersonalesViewController: UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let document = appointments[indexPath.row]
-         let fecha  = document["fecha"] as? String ?? ""
-         let nombre = document["nombre"] as? String ?? ""
+        let fecha  = document["fecha"] as? String ?? ""
+        let nombre = document["nombre"] as? String ?? ""
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseDocument, for: indexPath)
         cell.selectionStyle = .none
         if let cell = cell as? personalesTableViewCell {
@@ -84,8 +85,8 @@ extension documentosPersonalesViewController: UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let document = appointments[indexPath.row]
         let url = document["url"] as! String
-         let varstring = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-         let urlvarstring = URL(string: varstring!)
-         UIApplication.shared.openURL(urlvarstring!)
+        let varstring = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let urlvarstring = URL(string: varstring!)
+        UIApplication.shared.open(urlvarstring!)
     }
 }

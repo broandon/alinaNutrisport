@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class chatViewController: UIViewController {
+    
+    //MARK: Outlets
     
     var messages: [Dictionary<String, Any>] = []
     let reuseDocument = "DocumentCellMessages"
@@ -20,19 +23,20 @@ class chatViewController: UIViewController {
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var messageText: UITextField!
     
+    //MARK: viewDid
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadJson()
         setupView()
-        let documentXib = UINib(nibName: "messageTableViewCell", bundle: nil)
-        tableView!.register(documentXib, forCellReuseIdentifier: reuseDocument)
-        tableView!.delegate = self
-        tableView!.dataSource = self
-        tableView!.separatorStyle = .none
-        tableView!.allowsSelection = true
-        tableView.transform = CGAffineTransform(rotationAngle: (-.pi))
-        tableView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.size.width - 10)
+        setupTableView()
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    //MARK: Funcs
     
     func setupView() {
         logoBackground?.layer.backgroundColor = UIColor.white.cgColor
@@ -55,6 +59,16 @@ class chatViewController: UIViewController {
         logo?.layer.shadowOpacity = 1.0
     }
     
+    func setupTableView() {
+        let documentXib = UINib(nibName: "messageTableViewCell", bundle: nil)
+        tableView!.register(documentXib, forCellReuseIdentifier: reuseDocument)
+        tableView!.delegate = self
+        tableView!.dataSource = self
+        tableView!.separatorStyle = .none
+        tableView!.allowsSelection = true
+        tableView.transform = CGAffineTransform(rotationAngle: (-.pi))
+        tableView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.size.width - 10)
+    }
     
     func downloadJson() {
         let url = URL(string: "http://alinanutrisport.com.mx/sistema/webservice/controller_last.php")!
@@ -82,13 +96,15 @@ class chatViewController: UIViewController {
             
         }.resume()
     }
+    
+    //MARK: Actions
+    
     @IBAction func sendMessage(_ sender: Any) {
         
         if messageText.text?.isEmpty == true {
             print("No text.")
             return
         }
-        
         let url = URL(string: "http://alinanutrisport.com.mx/sistema/webservice/controller_last.php")!
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
@@ -100,10 +116,10 @@ class chatViewController: UIViewController {
                 return
             }
             let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            
             if let dictionary = json as? Dictionary<String, Any> {
                 if let state = dictionary["state"] {
                     print(state)
-                    
                     let stateNumber = state as! String
                     
                     if stateNumber == "200" {
@@ -134,6 +150,8 @@ class chatViewController: UIViewController {
     }
 }
 
+//MARK: Extensions
+
 extension chatViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -152,9 +170,7 @@ extension chatViewController : UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseDocument, for: indexPath) as? messageTableViewCell else {
             return UITableViewCell()
         }
-        
         messages.sort { ($0["Id"] as! String) > ($1["Id"] as! String) }
-        
         let document = messages[indexPath.row]
         let ID  = document["Id"] as? String ?? ""
         let Mensaje = document["mensaje"] as? String ?? ""
@@ -172,15 +188,10 @@ extension chatViewController : UITableViewDelegate, UITableViewDataSource {
             cell.type2MessageIcon.isHidden = true
             cell.tipe1MessageIcon.isHidden = false
         }
-        
         cell.dateLabel.text = Fecha
         cell.mainMessageLabel.text = Mensaje
         cell.transform = CGAffineTransform(rotationAngle: (-.pi))
         cell.selectionStyle = .none
         return cell
     }
-    
-    
-    
-    
 }

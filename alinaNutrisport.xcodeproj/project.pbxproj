@@ -43,6 +43,7 @@
 		CFA2A9A924BD1A3600218C55 /* chatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2A9A824BD1A3600218C55 /* chatViewController.swift */; };
 		CFA2A9AC24BD1D4C00218C55 /* messageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2A9AA24BD1D4C00218C55 /* messageTableViewCell.swift */; };
 		CFA2A9AD24BD1D4C00218C55 /* messageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFA2A9AB24BD1D4C00218C55 /* messageTableViewCell.xib */; };
+		CFA39F5124BE51B500626A6B /* profleOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA39F5024BE51B500626A6B /* profleOtherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		CFA2A9A824BD1A3600218C55 /* chatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatViewController.swift; sourceTree = "<group>"; };
 		CFA2A9AA24BD1D4C00218C55 /* messageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageTableViewCell.swift; sourceTree = "<group>"; };
 		CFA2A9AB24BD1D4C00218C55 /* messageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = messageTableViewCell.xib; sourceTree = "<group>"; };
+		CFA39F5024BE51B500626A6B /* profleOtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profleOtherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				CF0A404424B4F7E0008F583B /* datesViewController.swift */,
 				CF0A404624B4FBB0008F583B /* datesTableViewCell.swift */,
 				CF0A404724B4FBB0008F583B /* datesTableViewCell.xib */,
+				CFA39F5024BE51B500626A6B /* profleOtherViewController.swift */,
 			);
 			path = profileViewController;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				9DC9486C2432E53300D65573 /* mainViewController.swift in Sources */,
 				CF0A404524B4F7E0008F583B /* datesViewController.swift in Sources */,
 				9DC948662432928100D65573 /* loginViewController.swift in Sources */,
+				CFA39F5124BE51B500626A6B /* profleOtherViewController.swift in Sources */,
 				CF0A404824B4FBB0008F583B /* datesTableViewCell.swift in Sources */,
 				CF88053024B8E66B001DD622 /* updatedProfile.swift in Sources */,
 				CFA2A9A524BD107800218C55 /* webViewViewController.swift in Sources */,
