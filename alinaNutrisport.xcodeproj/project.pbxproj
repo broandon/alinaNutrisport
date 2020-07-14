@@ -38,6 +38,11 @@
 		CFA22AB02422850E0036DB71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AAE2422850E0036DB71 /* Main.storyboard */; };
 		CFA22AB2242285110036DB71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AB1242285110036DB71 /* Assets.xcassets */; };
 		CFA22AB5242285110036DB71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA22AB3242285110036DB71 /* LaunchScreen.storyboard */; };
+		CFA2A9A524BD107800218C55 /* webViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2A9A324BD107800218C55 /* webViewViewController.swift */; };
+		CFA2A9A624BD107900218C55 /* webViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFA2A9A424BD107800218C55 /* webViewViewController.xib */; };
+		CFA2A9A924BD1A3600218C55 /* chatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2A9A824BD1A3600218C55 /* chatViewController.swift */; };
+		CFA2A9AC24BD1D4C00218C55 /* messageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2A9AA24BD1D4C00218C55 /* messageTableViewCell.swift */; };
+		CFA2A9AD24BD1D4C00218C55 /* messageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFA2A9AB24BD1D4C00218C55 /* messageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +81,11 @@
 		CFA22AB1242285110036DB71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFA22AB4242285110036DB71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFA22AB6242285110036DB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFA2A9A324BD107800218C55 /* webViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webViewViewController.swift; sourceTree = "<group>"; };
+		CFA2A9A424BD107800218C55 /* webViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = webViewViewController.xib; sourceTree = "<group>"; };
+		CFA2A9A824BD1A3600218C55 /* chatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatViewController.swift; sourceTree = "<group>"; };
+		CFA2A9AA24BD1D4C00218C55 /* messageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageTableViewCell.swift; sourceTree = "<group>"; };
+		CFA2A9AB24BD1D4C00218C55 /* messageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = messageTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +158,8 @@
 				CF0A403824B4E108008F583B /* dietsViewController.swift */,
 				CF0A403E24B4E27F008F583B /* dietsCollectionViewCell.swift */,
 				CF0A403F24B4E27F008F583B /* dietsCollectionViewCell.xib */,
+				CFA2A9A324BD107800218C55 /* webViewViewController.swift */,
+				CFA2A9A424BD107800218C55 /* webViewViewController.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -178,6 +190,7 @@
 		CFA22A9C2422850E0036DB71 = {
 			isa = PBXGroup;
 			children = (
+				CFA2A9A724BD1A1E00218C55 /* Chat */,
 				CF0A404A24B5068E008F583B /* Documentos */,
 				9D498C6E24B2DC3800ADF7F2 /* profileViewController */,
 				9DC0956D2458EBFE00ED6B59 /* Models */,
@@ -209,6 +222,16 @@
 				CFA22AB6242285110036DB71 /* Info.plist */,
 			);
 			path = alinaNutrisport;
+			sourceTree = "<group>";
+		};
+		CFA2A9A724BD1A1E00218C55 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				CFA2A9A824BD1A3600218C55 /* chatViewController.swift */,
+				CFA2A9AA24BD1D4C00218C55 /* messageTableViewCell.swift */,
+				CFA2A9AB24BD1D4C00218C55 /* messageTableViewCell.xib */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +299,10 @@
 				CFA22AB2242285110036DB71 /* Assets.xcassets in Resources */,
 				CF0A405824B50A6D008F583B /* personalesTableViewCell.xib in Resources */,
 				CF0A404124B4E27F008F583B /* dietsCollectionViewCell.xib in Resources */,
+				CFA2A9AD24BD1D4C00218C55 /* messageTableViewCell.xib in Resources */,
 				CF0A405424B50A5C008F583B /* genericosTableViewCell.xib in Resources */,
 				9DDC26E12435C1B1002FAC0D /* sectionsCollectionViewCell.xib in Resources */,
+				CFA2A9A624BD107900218C55 /* webViewViewController.xib in Resources */,
 				CFA22AB02422850E0036DB71 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,11 +359,13 @@
 				9DDC26E02435C1B1002FAC0D /* sectionsCollectionViewCell.swift in Sources */,
 				9DBD90E52453483E00191361 /* recoverViewController.swift in Sources */,
 				CFA22AA92422850E0036DB71 /* AppDelegate.swift in Sources */,
+				CFA2A9AC24BD1D4C00218C55 /* messageTableViewCell.swift in Sources */,
 				9DC9486C2432E53300D65573 /* mainViewController.swift in Sources */,
 				CF0A404524B4F7E0008F583B /* datesViewController.swift in Sources */,
 				9DC948662432928100D65573 /* loginViewController.swift in Sources */,
 				CF0A404824B4FBB0008F583B /* datesTableViewCell.swift in Sources */,
 				CF88053024B8E66B001DD622 /* updatedProfile.swift in Sources */,
+				CFA2A9A524BD107800218C55 /* webViewViewController.swift in Sources */,
 				CF0A405724B50A6D008F583B /* personalesTableViewCell.swift in Sources */,
 				9DC948692432996000D65573 /* Extensions.swift in Sources */,
 				CF0A404324B4EBB5008F583B /* settingsViewController.swift in Sources */,
@@ -348,6 +375,7 @@
 				CF0A403924B4E108008F583B /* dietsViewController.swift in Sources */,
 				9DC095732459312800ED6B59 /* Login.swift in Sources */,
 				CF0A405324B50A5C008F583B /* genericosTableViewCell.swift in Sources */,
+				CFA2A9A924BD1A3600218C55 /* chatViewController.swift in Sources */,
 				CF88052E24B8DE87001DD622 /* profileInfo.swift in Sources */,
 				CF0A404024B4E27F008F583B /* dietsCollectionViewCell.swift in Sources */,
 				9DC095712458ED1C00ED6B59 /* baseURL.swift in Sources */,
@@ -498,7 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -520,7 +548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;

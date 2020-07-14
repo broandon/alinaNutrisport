@@ -13,6 +13,7 @@ class documentosGenericosViewController: UIViewController {
     var appointments: [Dictionary<String, Any>] = []
     let reuseDocument = "DocumentCell3"
     
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {

@@ -34,7 +34,6 @@ class settingsViewController: UIViewController {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! mainViewController
         newViewController.hero.modalAnimationType = .pageOut(direction: .right)
-        
         self.hero.replaceViewController(with: newViewController)
     }
     @IBAction func closeSession(_ sender: Any) {

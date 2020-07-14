@@ -13,14 +13,10 @@ class datesViewController: UIViewController {
     
     @IBOutlet weak var logoBackround: UIView?
     @IBOutlet weak var logoImage: UIImageView?
-    
     @IBOutlet weak var containerView1Dates: UIView?
     @IBOutlet weak var containerView2Calendar: UIView?
-    
     @IBOutlet weak var tableView: UITableView?
-    
     @IBOutlet weak var calendarView: UIView?
-    
     
     var appointments: [Dictionary<String, Any>] = []
     let reuseDocument = "DocumentCell3"

@@ -9,22 +9,18 @@
 import UIKit
 
 class dietsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+    
     @IBOutlet weak var dietsCollectionView: UICollectionView!
     @IBOutlet weak var logoBackground: UIView!
     @IBOutlet weak var logoImage: UIImageView!
     
-    
     let reuseDocument = "dietsCellStores"
-    
-    var Diets : [Dictionary<String, Any>] =
-           [["Titulo": "Dieta 1", "ID" : "1", "Imagen" : UIImage(named: "manzana")!],
-            ["Titulo": "Dieta 2", "ID" : "2", "Imagen" : UIImage(named: "manzana")!],
-            ["Titulo": "Dieta 3", "ID" : "3", "Imagen" : UIImage(named: "manzana")!]]
+    let UserID = UserDefaults.standard.string(forKey: "IDUser")
+    var Diets : [Dictionary<String, Any>] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        downloadJson()
         setupView()
         setupCollectionview()
     }
@@ -39,7 +35,6 @@ class dietsViewController: UIViewController, UICollectionViewDelegate, UICollect
         logoBackground.layer.shadowColor = UIColor.gray.cgColor
         logoBackground.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         logoBackground.layer.shadowOpacity = 1.0
-        
         logoImage.layer.backgroundColor = UIColor.white.cgColor
         logoImage.layer.borderColor = UIColor.lightGray.cgColor
         logoImage.layer.borderWidth = 0.0
@@ -53,48 +48,79 @@ class dietsViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func setupCollectionview() {
-          let documentXib = UINib(nibName: "dietsCollectionViewCell", bundle: nil)
-          dietsCollectionView.dataSource = self
-          dietsCollectionView.delegate = self
-          dietsCollectionView.register(documentXib, forCellWithReuseIdentifier: reuseDocument)
-      }
+        let documentXib = UINib(nibName: "dietsCollectionViewCell", bundle: nil)
+        dietsCollectionView.dataSource = self
+        dietsCollectionView.delegate = self
+        dietsCollectionView.register(documentXib, forCellWithReuseIdentifier: reuseDocument)
+    }
+    
+    func downloadJson() {
+        let url = URL(string: "http://alinanutrisport.com.mx/sistema/webservice/controller_last.php")!
+        var request = URLRequest(url: url)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
+        request.httpMethod = "POST" // Metodo
+        let postString = "funcion=getDiets&id_user=" + UserID!
+        request.httpBody = postString.data(using: .utf8)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil, response != nil else {
+                return
+            }
+            let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            
+            if let dictionary = json as? Dictionary<String, Any> {
+                for d in dictionary["data"] as! [Dictionary<String, Any>] {
+                    print(d)
+                    self.Diets.append(d)
+                }
+            }
+            DispatchQueue.main.async {
+                if self.Diets.count > 0 {
+                    self.dietsCollectionView.reloadData()
+                }
+                
+            }
+        }.resume()
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-           return 3
-       }
+        return Diets.count
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let alert = UIAlertController(title: "¡Pronto!", message: "Muy pronto tendrás tus dietas personalizadas en esta sección.", preferredStyle: .alert)
-
-        alert.addAction(UIAlertAction(title: "Genial", style: .default, handler: nil))
-         
-        self.present(alert, animated: true)
+        let pickedSections = Diets[indexPath.row]
+        let urlToVisit = pickedSections["url"]
+        
+        let vc = webViewViewController(nibName: "webViewViewController", bundle: nil)
+        vc.urlToVisit = urlToVisit as! String
+        self.present(vc, animated: true)
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-           let pickedSections = Diets[indexPath.row]
-           let sectionImage = pickedSections["Imagen"] as! UIImage
-           let sectionTitle = pickedSections["Titulo"] as! String
-           let cell = dietsCollectionView.dequeueReusableCell(withReuseIdentifier: reuseDocument, for: indexPath)
-           if let cell = cell as? dietsCollectionViewCell {
-               DispatchQueue.main.async {
+        let pickedSections = Diets[indexPath.row]
+        let sectionImage = UIImage(named: "manzana")
+        let sectionTitle = pickedSections["nombre"]
+        let cell = dietsCollectionView.dequeueReusableCell(withReuseIdentifier: reuseDocument, for: indexPath)
+        if let cell = cell as? dietsCollectionViewCell {
+            DispatchQueue.main.async {
                 cell.image.image = sectionImage
-                cell.label.text = sectionTitle
-               }
-           }
-           return cell
-       }
+                    cell.label.text = "Dieta"
+                    cell.label.text = sectionTitle as? String
+            }
+        }
+        return cell
+    }
+    
     @IBAction func getOut(_ sender: Any) {
         
         self.hero.isEnabled = true
-             
-             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-             let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! mainViewController
-             newViewController.hero.modalAnimationType = .pageOut(direction: .right)
-             
-             self.hero.replaceViewController(with: newViewController)
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! mainViewController
+        newViewController.hero.modalAnimationType = .pageOut(direction: .right)
+        
+        self.hero.replaceViewController(with: newViewController)
         
     }
     @IBAction func sectionChange(_ sender: UISegmentedControl) {

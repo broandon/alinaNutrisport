@@ -125,6 +125,14 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             newViewController.hero.modalAnimationType = .pageIn(direction: .left)
             self.hero.replaceViewController(with: newViewController)
         }
+        
+        if sectionID == "5" {
+            self.hero.isEnabled = true
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "chatViewController") as! chatViewController
+            newViewController.hero.modalAnimationType = .pageIn(direction: .left)
+            self.hero.replaceViewController(with: newViewController)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
