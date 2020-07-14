@@ -30,8 +30,9 @@ class chatViewController: UIViewController {
         tableView!.dataSource = self
         tableView!.separatorStyle = .none
         tableView!.allowsSelection = true
+        tableView.transform = CGAffineTransform(rotationAngle: (-.pi))
+        tableView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.size.width - 10)
     }
-    
     
     func setupView() {
         logoBackground?.layer.backgroundColor = UIColor.white.cgColor
@@ -84,6 +85,7 @@ class chatViewController: UIViewController {
     @IBAction func sendMessage(_ sender: Any) {
         
         if messageText.text?.isEmpty == true {
+            print("No text.")
             return
         }
         
@@ -106,13 +108,14 @@ class chatViewController: UIViewController {
                     
                     if stateNumber == "200" {
                         DispatchQueue.main.async {
-                            self.messages.removeAll()
-                            self.downloadJson()
-                            self.tableView.reloadData()
-                            self.messageText.text = ""
+                            UIView.animate(withDuration: 0.3, animations: {
+                                self.messages.removeAll()
+                                self.downloadJson()
+                                self.tableView.reloadData()
+                                self.messageText.text = ""
+                            })
                         }
                     }
-                    
                 }
             }
             DispatchQueue.main.async {
@@ -141,10 +144,17 @@ extension chatViewController : UITableViewDelegate, UITableViewDataSource {
         return UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        messageText.resignFirstResponder()
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseDocument, for: indexPath) as? messageTableViewCell else {
             return UITableViewCell()
         }
+        
+        messages.sort { ($0["Id"] as! String) > ($1["Id"] as! String) }
+        
         let document = messages[indexPath.row]
         let ID  = document["Id"] as? String ?? ""
         let Mensaje = document["mensaje"] as? String ?? ""
@@ -165,6 +175,8 @@ extension chatViewController : UITableViewDelegate, UITableViewDataSource {
         
         cell.dateLabel.text = Fecha
         cell.mainMessageLabel.text = Mensaje
+        cell.transform = CGAffineTransform(rotationAngle: (-.pi))
+        cell.selectionStyle = .none
         return cell
     }
     

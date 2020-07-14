@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -484,7 +484,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuJ-X5-FhE">
-                                <rect key="frame" x="0.0" y="352" width="414" height="1165"/>
+                                <rect key="frame" x="0.0" y="352" width="414" height="319"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2020-07-07 at 11.30.44" translatesAutoresizingMaskIntoConstraints="NO" id="8hk-xN-nkb">
                                         <rect key="frame" x="8" y="8" width="398" height="191"/>
@@ -1379,14 +1379,14 @@
     <resources>
         <image name="Screen Shot 2020-07-07 at 11.30.44" width="1124" height="484"/>
         <image name="chat" width="600" height="599"/>
-        <image name="checkmark.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="documento" width="600" height="599"/>
         <image name="engraneVerde" width="600" height="599"/>
         <image name="iconos salir" width="400" height="400"/>
         <image name="iconos-seguridad" width="400" height="400"/>
         <image name="iconos-telefono" width="400" height="400"/>
         <image name="iconos-usuario" width="400" height="400"/>
-        <image name="leaf.arrow.circlepath" catalog="system" width="60" height="64"/>
+        <image name="leaf.arrow.circlepath" catalog="system" width="121" height="128"/>
         <image name="logoAlinaNutrisport" width="1000" height="1000"/>
         <image name="manzana" width="600" height="599"/>
         <image name="tabla" width="600" height="599"/>
