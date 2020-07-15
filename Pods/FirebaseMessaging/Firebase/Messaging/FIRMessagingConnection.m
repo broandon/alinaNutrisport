@@ -76,7 +76,7 @@ static NSString *const kRemoteFromAddress = @"from";
 
 @end
 
-@interface FIRMessagingConnection () <FIRMessagingSecureSocketDelegate>
+@interface FIRMessagingConnection ()<FIRMessagingSecureSocketDelegate>
 
 @property(nonatomic, readwrite, weak) FIRMessagingRmqManager *rmq2Manager;
 @property(nonatomic, readwrite, weak) FIRMessagingDataMessageManager *dataMessageManager;
@@ -105,8 +105,8 @@ static NSString *const kRemoteFromAddress = @"from";
 
 @end
 
-@implementation FIRMessagingConnection
-;
+
+@implementation FIRMessagingConnection;
 
 - (instancetype)initWithAuthID:(NSString *)authId
                          token:(NSString *)token
@@ -136,8 +136,10 @@ static NSString *const kRemoteFromAddress = @"from";
 
 - (NSString *)description {
   return [NSString stringWithFormat:@"host: %@, port: %lu, stream id in: %d, stream id out: %d",
-                                    self.host, _FIRMessaging_UL(self.port), self.inStreamId,
-                                    self.outStreamId];
+          self.host,
+          _FIRMessaging_UL(self.port),
+          self.inStreamId,
+          self.outStreamId];
 }
 
 - (void)signIn {
@@ -197,11 +199,9 @@ static NSString *const kRemoteFromAddress = @"from";
 
 - (void)didDisconnectWithSecureSocket:(FIRMessagingSecureSocket *)socket {
   FIRMessagingLoggerDebug(kFIRMessagingMessageCodeConnection002,
-                          @"Secure socket disconnected from FIRMessaging service. %ld",
-                          (long)self.socket.state);
+                          @"Secure socket disconnected from FIRMessaging service. %ld", (long)self.socket.state);
   [self disconnect];
-  [self.delegate connection:self
-          didCloseForReason:kFIRMessagingConnectionCloseReasonSocketDisconnected];
+  [self.delegate connection:self didCloseForReason:kFIRMessagingConnectionCloseReasonSocketDisconnected];
 }
 
 - (void)secureSocket:(FIRMessagingSecureSocket *)socket
@@ -225,8 +225,7 @@ static NSString *const kRemoteFromAddress = @"from";
         kFIRMessagingMessageCodeConnection004,
         @"Should not receive generated message when the connection is not connected.");
     return;
-  } else if (tag != kFIRMessagingProtoTagLoginResponse &&
-             self.state != kFIRMessagingConnectionSignedIn) {
+  } else if (tag != kFIRMessagingProtoTagLoginResponse && self.state != kFIRMessagingConnectionSignedIn) {
     FIRMessagingLoggerDebug(
         kFIRMessagingMessageCodeConnection005,
         @"Should not receive generated message when the connection is not signed in.");
@@ -235,7 +234,9 @@ static NSString *const kRemoteFromAddress = @"from";
 
   // If traffic is received after a heartbeat it is safe to assume the connection is healthy.
   [self cancelConnectionTimeoutTask];
-  [self performSelector:@selector(sendHeartbeatPing) withObject:nil afterDelay:kHeartbeatInterval];
+  [self performSelector:@selector(sendHeartbeatPing)
+             withObject:nil
+             afterDelay:kHeartbeatInterval];
 
   [self willProcessProto:proto];
   switch (tag) {
@@ -268,8 +269,8 @@ static NSString *const kRemoteFromAddress = @"from";
 // we can retrieve them from the Rmq if necessary to look at stuff but for now we just
 // log it.
 - (void)secureSocket:(FIRMessagingSecureSocket *)socket
-    didSendProtoWithTag:(int8_t)tag
-                  rmqId:(NSString *)rmqId {
+ didSendProtoWithTag:(int8_t)tag
+               rmqId:(NSString *)rmqId {
   // log the message
   [self logMessage:rmqId messageType:tag isOut:YES];
 }
@@ -282,8 +283,7 @@ static NSString *const kRemoteFromAddress = @"from";
     FIRMessagingLoggerDebug(kFIRMessagingMessageCodeConnection006,
                             @"Cannot send generated message when the connection is not connected.");
     return;
-  } else if (tag != kFIRMessagingProtoTagLoginRequest &&
-             self.state != kFIRMessagingConnectionSignedIn) {
+  } else if (tag != kFIRMessagingProtoTagLoginRequest && self.state != kFIRMessagingConnectionSignedIn) {
     FIRMessagingLoggerDebug(kFIRMessagingMessageCodeConnection007,
                             @"Cannot send generated message when the connection is not signed in.");
     return;
@@ -320,7 +320,7 @@ static NSString *const kRemoteFromAddress = @"from";
   login.resource = authID;
   login.user = authID;
   login.useRmq2 = YES;
-  login.lastRmqId = 1;  // Sending not enabled yet so this stays as 1.
+  login.lastRmqId = 1; // Sending not enabled yet so this stays as 1.
   return login;
 }
 
@@ -344,7 +344,8 @@ static NSString *const kRemoteFromAddress = @"from";
   return fcmNetworkType;
 }
 
-- (void)sendLoginRequest:(NSString *)authId token:(NSString *)token {
+- (void)sendLoginRequest:(NSString *)authId
+                   token:(NSString *)token {
   GtalkLoginRequest *login = [[self class] loginRequestWithToken:token authID:authId];
 
   // clear the messages sent during last connection
@@ -469,12 +470,13 @@ static NSString *const kRemoteFromAddress = @"from";
   if (extension) {
     int extensionId = extension.id_p;
     if (extensionId == kIqSelectiveAck) {
+
       NSString *dataString = extension.data_p;
       GtalkSelectiveAck *selectiveAck = [[GtalkSelectiveAck alloc] init];
       [selectiveAck mergeFromData:[dataString dataUsingEncoding:NSUTF8StringEncoding]
                 extensionRegistry:nil];
 
-      NSArray<NSString *> *acks = [selectiveAck idArray];
+      NSArray <NSString *>*acks = [selectiveAck idArray];
 
       // we've received ACK's
       [self.delegate connectionDidReceiveAckForRmqIds:acks];
@@ -516,7 +518,7 @@ static NSString *const kRemoteFromAddress = @"from";
                             @"RMQ: Add unacked persistent Id: %@.",
                             [rmq2Id stringByReplacingOccurrencesOfString:@"%" withString:@"%%"]);
     [self.unackedS2dIds addObject:rmq2Id];
-    [self.rmq2Manager saveS2dMessageWithRmqId:rmq2Id];  // RMQ save
+    [self.rmq2Manager saveS2dMessageWithRmqId:rmq2Id]; // RMQ save
   }
   BOOL explicitAck = ([proto isKindOfClass:[GtalkDataMessageStanza class]] &&
                       [(GtalkDataMessageStanza *)proto immediateAck]);
@@ -532,8 +534,7 @@ static NSString *const kRemoteFromAddress = @"from";
 
   NSString *rmq2Id = FIRMessagingGetRmq2Id(proto);
   if ([rmq2Id length]) {
-    FIRMessagingD2SInfo *d2sInfo = [[FIRMessagingD2SInfo alloc] initWithStreamId:self.outStreamId
-                                                                           d2sId:rmq2Id];
+    FIRMessagingD2SInfo *d2sInfo = [[FIRMessagingD2SInfo alloc] initWithStreamId:self.outStreamId d2sId:rmq2Id];
     [self.d2sInfos addObject:d2sInfo];
   }
 
@@ -600,10 +601,10 @@ static NSString *const kRemoteFromAddress = @"from";
   }
 
   NSSet *ackedStreamIds =
-      [self.ackedS2dMap keysOfEntriesPassingTest:^BOOL(id key, id obj, BOOL *stop) {
-        NSString *streamId = key;
-        return streamId.intValue <= lastReceivedStreamId;
-      }];
+    [self.ackedS2dMap keysOfEntriesPassingTest:^BOOL(id key, id obj, BOOL *stop) {
+      NSString *streamId = key;
+      return streamId.intValue <= lastReceivedStreamId;
+    }];
   NSMutableArray *s2dIdsToDelete = [NSMutableArray array];
 
   for (NSString *streamId in ackedStreamIds) {
@@ -640,8 +641,7 @@ static NSString *const kRemoteFromAddress = @"from";
   [NSObject cancelPreviousPerformRequestsWithTarget:self
                                            selector:@selector(sendHeartbeatPing)
                                              object:nil];
-  // Unset the delegate. FIRMessagingConnection will not receive further events from the socket from
-  // now on.
+  // Unset the delegate. FIRMessagingConnection will not receive further events from the socket from now on.
   self.socket.delegate = nil;
   [self.socket disconnect];
   self.state = kFIRMessagingConnectionNotConnected;

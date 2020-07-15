@@ -7,11 +7,7 @@ target 'alinaNutrisport' do
 
   # Pods for alinaNutrisport
   
-  pod 'TextFieldEffects'
-  pod 'RevealingSplashView'
-  pod 'Alamofire'
   pod 'JGProgressHUD'
-  pod 'AlamofireImage'
   pod 'SDWebImage'
   pod 'FSCalendar'
   pod 'DateTimePicker'
@@ -24,5 +20,6 @@ target 'alinaNutrisport' do
   pod 'TableViewReloadAnimation'
   pod 'NVActivityIndicatorView'
   pod 'BetterSegmentedControl', '~> 1.3'
+  pod 'Charts'
 
 end

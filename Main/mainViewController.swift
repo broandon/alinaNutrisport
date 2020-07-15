@@ -18,7 +18,6 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var upperCircle: UIImageView!
     
     let reuseDocument = "sectionsCellStores"
-    
     var Sections : [Dictionary<String, Any>] =
         [["Titulo": "Perfil", "ID" : "1", "Imagen" : UIImage(named: "perfil")!],
          ["Titulo": "Dietas", "ID" : "2", "Imagen" : UIImage(named: "manzana")!],
@@ -87,6 +86,7 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let sectionID = pickedSections["ID"] as! String
         
         if sectionID == "1" {
+            UserDefaults.standard.set(true, forKey: "loadImage")
             self.hero.isEnabled = true
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileViewController") as! profileViewController

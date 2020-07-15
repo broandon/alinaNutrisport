@@ -32,6 +32,7 @@
 		CF0A405424B50A5C008F583B /* genericosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A405224B50A5C008F583B /* genericosTableViewCell.xib */; };
 		CF0A405724B50A6D008F583B /* personalesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A405524B50A6D008F583B /* personalesTableViewCell.swift */; };
 		CF0A405824B50A6D008F583B /* personalesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A405624B50A6D008F583B /* personalesTableViewCell.xib */; };
+		CF56A49B24BF852A0060D86A /* Measurements.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A49A24BF852A0060D86A /* Measurements.swift */; };
 		CF88052E24B8DE87001DD622 /* profileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88052D24B8DE87001DD622 /* profileInfo.swift */; };
 		CF88053024B8E66B001DD622 /* updatedProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88052F24B8E66B001DD622 /* updatedProfile.swift */; };
 		CFA22AA92422850E0036DB71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA22AA82422850E0036DB71 /* AppDelegate.swift */; };
@@ -74,6 +75,7 @@
 		CF0A405224B50A5C008F583B /* genericosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = genericosTableViewCell.xib; sourceTree = "<group>"; };
 		CF0A405524B50A6D008F583B /* personalesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalesTableViewCell.swift; sourceTree = "<group>"; };
 		CF0A405624B50A6D008F583B /* personalesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = personalesTableViewCell.xib; sourceTree = "<group>"; };
+		CF56A49A24BF852A0060D86A /* Measurements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurements.swift; sourceTree = "<group>"; };
 		CF88052D24B8DE87001DD622 /* profileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileInfo.swift; sourceTree = "<group>"; };
 		CF88052F24B8E66B001DD622 /* updatedProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updatedProfile.swift; sourceTree = "<group>"; };
 		CFA22AA52422850E0036DB71 /* alinaNutrisport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alinaNutrisport.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 				9DC095722459312800ED6B59 /* Login.swift */,
 				CF88052D24B8DE87001DD622 /* profileInfo.swift */,
 				CF88052F24B8E66B001DD622 /* updatedProfile.swift */,
+				CF56A49A24BF852A0060D86A /* Measurements.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				9DC9486C2432E53300D65573 /* mainViewController.swift in Sources */,
 				CF0A404524B4F7E0008F583B /* datesViewController.swift in Sources */,
 				9DC948662432928100D65573 /* loginViewController.swift in Sources */,
+				CF56A49B24BF852A0060D86A /* Measurements.swift in Sources */,
 				CFA39F5124BE51B500626A6B /* profleOtherViewController.swift in Sources */,
 				CF0A404824B4FBB0008F583B /* datesTableViewCell.swift in Sources */,
 				CF88053024B8E66B001DD622 /* updatedProfile.swift in Sources */,

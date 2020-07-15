@@ -16,9 +16,8 @@
 
 #import "Firebase/Messaging/FIRMessagingPubSub.h"
 
-#import <FirebaseMessaging/FIRMessaging.h>
-#import <GoogleUtilities/GULSecureCoding.h>
 #import <GoogleUtilities/GULUserDefaults.h>
+#import <FirebaseMessaging/FIRMessaging.h>
 
 #import "Firebase/Messaging/FIRMessagingClient.h"
 #import "Firebase/Messaging/FIRMessagingDefines.h"
@@ -159,9 +158,10 @@ static NSString *const kPendingSubscriptionsListKey =
 #pragma mark - FIRMessagingPendingTopicsListDelegate
 
 - (void)pendingTopicsList:(FIRMessagingPendingTopicsList *)list
-    requestedUpdateForTopic:(NSString *)topic
-                     action:(FIRMessagingTopicAction)action
-                 completion:(FIRMessagingTopicOperationCompletion)completion {
+  requestedUpdateForTopic:(NSString *)topic
+                   action:(FIRMessagingTopicAction)action
+               completion:(FIRMessagingTopicOperationCompletion)completion {
+
   NSString *fcmToken = [[FIRMessaging messaging] defaultFcmToken];
   if (action == FIRMessagingTopicActionSubscribe) {
     [self subscribeWithToken:fcmToken topic:topic options:nil handler:completion];
@@ -183,13 +183,10 @@ static NSString *const kPendingSubscriptionsListKey =
 
 - (void)archivePendingTopicsList:(FIRMessagingPendingTopicsList *)topicsList {
   GULUserDefaults *defaults = [GULUserDefaults standardUserDefaults];
-  NSError *error;
-  NSData *pendingData = [GULSecureCoding archivedDataWithRootObject:topicsList error:&error];
-  if (error) {
-    FIRMessagingLoggerError(kFIRMessagingMessageCodePubSubArchiveError,
-                            @"Failed to archive topic list data %@", error);
-    return;
-  }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+  NSData *pendingData = [NSKeyedArchiver archivedDataWithRootObject:topicsList];
+#pragma clang diagnostic pop
   [defaults setObject:pendingData forKey:kPendingSubscriptionsListKey];
   [defaults synchronize];
 }
@@ -198,23 +195,23 @@ static NSString *const kPendingSubscriptionsListKey =
   GULUserDefaults *defaults = [GULUserDefaults standardUserDefaults];
   NSData *pendingData = [defaults objectForKey:kPendingSubscriptionsListKey];
   FIRMessagingPendingTopicsList *subscriptions;
-  if (pendingData) {
-    NSError *error;
-    subscriptions = [GULSecureCoding
-        unarchivedObjectOfClasses:[NSSet setWithObjects:FIRMessagingPendingTopicsList.class, nil]
-                         fromData:pendingData
-                            error:&error];
-    if (error) {
-      FIRMessagingLoggerError(kFIRMessagingMessageCodePubSubUnarchiveError,
-                              @"Failed to unarchive topic list data %@", error);
+  @try {
+    if (pendingData) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+      subscriptions = [NSKeyedUnarchiver unarchiveObjectWithData:pendingData];
+#pragma clang diagnostic pop
     }
+  } @catch (NSException *exception) {
+    // Nothing we can do, just continue as if we don't have pending subscriptions
+  } @finally {
+    if (subscriptions) {
+      self.pendingTopicUpdates = subscriptions;
+    } else {
+      self.pendingTopicUpdates = [[FIRMessagingPendingTopicsList alloc] init];
+    }
+    self.pendingTopicUpdates.delegate = self;
   }
-  if (subscriptions) {
-    self.pendingTopicUpdates = subscriptions;
-  } else {
-    self.pendingTopicUpdates = [[FIRMessagingPendingTopicsList alloc] init];
-  }
-  self.pendingTopicUpdates.delegate = self;
 }
 
 #pragma mark - Private Helpers

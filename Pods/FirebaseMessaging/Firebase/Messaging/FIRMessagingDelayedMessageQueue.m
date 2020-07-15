@@ -27,8 +27,7 @@ static const int kMaxQueuedMessageCount = 10;
 @interface FIRMessagingDelayedMessageQueue ()
 
 @property(nonatomic, readonly, weak) id<FIRMessagingRmqScanner> rmqScanner;
-@property(nonatomic, readonly, copy)
-    FIRMessagingSendDelayedMessagesHandler sendDelayedMessagesHandler;
+@property(nonatomic, readonly, copy) FIRMessagingSendDelayedMessagesHandler sendDelayedMessagesHandler;
 
 @property(nonatomic, readwrite, assign) int persistedMessageCount;
 // the scheduled timeout or -1 if not set
@@ -49,8 +48,7 @@ static const int kMaxQueuedMessageCount = 10;
 }
 
 - (instancetype)initWithRmqScanner:(id<FIRMessagingRmqScanner>)rmqScanner
-        sendDelayedMessagesHandler:
-            (FIRMessagingSendDelayedMessagesHandler)sendDelayedMessagesHandler {
+        sendDelayedMessagesHandler:(FIRMessagingSendDelayedMessagesHandler)sendDelayedMessagesHandler {
   self = [super init];
   if (self) {
     _rmqScanner = rmqScanner;
@@ -99,7 +97,8 @@ static const int kMaxQueuedMessageCount = 10;
       for (NSString *rmqID in messages) {
         GPBMessage *proto = messages[rmqID];
         GtalkDataMessageStanza *stanza = (GtalkDataMessageStanza *)proto;
-        if ([stanza hasMaxDelay] && [stanza sent] >= self.lastDBScanTimestampSeconds) {
+        if ([stanza hasMaxDelay] &&
+            [stanza sent] >= self.lastDBScanTimestampSeconds) {
           [delayedMessages addObject:stanza];
         }
       }

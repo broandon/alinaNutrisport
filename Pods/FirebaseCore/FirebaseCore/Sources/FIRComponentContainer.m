@@ -203,12 +203,6 @@ static NSMutableSet<Class> *sFIRComponentRegistrants;
   }
 }
 
-- (void)removeAllComponents {
-  @synchronized(self) {
-    [self.components removeAllObjects];
-  }
-}
-
 @end
 
 NS_ASSUME_NONNULL_END

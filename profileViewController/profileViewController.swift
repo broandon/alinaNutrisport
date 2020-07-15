@@ -18,7 +18,6 @@ class profileViewController: UIViewController {
     @IBOutlet weak var saveProfileButton: UIButton!
     @IBOutlet weak var profileDataView: UIView!
     @IBOutlet weak var statisticsDataView: UIView!
-    @IBOutlet weak var newPhotoDataView: UIView!
     @IBOutlet weak var nombreTextField: UITextField!
     @IBOutlet weak var apellidoTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -50,7 +49,10 @@ class profileViewController: UIViewController {
                         self.nombreTextField.text = profileData?.data?.info?.nombre
                         self.apellidoTextField.text = profileData?.data?.info?.apellidos
                         self.emailTextField.text = profileData?.data?.info?.telefono
-                        self.profileImage.sd_setImage(with: URL(string: imageForProfile ?? "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"), completed: nil)
+                        if UserDefaults.standard.bool(forKey: "loadImage") == true {
+                            self.profileImage.sd_setImage(with: URL(string: imageForProfile ?? "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"), completed: nil)
+                            UserDefaults.standard.set(false, forKey: "loadImage")
+                        }
                     }
                 }
             }
@@ -79,7 +81,13 @@ class profileViewController: UIViewController {
         logoBackground.layer.shadowOpacity = 1.0
         saveProfileButton.layer.cornerRadius = 13
         statisticsDataView.alpha = 0
-        newPhotoDataView.alpha = 0
+        if UserDefaults.standard.bool(forKey: "comingFromProfile") == true {
+            segmentIndicator.selectedSegmentIndex = 1
+            profileImage.image = UIImage(named: "graficas1")
+            profileDataView.alpha = 0
+            statisticsDataView.alpha = 1
+            UserDefaults.standard.set(false, forKey: "comingFromProfile")
+        }
     }
     
     @IBAction func selectedSegment(_ sender: UISegmentedControl) {
@@ -88,14 +96,12 @@ class profileViewController: UIViewController {
             profileImage.sd_setImage(with: URL(string: profileImageSaved ?? ""), completed: nil)
             profileDataView.alpha = 1
             statisticsDataView.alpha = 0
-            newPhotoDataView.alpha = 0
         }
         
         if sender.selectedSegmentIndex == 1 {
             profileImage.image = UIImage(named: "graficas1")
             profileDataView.alpha = 0
             statisticsDataView.alpha = 1
-            newPhotoDataView.alpha = 0
         }
         
         if sender.selectedSegmentIndex == 2 {
@@ -107,7 +113,6 @@ class profileViewController: UIViewController {
             profileImage.image = UIImage(named: "fotos1")
             profileDataView.alpha = 0
             statisticsDataView.alpha = 0
-            newPhotoDataView.alpha = 1
         }
     }
     
