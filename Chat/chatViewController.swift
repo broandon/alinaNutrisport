@@ -24,16 +24,17 @@ class chatViewController: UIViewController {
     @IBOutlet weak var messageText: UITextField!
     
     //MARK: viewDid
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadJson()
         setupView()
         setupTableView()
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
+        let statusBarFrame = UIApplication.shared.statusBarFrame
+        let statusBarView = UIView(frame: statusBarFrame)
+        self.view.addSubview(statusBarView)
+        statusBarView.backgroundColor = #colorLiteral(red: 0.3819331229, green: 0.6950346828, blue: 0.01693408191, alpha: 1)
     }
     
     //MARK: Funcs
@@ -42,8 +43,8 @@ class chatViewController: UIViewController {
         logoBackground?.layer.backgroundColor = UIColor.white.cgColor
         logoBackground?.layer.borderColor = UIColor.lightGray.cgColor
         logoBackground?.layer.borderWidth = 0.0
-        logoBackground?.layer.cornerRadius = (logoBackground?.bounds.height ?? 50) / 2
-        logoBackground?.layer.masksToBounds = true
+        logoBackground?.layer.cornerRadius = 84.5
+        logoBackground?.layer.masksToBounds = false
         logoBackground?.layer.shadowRadius = 3.5
         logoBackground?.layer.shadowColor = UIColor.gray.cgColor
         logoBackground?.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
@@ -51,12 +52,8 @@ class chatViewController: UIViewController {
         logo?.layer.backgroundColor = UIColor.white.cgColor
         logo?.layer.borderColor = UIColor.lightGray.cgColor
         logo?.layer.borderWidth = 0.0
-        logo?.layer.cornerRadius = (logo?.bounds.height ?? 50) / 2
+        logo?.layer.cornerRadius = 84.5
         logo?.layer.masksToBounds = true
-        logo?.layer.shadowRadius = 3.5
-        logo?.layer.shadowColor = UIColor.gray.cgColor
-        logo?.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        logo?.layer.shadowOpacity = 1.0
     }
     
     func setupTableView() {

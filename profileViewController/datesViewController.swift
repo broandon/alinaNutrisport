@@ -37,22 +37,17 @@ class datesViewController: UIViewController {
         logoBackround?.layer.backgroundColor = UIColor.white.cgColor
         logoBackround?.layer.borderColor = UIColor.lightGray.cgColor
         logoBackround?.layer.borderWidth = 0.0
-        logoBackround?.layer.cornerRadius = (logoBackround?.bounds.height ?? 50) / 2
-        logoBackround?.layer.masksToBounds = true
+        logoBackround?.layer.cornerRadius = 84.5
+        logoBackround?.layer.masksToBounds = false
         logoBackround?.layer.shadowRadius = 3.5
         logoBackround?.layer.shadowColor = UIColor.gray.cgColor
         logoBackround?.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         logoBackround?.layer.shadowOpacity = 1.0
-        
         logoImage?.layer.backgroundColor = UIColor.white.cgColor
         logoImage?.layer.borderColor = UIColor.lightGray.cgColor
         logoImage?.layer.borderWidth = 0.0
-        logoImage?.layer.cornerRadius = (logoImage?.bounds.height ?? 50) / 2
+        logoImage?.layer.cornerRadius = 84.5
         logoImage?.layer.masksToBounds = true
-        logoImage?.layer.shadowRadius = 3.5
-        logoImage?.layer.shadowColor = UIColor.gray.cgColor
-        logoImage?.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        logoImage?.layer.shadowOpacity = 1.0
         
         containerView1Dates?.alpha = 0
         containerView2Calendar?.alpha = 1

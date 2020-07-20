@@ -23,21 +23,21 @@ class documentosViewController: UIViewController {
     func setupView() {
         behindLogoView?.layer.backgroundColor = UIColor.white.cgColor
         behindLogoView?.layer.borderColor = UIColor.lightGray.cgColor
-        behindLogoView?.layer.borderWidth = 0.0
+        behindLogoView?.layer.borderWidth = 0.5
         behindLogoView?.layer.cornerRadius = (behindLogoView?.bounds.height ?? 50) / 2
         behindLogoView?.layer.masksToBounds = true
-        behindLogoView?.layer.shadowRadius = 3.5
+        behindLogoView?.layer.shadowRadius = 4.5
         behindLogoView?.layer.shadowColor = UIColor.gray.cgColor
-        behindLogoView?.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        behindLogoView?.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
         behindLogoView?.layer.shadowOpacity = 1.0
         logoImage?.layer.backgroundColor = UIColor.white.cgColor
         logoImage?.layer.borderColor = UIColor.lightGray.cgColor
-        logoImage?.layer.borderWidth = 0.0
+        logoImage?.layer.borderWidth = 0.5
         logoImage?.layer.cornerRadius = (logoImage?.bounds.height ?? 50) / 2
         logoImage?.layer.masksToBounds = true
-        logoImage?.layer.shadowRadius = 3.5
+        logoImage?.layer.shadowRadius = 4.5
         logoImage?.layer.shadowColor = UIColor.gray.cgColor
-        logoImage?.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        logoImage?.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
         logoImage?.layer.shadowOpacity = 1.0
         documentosPersonales.alpha = 1
         documentosGenericos.alpha = 0

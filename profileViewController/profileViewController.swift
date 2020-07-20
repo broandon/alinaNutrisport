@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import Charts
 
 class profileViewController: UIViewController {
     
@@ -23,12 +24,55 @@ class profileViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var segmentIndicator: UISegmentedControl!
+    @IBOutlet weak var firstGraphic: LineChartView!
+    
+    var chart1Data : [Double] = [77, 78]
+    var datesInfo : [String] = ["Peso", "Peso Otro"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         getInfo()
+        
+        // CHART 1 -------------------------------
+          
+          var preEntries = [ChartDataEntry]()
+          
+          let pre = chart1Data
+          
+          for i in 0..<pre.count {
+              let preDataEntry = ChartDataEntry(x: Double(i), y: pre[i])
+              preEntries.append(preDataEntry)
+              
+          }
+          
+          let nombreMedidas = datesInfo
+          firstGraphic.xAxis.valueFormatter = IndexAxisValueFormatter(values: nombreMedidas)
+          firstGraphic.xAxis.labelPosition = XAxis.LabelPosition.bottom
+          firstGraphic.xAxis.granularity = 1
+          firstGraphic.xAxis.labelRotationAngle = 0
+          
+          let line1 = LineChartDataSet(entries: preEntries, label: "Peso")
+          line1.valueColors = [NSUIColor.black]
+          line1.circleColors = [NSUIColor(cgColor: UIColor(red: 0.34, green: 0.47, blue: 0.38, alpha: 1.00).cgColor)]
+          line1.lineWidth = 3.0
+          
+          line1.colors = [NSUIColor(cgColor: UIColor(red: 0.34, green: 0.47, blue: 0.38, alpha: 1.00).cgColor)]
+          
+          line1.drawFilledEnabled = true
+          line1.fillColor = UIColor(red: 0.34, green: 0.47, blue: 0.38, alpha: 1.00)
+          
+          let data = LineChartData()
+          
+          data.addDataSet(line1)
+          
+          firstGraphic.data = data
+          
+          firstGraphic.extraRightOffset = 13
+          firstGraphic.extraLeftOffset = 13
+                  
     }
+    
     
     func getInfo() {
         let url = URL(string: http.baseURL())!

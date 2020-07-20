@@ -30,7 +30,7 @@ class dietsViewController: UIViewController, UICollectionViewDelegate, UICollect
         logoBackground.layer.borderColor = UIColor.lightGray.cgColor
         logoBackground.layer.borderWidth = 0.0
         logoBackground.layer.cornerRadius = logoBackground.bounds.height / 2
-        logoBackground.layer.masksToBounds = true
+        logoBackground.layer.masksToBounds = false
         logoBackground.layer.shadowRadius = 3.5
         logoBackground.layer.shadowColor = UIColor.gray.cgColor
         logoBackground.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
@@ -40,10 +40,6 @@ class dietsViewController: UIViewController, UICollectionViewDelegate, UICollect
         logoImage.layer.borderWidth = 0.0
         logoImage.layer.cornerRadius = logoImage.bounds.height / 2
         logoImage.layer.masksToBounds = true
-        logoImage.layer.shadowRadius = 3.5
-        logoImage.layer.shadowColor = UIColor.gray.cgColor
-        logoImage.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        logoImage.layer.shadowOpacity = 1.0
         dietsCollectionView.alpha = 1
     }
     

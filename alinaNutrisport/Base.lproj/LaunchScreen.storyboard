@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,19 +25,19 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoEasycode" translatesAutoresizingMaskIntoConstraints="NO" id="SB0-Su-qRg">
-                                <rect key="frame" x="36" y="734" width="303" height="44"/>
+                                <rect key="frame" x="36" y="716" width="303" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Mz6-xM-wH8"/>
+                                    <constraint firstAttribute="height" constant="44" id="RhX-Rx-wBX"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="SB0-Su-qRg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="01M-0k-nUl"/>
                             <constraint firstItem="I4C-4Q-KQL" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-95" id="9GN-4K-Pnp"/>
-                            <constraint firstItem="SB0-Su-qRg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OJS-BV-aob"/>
-                            <constraint firstItem="SB0-Su-qRg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="eT0-sC-Kxq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SB0-Su-qRg" secondAttribute="trailing" constant="36" id="jeK-qf-qcx"/>
                             <constraint firstItem="I4C-4Q-KQL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="t1o-XU-3IY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SB0-Su-qRg" secondAttribute="trailing" constant="36" id="tvG-IV-aBC"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="SB0-Su-qRg" secondAttribute="bottom" constant="18" id="wXo-Un-kk4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

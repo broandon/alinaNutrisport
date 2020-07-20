@@ -31,7 +31,7 @@ class documentosPersonalesViewController: UIViewController {
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
         request.httpMethod = "POST" // Metodo
-        let postString = "funcion=getGenericDocuments&id_user=1"
+        let postString = "funcion=getPersonalDocuments&id_user=1"
         request.httpBody = postString.data(using: .utf8)
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil, response != nil else {

@@ -35,7 +35,6 @@ class loginViewController: UIViewController {
         passTF.addLine(position: .LINE_POSITION_BOTTOM, color: UIColor(named: "Main Green") ?? UIColor.red, width: 1)
         mailTF.addLine(position: .LINE_POSITION_BOTTOM, color: UIColor(named: "Main Green") ?? UIColor.red, width: 1)
         mailTF.attributedPlaceholder = NSAttributedString(string: "E-MAIL", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "Main Blue")!])
-        
         passTF.attributedPlaceholder = NSAttributedString(string: "CONTRASEÑA", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "Main Blue")!])
         loginButton.layer.cornerRadius = 15
     }
@@ -82,19 +81,10 @@ class loginViewController: UIViewController {
                         UserDefaults.standard.set("\(recoverResponse?.data.firstName ?? "")", forKey: "FirstName")
                         UserDefaults.standard.set("\(recoverResponse?.data.lastName ?? "")", forKey: "LastName")
                         UserDefaults.standard.set("\(recoverResponse?.data.mail ?? "")", forKey: "Mail")
-                        
-                        print("THIS IS THE INFO****************************")
-                        print(UserDefaults.standard.string(forKey: "IDUser"))
-                        print(UserDefaults.standard.string(forKey: "FirstName"))
-                        print(UserDefaults.standard.string(forKey: "LastName"))
-                        print(UserDefaults.standard.string(forKey: "Mail"))
-                        print(UserDefaults.standard.bool(forKey: "LoggedStatus"))
-                        print("********************************************")
-                        
                         self.hero.isEnabled = true
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! mainViewController
-                        newViewController.hero.modalAnimationType = .zoomSlide(direction: .down)
+                        newViewController.hero.modalAnimationType = .zoomSlide(direction: .up)
                         self.hero.replaceViewController(with: newViewController)
                     }
                 }
@@ -109,21 +99,12 @@ class loginViewController: UIViewController {
                 }
                 
                 if recoverResponse?.state == "101" {
-                    
                     let alert = UIAlertController(title: "Error", message: "Tu contraseña es incorrecta o ese correo no está registrado", preferredStyle: .alert)
-                    
                     alert.addAction(UIAlertAction(title: "Reintentar", style: .default, handler: nil))
-                    
                     self.present(alert, animated: true)
-                    
                 }
             }
-            
         }
-        
         task.resume()
-        
     }
-    
-    
 }
