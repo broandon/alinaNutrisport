@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -348,18 +348,18 @@
                                 <rect key="frame" x="122.5" y="175" width="169" height="169"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf.arrow.circlepath" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Pmh-pi-l29">
-                                        <rect key="frame" x="35" y="33.5" width="99" height="100"/>
+                                        <rect key="frame" x="20" y="18.5" width="129" height="130"/>
                                         <color key="tintColor" name="Main Green"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Pmh-pi-l29" secondAttribute="trailing" constant="35" id="5KA-Lh-WvU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pmh-pi-l29" secondAttribute="trailing" constant="20" id="5KA-Lh-WvU"/>
                                     <constraint firstAttribute="width" secondItem="dYt-x5-Q6I" secondAttribute="height" multiplier="1:1" id="6A6-w8-YFw"/>
-                                    <constraint firstItem="Pmh-pi-l29" firstAttribute="leading" secondItem="dYt-x5-Q6I" secondAttribute="leading" constant="35" id="9bC-Nd-jTA"/>
+                                    <constraint firstItem="Pmh-pi-l29" firstAttribute="leading" secondItem="dYt-x5-Q6I" secondAttribute="leading" constant="20" id="9bC-Nd-jTA"/>
                                     <constraint firstAttribute="width" constant="169" id="laQ-cf-qVy"/>
-                                    <constraint firstItem="Pmh-pi-l29" firstAttribute="top" secondItem="dYt-x5-Q6I" secondAttribute="top" constant="35" id="pB7-Iv-otk"/>
-                                    <constraint firstAttribute="bottom" secondItem="Pmh-pi-l29" secondAttribute="bottom" constant="35" id="r6j-Nv-qVv"/>
+                                    <constraint firstItem="Pmh-pi-l29" firstAttribute="top" secondItem="dYt-x5-Q6I" secondAttribute="top" constant="20" id="pB7-Iv-otk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pmh-pi-l29" secondAttribute="bottom" constant="20" id="r6j-Nv-qVv"/>
                                     <constraint firstAttribute="height" constant="169" id="y9S-I7-cf1"/>
                                 </constraints>
                             </view>

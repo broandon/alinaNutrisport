@@ -24,7 +24,6 @@ class profileViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var segmentIndicator: UISegmentedControl!
     
-    
     // Graphics views
     @IBOutlet weak var graphicsScrollView: UIScrollView!
     @IBOutlet weak var firstGraphic: LineChartView!
@@ -50,6 +49,7 @@ class profileViewController: UIViewController {
     }
     
     func setupCharts() {
+        print("called")
         // Chart 1
         var preEntries = [ChartDataEntry]()
         let pre = chart1Data
@@ -95,12 +95,11 @@ class profileViewController: UIViewController {
         
         let line2 = LineChartDataSet(entries: preEntries2, label: "Perimetro cintura")
         line2.valueColors = [NSUIColor.black]
-        line2.circleColors = [NSUIColor(cgColor: UIColor(red: 0.51, green: 0.87, blue: 0.92, alpha: 1.00).cgColor)]
+        line2.circleColors = [NSUIColor(cgColor: UIColor(red: 0.34, green: 0.47, blue: 0.38, alpha: 1.00).cgColor)]
         line2.lineWidth = 3.0
-        line2.colors = [NSUIColor(cgColor: UIColor(red: 0.51, green: 0.87, blue: 0.92, alpha: 1.00).cgColor)]
-        
+        line2.colors = [NSUIColor(cgColor: UIColor(red: 0.34, green: 0.47, blue: 0.38, alpha: 1.00).cgColor)]
         line2.drawFilledEnabled = true
-        line2.fillColor = UIColor(red: 0.51, green: 0.87, blue: 0.92, alpha: 1.00)
+        line2.fillColor = UIColor(red: 0.34, green: 0.47, blue: 0.38, alpha: 1.00)
         
         let data2 = LineChartData()
         
@@ -112,43 +111,77 @@ class profileViewController: UIViewController {
         secondGraphic.extraLeftOffset = 13
         
         // CHART 3 -------------------------------
+        
+        var preEntries3 = [ChartDataEntry]()
+        
+        let pre3 = chart3Data
+        
+        for i in 0..<pre3.count {
+            let preDataEntry3 = ChartDataEntry(x: Double(i), y: pre3[i])
+            preEntries3.append(preDataEntry3)
             
-            var preEntries3 = [ChartDataEntry]()
+        }
+        
+        thirdGraphic.xAxis.valueFormatter = IndexAxisValueFormatter(values: nombreMedidas)
+        thirdGraphic.xAxis.labelPosition = XAxis.LabelPosition.bottom
+        thirdGraphic.xAxis.granularity = 1
+        thirdGraphic.xAxis.labelRotationAngle = 0
+        
+        let line3 = LineChartDataSet(entries: preEntries3, label: "Perimetro Grasa")
+        line3.valueColors = [NSUIColor.black]
+        line3.circleColors = [NSUIColor(cgColor: UIColor(red: 0.34, green: 0.47, blue: 0.38, alpha: 1.00).cgColor)]
+        line3.lineWidth = 3.0
+        line3.colors = [NSUIColor(cgColor: UIColor(red: 0.34, green: 0.47, blue: 0.38, alpha: 1.00).cgColor)]
+        line3.drawFilledEnabled = true
+        line3.fillColor = UIColor(red: 0.34, green: 0.47, blue: 0.38, alpha: 1.00)
+        
+        let data3 = LineChartData()
+        
+        data3.addDataSet(line3)
+        
+        thirdGraphic.data = data3
+        
+        thirdGraphic.extraRightOffset = 13
+        thirdGraphic.extraLeftOffset = 13
+        
+        // CHART 4 -------------------------------
+        
+        var preEntries4 = [ChartDataEntry]()
+        
+        let pre4 = chart4Data
+        
+        for i in 0..<pre4.count {
+            let preDataEntry4 = ChartDataEntry(x: Double(i), y: pre4[i])
+            preEntries4.append(preDataEntry4)
             
-            let pre3 = chart3Data
-            
-            for i in 0..<pre3.count {
-                let preDataEntry3 = ChartDataEntry(x: Double(i), y: pre3[i])
-                preEntries3.append(preDataEntry3)
-                
-            }
-            
-            thirdGraphic.xAxis.valueFormatter = IndexAxisValueFormatter(values: nombreMedidas)
-            thirdGraphic.xAxis.labelPosition = XAxis.LabelPosition.bottom
-            thirdGraphic.xAxis.granularity = 1
-            thirdGraphic.xAxis.labelRotationAngle = 0
-            
-            let line3 = LineChartDataSet(entries: preEntries3, label: "% Grasa Visceral")
-            line3.valueColors = [NSUIColor.black]
-            line3.circleColors = [NSUIColor(cgColor: UIColor(red: 1.00, green: 0.66, blue: 0.16, alpha: 1.00).cgColor)]
-            line3.lineWidth = 3.0
-            line3.colors = [NSUIColor(cgColor: UIColor(red: 1.00, green: 0.66, blue: 0.16, alpha: 1.00).cgColor)]
-            
-            line3.drawFilledEnabled = true
-            line3.fillColor = UIColor(red: 1.00, green: 0.66, blue: 0.16, alpha: 1.00)
-            
-            let data3 = LineChartData()
-            
-            data3.addDataSet(line3)
-            
-            thirdGraphic.data = data3
-            
-            thirdGraphic.extraRightOffset = 13
-            thirdGraphic.extraLeftOffset = 13
+        }
+        
+        fourthGraphic.xAxis.valueFormatter = IndexAxisValueFormatter(values: nombreMedidas)
+        fourthGraphic.xAxis.labelPosition = XAxis.LabelPosition.bottom
+        fourthGraphic.xAxis.granularity = 1
+        fourthGraphic.xAxis.labelRotationAngle = 0
+        
+        let line4 = LineChartDataSet(entries: preEntries4, label: "Perimetro Musculo")
+        line4.valueColors = [NSUIColor.black]
+        line4.circleColors = [NSUIColor(cgColor: UIColor(red: 0.34, green: 0.47, blue: 0.38, alpha: 1.00).cgColor)]
+        line4.lineWidth = 3.0
+        line4.colors = [NSUIColor(cgColor: UIColor(red: 0.34, green: 0.47, blue: 0.38, alpha: 1.00).cgColor)]
+        line4.drawFilledEnabled = true
+        line4.fillColor = UIColor(red: 0.34, green: 0.47, blue: 0.38, alpha: 1.00)
+        
+        let data4 = LineChartData()
+        
+        data4.addDataSet(line4)
+        
+        fourthGraphic.data = data4
+        
+        fourthGraphic.extraRightOffset = 13
+        fourthGraphic.extraLeftOffset = 13
     }
     
     
     func getInfo() {
+        print("called GetInfo")
         let url = URL(string: http.baseURL())!
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
@@ -162,14 +195,15 @@ class profileViewController: UIViewController {
                 
                 if profileData?.state == "200" {
                     let imageForProfile = profileData?.data?.info?.imagen
-                    self.profileImageSaved = imageForProfile
+                    let imageReal = imageForProfile?.removingAllWhitespaces
+                    self.profileImageSaved = imageReal
                     DispatchQueue.main.async {
                         self.nombreTextField.text = profileData?.data?.info?.nombre
                         self.apellidoTextField.text = profileData?.data?.info?.apellidos
                         self.emailTextField.text = profileData?.data?.info?.telefono
                         
                         if UserDefaults.standard.bool(forKey: "loadImage") == true {
-                            self.profileImage.sd_setImage(with: URL(string: imageForProfile ?? "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"), completed: nil)
+                            self.profileImage.sd_setImage(with: URL(string: imageReal!), completed: nil)
                             UserDefaults.standard.set(false, forKey: "loadImage")
                         }
                     }
@@ -180,6 +214,7 @@ class profileViewController: UIViewController {
     }
     
     func getData() {
+        print("called Get Data")
         let url = URL(string: http.baseURL())!
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
@@ -256,7 +291,6 @@ class profileViewController: UIViewController {
         logoBackground.layer.shadowOpacity = 1.0
         saveProfileButton.layer.cornerRadius = 13
         graphicsScrollView.alpha = 0
-        
         if UserDefaults.standard.bool(forKey: "comingFromProfile") == true {
             segmentIndicator.selectedSegmentIndex = 1
             profileImage.image = UIImage(named: "graficas1")
@@ -385,5 +419,14 @@ extension Array where Element: Encodable {
             }
         }
         return dict
+    }
+}
+
+extension StringProtocol where Self: RangeReplaceableCollection {
+    var removingAllWhitespaces: Self {
+        filter { !$0.isWhitespace }
+    }
+    mutating func removeAllWhitespaces() {
+        removeAll(where: \.isWhitespace)
     }
 }
