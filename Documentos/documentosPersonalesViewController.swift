@@ -49,7 +49,7 @@ class documentosPersonalesViewController: UIViewController {
             DispatchQueue.main.async {
                 
                 if self.appointments.count > 0 {
-                    self.tableView?.reloadData()
+                    self.tableView?.reloadData(with: .simple(duration: 0.45, direction: .top(useCellsFrame: true), constantDelay: 0))
                 }
             }
         }.resume()

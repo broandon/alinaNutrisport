@@ -89,7 +89,7 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             UserDefaults.standard.set(true, forKey: "loadImage")
             self.hero.isEnabled = true
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileViewController") as! profileViewController
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileViewSwitcher") as! profileViewSwitcher
             newViewController.hero.modalAnimationType = .pageIn(direction: .left)
             self.hero.replaceViewController(with: newViewController)
         }
@@ -153,7 +153,7 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cellWidth : CGFloat = 300
         let numberOfCells = floor(self.view.frame.size.width / cellWidth)
         let edgeInsets = (self.view.frame.size.width - (numberOfCells * cellWidth)) / (numberOfCells + 1.5)
-        return UIEdgeInsets(top: 0, left: edgeInsets, bottom: 0, right: edgeInsets)
+        return UIEdgeInsets(top: 0, left: edgeInsets, bottom: 10, right: edgeInsets)
     }
 }
 

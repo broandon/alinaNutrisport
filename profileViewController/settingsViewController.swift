@@ -37,6 +37,22 @@ class settingsViewController: UIViewController {
         self.hero.replaceViewController(with: newViewController)
     }
     
+    @IBAction func showPrivacy(_ sender: Any) {
+        let urlToVisit = "http://alinanutrisport.com.mx/app/privacidad/aviso.pdf"
+        
+        let vc = webViewViewController(nibName: "webViewViewController", bundle: nil)
+        vc.urlToVisit = urlToVisit
+        self.present(vc, animated: true)
+    }
+    
+    @IBAction func contact(_ sender: Any) {
+        let urlToVisit = "http://alinanutrisport.com.mx"
+        
+        let vc = webViewViewController(nibName: "webViewViewController", bundle: nil)
+        vc.urlToVisit = urlToVisit
+        self.present(vc, animated: true)
+    }
+    
     @IBAction func closeSession(_ sender: Any) {
         
         UserDefaults.standard.set(false, forKey: "LoggedStatus")

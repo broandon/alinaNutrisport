@@ -45,6 +45,8 @@ class profileViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        getInfo()
+        getData()
         setupCharts()
     }
     

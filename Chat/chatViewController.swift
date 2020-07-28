@@ -87,7 +87,9 @@ class chatViewController: UIViewController {
             }
             DispatchQueue.main.async {
                 if self.messages.count > 0 {
-                    self.tableView?.reloadData()
+                    UIView.animate(withDuration: 1.0, animations: {
+                      self.tableView?.reloadData()
+                    })
                 }
             }
             
