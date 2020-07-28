@@ -39,9 +39,9 @@ class profileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
         getInfo()
         getData()
+        setupView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,7 +49,6 @@ class profileViewController: UIViewController {
     }
     
     func setupCharts() {
-        print("called")
         // Chart 1
         var preEntries = [ChartDataEntry]()
         let pre = chart1Data
@@ -181,7 +180,6 @@ class profileViewController: UIViewController {
     
     
     func getInfo() {
-        print("called GetInfo")
         let url = URL(string: http.baseURL())!
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
@@ -214,7 +212,6 @@ class profileViewController: UIViewController {
     }
     
     func getData() {
-        print("called Get Data")
         let url = URL(string: http.baseURL())!
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
@@ -290,12 +287,12 @@ class profileViewController: UIViewController {
         logoBackground.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         logoBackground.layer.shadowOpacity = 1.0
         saveProfileButton.layer.cornerRadius = 13
-        graphicsScrollView.alpha = 0
+        graphicsScrollView.isHidden = true
         if UserDefaults.standard.bool(forKey: "comingFromProfile") == true {
             segmentIndicator.selectedSegmentIndex = 1
             profileImage.image = UIImage(named: "graficas1")
-            profileDataView.alpha = 0
-            graphicsScrollView.alpha = 1
+            profileDataView.isHidden = true
+            graphicsScrollView.isHidden = false
             UserDefaults.standard.set(false, forKey: "comingFromProfile")
         }
     }
@@ -304,14 +301,14 @@ class profileViewController: UIViewController {
         
         if sender.selectedSegmentIndex == 0 {
             profileImage.sd_setImage(with: URL(string: profileImageSaved ?? ""), completed: nil)
-            profileDataView.alpha = 1
-            graphicsScrollView.alpha = 0
+            profileDataView.isHidden = false
+            graphicsScrollView.isHidden = true
         }
         
         if sender.selectedSegmentIndex == 1 {
             profileImage.image = UIImage(named: "graficas1")
-            profileDataView.alpha = 0
-            graphicsScrollView.alpha = 1
+            profileDataView.isHidden = true
+            graphicsScrollView.isHidden = false
         }
         
         if sender.selectedSegmentIndex == 2 {
@@ -321,8 +318,8 @@ class profileViewController: UIViewController {
             newViewController.hero.modalAnimationType = .none
             self.hero.replaceViewController(with: newViewController)
             profileImage.image = UIImage(named: "fotos1")
-            profileDataView.alpha = 0
-            graphicsScrollView.alpha = 0
+            profileDataView.isHidden = true
+            graphicsScrollView.isHidden = true
         }
     }
     
