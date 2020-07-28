@@ -32,6 +32,7 @@
 		CF0A405424B50A5C008F583B /* genericosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A405224B50A5C008F583B /* genericosTableViewCell.xib */; };
 		CF0A405724B50A6D008F583B /* personalesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A405524B50A6D008F583B /* personalesTableViewCell.swift */; };
 		CF0A405824B50A6D008F583B /* personalesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A405624B50A6D008F583B /* personalesTableViewCell.xib */; };
+		CF24BF1624D0BE90002F4B13 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF24BF1524D0BE90002F4B13 /* WebKit.framework */; };
 		CF56A49B24BF852A0060D86A /* Measurements.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A49A24BF852A0060D86A /* Measurements.swift */; };
 		CF88052E24B8DE87001DD622 /* profileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88052D24B8DE87001DD622 /* profileInfo.swift */; };
 		CF88053024B8E66B001DD622 /* updatedProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88052F24B8E66B001DD622 /* updatedProfile.swift */; };
@@ -76,6 +77,7 @@
 		CF0A405224B50A5C008F583B /* genericosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = genericosTableViewCell.xib; sourceTree = "<group>"; };
 		CF0A405524B50A6D008F583B /* personalesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalesTableViewCell.swift; sourceTree = "<group>"; };
 		CF0A405624B50A6D008F583B /* personalesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = personalesTableViewCell.xib; sourceTree = "<group>"; };
+		CF24BF1524D0BE90002F4B13 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CF56A49A24BF852A0060D86A /* Measurements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurements.swift; sourceTree = "<group>"; };
 		CF88052D24B8DE87001DD622 /* profileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileInfo.swift; sourceTree = "<group>"; };
 		CF88052F24B8E66B001DD622 /* updatedProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updatedProfile.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF24BF1624D0BE90002F4B13 /* WebKit.framework in Frameworks */,
 				1118C3AC4715FF4AD8C27523 /* Pods_alinaNutrisport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +112,7 @@
 		71B1E6CFE821DD10ABAC5AEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF24BF1524D0BE90002F4B13 /* WebKit.framework */,
 				33BBF215C661F8070C933008 /* Pods_alinaNutrisport.framework */,
 			);
 			name = Frameworks;

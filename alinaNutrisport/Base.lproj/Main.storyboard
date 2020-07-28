@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -576,7 +576,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQe-EE-B3p" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6737.68115942029" y="349.21875"/>
+            <point key="canvasLocation" x="6841" y="174"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="ZZ6-vD-0GT">
@@ -942,16 +942,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ea3-Sg-6IY">
                                 <rect key="frame" x="122.5" y="175" width="169" height="169"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabla" translatesAutoresizingMaskIntoConstraints="NO" id="jO0-dn-OTv">
-                                        <rect key="frame" x="35" y="35" width="99" height="99"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forTheSwitchTable" translatesAutoresizingMaskIntoConstraints="NO" id="jO0-dn-OTv">
+                                        <rect key="frame" x="2" y="2" width="165" height="165"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="jO0-dn-OTv" secondAttribute="trailing" constant="35" id="285-pl-Yjg"/>
-                                    <constraint firstItem="jO0-dn-OTv" firstAttribute="leading" secondItem="ea3-Sg-6IY" secondAttribute="leading" constant="35" id="6n0-Ep-ney"/>
-                                    <constraint firstAttribute="bottom" secondItem="jO0-dn-OTv" secondAttribute="bottom" constant="35" id="KtD-XY-yck"/>
-                                    <constraint firstItem="jO0-dn-OTv" firstAttribute="top" secondItem="ea3-Sg-6IY" secondAttribute="top" constant="35" id="kEv-aO-Ze1"/>
+                                    <constraint firstAttribute="trailing" secondItem="jO0-dn-OTv" secondAttribute="trailing" constant="2" id="285-pl-Yjg"/>
+                                    <constraint firstItem="jO0-dn-OTv" firstAttribute="leading" secondItem="ea3-Sg-6IY" secondAttribute="leading" constant="2" id="6n0-Ep-ney"/>
+                                    <constraint firstAttribute="bottom" secondItem="jO0-dn-OTv" secondAttribute="bottom" constant="2" id="KtD-XY-yck"/>
+                                    <constraint firstItem="jO0-dn-OTv" firstAttribute="top" secondItem="ea3-Sg-6IY" secondAttribute="top" constant="2" id="kEv-aO-Ze1"/>
                                     <constraint firstAttribute="width" constant="169" id="m2A-p3-wEn"/>
                                     <constraint firstAttribute="height" constant="169" id="nN8-zi-S41"/>
                                     <constraint firstAttribute="width" secondItem="ea3-Sg-6IY" secondAttribute="height" multiplier="1:1" id="tn6-RE-rvG"/>
@@ -983,19 +983,13 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QN2-Q0-CPZ">
-                                <rect key="frame" x="20" y="352" width="374" height="320"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="oGj-Ju-SRr"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="352" width="414" height="510"/>
                                 <connections>
                                     <segue destination="hu1-CX-KR0" kind="embed" id="NXw-cA-C8L"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63S-rK-6EG">
-                                <rect key="frame" x="20" y="352" width="374" height="320"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="8EJ-Tm-tiH"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="352" width="414" height="510"/>
                                 <connections>
                                     <segue destination="GKZ-4e-de1" kind="embed" id="Csc-pN-Wka"/>
                                 </connections>
@@ -1003,8 +997,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="nzW-JD-ldg" firstAttribute="trailing" secondItem="63S-rK-6EG" secondAttribute="trailing" constant="20" id="1fl-uo-hg1"/>
-                            <constraint firstItem="nzW-JD-ldg" firstAttribute="trailing" secondItem="QN2-Q0-CPZ" secondAttribute="trailing" constant="20" id="30E-lH-pOU"/>
+                            <constraint firstItem="nzW-JD-ldg" firstAttribute="trailing" secondItem="63S-rK-6EG" secondAttribute="trailing" id="1fl-uo-hg1"/>
+                            <constraint firstItem="nzW-JD-ldg" firstAttribute="trailing" secondItem="QN2-Q0-CPZ" secondAttribute="trailing" id="30E-lH-pOU"/>
                             <constraint firstItem="7uK-yo-SkA" firstAttribute="leading" secondItem="nzW-JD-ldg" secondAttribute="leading" constant="20" id="3W6-Cw-YIk"/>
                             <constraint firstItem="63S-rK-6EG" firstAttribute="top" secondItem="ea3-Sg-6IY" secondAttribute="bottom" constant="8" id="6HQ-rg-hU2"/>
                             <constraint firstItem="QN2-Q0-CPZ" firstAttribute="top" secondItem="ea3-Sg-6IY" secondAttribute="bottom" constant="8" id="6Zq-BV-iaN"/>
@@ -1013,11 +1007,13 @@
                             <constraint firstItem="ewt-QU-uQd" firstAttribute="leading" secondItem="nzW-JD-ldg" secondAttribute="leading" constant="20" id="PNU-BA-Mce"/>
                             <constraint firstAttribute="trailing" secondItem="hsC-Bv-DIj" secondAttribute="trailing" constant="-122" id="POD-Ow-nbL"/>
                             <constraint firstItem="ewt-QU-uQd" firstAttribute="top" secondItem="nzW-JD-ldg" secondAttribute="top" id="R07-jD-WRv"/>
-                            <constraint firstItem="QN2-Q0-CPZ" firstAttribute="leading" secondItem="nzW-JD-ldg" secondAttribute="leading" constant="20" id="bbZ-aq-VrB"/>
+                            <constraint firstItem="QN2-Q0-CPZ" firstAttribute="leading" secondItem="nzW-JD-ldg" secondAttribute="leading" id="bbZ-aq-VrB"/>
                             <constraint firstItem="ea3-Sg-6IY" firstAttribute="top" secondItem="nzW-JD-ldg" secondAttribute="top" constant="131" id="gXh-KW-PH5"/>
                             <constraint firstItem="hsC-Bv-DIj" firstAttribute="leading" secondItem="VYP-H3-5wO" secondAttribute="leading" constant="-122" id="m5O-hg-XcG"/>
-                            <constraint firstItem="63S-rK-6EG" firstAttribute="leading" secondItem="nzW-JD-ldg" secondAttribute="leading" constant="20" id="tU5-eM-ktT"/>
+                            <constraint firstItem="nzW-JD-ldg" firstAttribute="bottom" secondItem="63S-rK-6EG" secondAttribute="bottom" id="p8T-wb-Ucj"/>
+                            <constraint firstItem="63S-rK-6EG" firstAttribute="leading" secondItem="nzW-JD-ldg" secondAttribute="leading" id="tU5-eM-ktT"/>
                             <constraint firstItem="ea3-Sg-6IY" firstAttribute="centerX" secondItem="VYP-H3-5wO" secondAttribute="centerX" id="uCv-pn-SZW"/>
+                            <constraint firstItem="nzW-JD-ldg" firstAttribute="bottom" secondItem="QN2-Q0-CPZ" secondAttribute="bottom" id="v2X-r2-p4x"/>
                             <constraint firstItem="7uK-yo-SkA" firstAttribute="top" secondItem="ewt-QU-uQd" secondAttribute="bottom" constant="9" id="wnx-D7-4kl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nzW-JD-ldg"/>
@@ -1039,11 +1035,11 @@
             <objects>
                 <viewController id="hu1-CX-KR0" customClass="datesViewController" customModule="alinaNutrisport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lb6-qI-Egs">
-                        <rect key="frame" x="0.0" y="0.0" width="374" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="510"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GxI-wp-tSE" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="0.0" width="374" height="222"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="222" id="uA4-s0-eRL"/>
@@ -1064,7 +1060,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Seleccionar horario..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tqw-yb-bsu">
-                                <rect key="frame" x="16" y="247" width="342" height="34"/>
+                                <rect key="frame" x="20" y="247" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="yJy-CP-4qB"/>
                                 </constraints>
@@ -1096,11 +1092,11 @@
             <objects>
                 <viewController id="GKZ-4e-de1" customClass="datesViewController" customModule="alinaNutrisport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CLn-Tb-rEo">
-                        <rect key="frame" x="0.0" y="0.0" width="374" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="510"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l5C-TG-xiS">
-                                <rect key="frame" x="1" y="1" width="372" height="318"/>
+                                <rect key="frame" x="1" y="1" width="412" height="508"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -2497,7 +2493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VL4-kF-b7C" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7450.7246376811599" y="348.88392857142856"/>
+            <point key="canvasLocation" x="8409" y="311"/>
         </scene>
     </scenes>
     <resources>
@@ -2507,13 +2503,13 @@
         <image name="engraneVerde" width="600" height="599"/>
         <image name="forTheSwitchApple" width="300" height="300"/>
         <image name="forTheSwitchDocLogo" width="300" height="300"/>
+        <image name="forTheSwitchTable" width="500" height="500"/>
         <image name="iconos salir" width="400" height="400"/>
         <image name="iconos-seguridad" width="400" height="400"/>
         <image name="iconos-telefono" width="400" height="400"/>
         <image name="iconos-usuario" width="400" height="400"/>
         <image name="leaf.arrow.circlepath" catalog="system" width="121" height="128"/>
         <image name="logoAlinaNutrisport" width="1000" height="1000"/>
-        <image name="tabla" width="600" height="599"/>
         <image name="upperCircle" width="1200" height="689"/>
         <image name="upperCircleGreen" width="1200" height="689"/>
         <namedColor name="Main Blue">

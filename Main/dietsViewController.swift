@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class dietsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class dietsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource  {
     
     @IBOutlet weak var dietsCollectionView: UICollectionView!
     @IBOutlet weak var logoBackground: UIView!

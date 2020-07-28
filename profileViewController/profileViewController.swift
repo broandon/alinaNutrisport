@@ -301,8 +301,11 @@ class profileViewController: UIViewController {
         
         if sender.selectedSegmentIndex == 0 {
             profileImage.sd_setImage(with: URL(string: profileImageSaved ?? ""), completed: nil)
-            profileDataView.isHidden = false
-            graphicsScrollView.isHidden = true
+            UIView.animate(withDuration: 0.5, animations: {
+                self.profileDataView.isHidden = false
+                self.graphicsScrollView.isHidden = true
+                self.profileDataView.slideInFromBottom()
+            })
         }
         
         if sender.selectedSegmentIndex == 1 {
