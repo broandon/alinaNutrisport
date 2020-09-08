@@ -15,6 +15,9 @@ class profileViewSwitcher: UIViewController {
     @IBOutlet weak var newInfoview: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var logoBackground: UIView!
+    @IBOutlet weak var segmentedIndexControl: UISegmentedControl!
+    
+    
     
     let UserID = UserDefaults.standard.string(forKey: "IDUser")
     var profileImageSaved: String? = ""
@@ -23,6 +26,16 @@ class profileViewSwitcher: UIViewController {
         super.viewDidLoad()
         setupView()
         getInfo()
+        if UserDefaults.standard.bool(forKey: "comingFromProfile") == true {
+            segmentedIndexControl.selectedSegmentIndex = 1
+            profileImage.image = UIImage(named: "graficas1")
+            UserDefaults.standard.set(false, forKey: "comingFromProfile")
+            self.profileView.alpha = 0
+            self.statisticsProfile.alpha = 2
+            self.newInfoview.alpha = 0
+            self.profileImage.image = UIImage(named: "graficas1")
+            self.segmentedIndexControl.isHidden = true
+        }
     }
     
     func setupView() {
@@ -65,8 +78,10 @@ class profileViewSwitcher: UIViewController {
                     let imageReal = imageForProfile?.removingAllWhitespaces
                     self.profileImageSaved = imageReal
                     DispatchQueue.main.async {
+                        if UserDefaults.standard.bool(forKey: "loadImage") == true {
                         self.profileImage.sd_setImage(with: URL(string: imageReal!), completed: nil)
                         UserDefaults.standard.set(false, forKey: "loadImage")
+                        }
                     }
                 }
             }

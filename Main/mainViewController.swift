@@ -20,11 +20,19 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     let reuseDocument = "sectionsCellStores"
     var Sections : [Dictionary<String, Any>] =
         [["Titulo": "Perfil", "ID" : "1", "Imagen" : UIImage(named: "perfil")!],
+         
+         ["Titulo": "Consultas", "ID" : "8", "Imagen" : UIImage(named: "seguimientos")!],
+         
          ["Titulo": "Dietas", "ID" : "2", "Imagen" : UIImage(named: "manzana")!],
-         ["Titulo": "Citas", "ID" : "3", "Imagen" : UIImage(named: "tabla")!],
-         ["Titulo": "Archivos", "ID" : "4", "Imagen" : UIImage(named: "documento")!],
-         ["Titulo": "Chat", "ID" : "5", "Imagen" : UIImage(named: "chat")!],
+         
          ["Titulo": "Seguimiento Diario", "ID" : "6", "Imagen" : UIImage(named: "reloj")!],
+         
+         ["Titulo": "Chat", "ID" : "5", "Imagen" : UIImage(named: "chat")!],
+
+         ["Titulo": "Archivos", "ID" : "4", "Imagen" : UIImage(named: "documento")!],
+         
+         ["Titulo": "Citas", "ID" : "3", "Imagen" : UIImage(named: "tabla")!],
+         
          ["Titulo": "Configuración", "ID" : "7", "Imagen" : UIImage(named: "engrane")!]]
     
     //MARK: viewDid
@@ -78,7 +86,7 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     //MARK: Collectionview Data
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -130,6 +138,16 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             self.hero.isEnabled = true
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "chatViewController") as! chatViewController
+            newViewController.hero.modalAnimationType = .pageIn(direction: .left)
+            self.hero.replaceViewController(with: newViewController)
+        }
+        
+        if sectionID == "8" {
+            UserDefaults.standard.set(false, forKey: "loadImage")
+            self.hero.isEnabled = true
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileViewSwitcher") as! profileViewSwitcher
+            UserDefaults.standard.set(true, forKey: "comingFromProfile")
             newViewController.hero.modalAnimationType = .pageIn(direction: .left)
             self.hero.replaceViewController(with: newViewController)
         }
