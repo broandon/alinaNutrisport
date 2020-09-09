@@ -25,7 +25,7 @@ class documentosViewController: UIViewController {
         behindLogoView?.layer.borderColor = UIColor.lightGray.cgColor
         behindLogoView?.layer.borderWidth = 0.5
         behindLogoView?.layer.cornerRadius = (behindLogoView?.bounds.height ?? 50) / 2
-        behindLogoView?.layer.masksToBounds = true
+        behindLogoView?.layer.masksToBounds = false
         behindLogoView?.layer.shadowRadius = 4.5
         behindLogoView?.layer.shadowColor = UIColor.gray.cgColor
         behindLogoView?.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
