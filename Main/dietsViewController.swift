@@ -139,7 +139,7 @@ extension dietsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = CGSize(width: 110, height: 110)
+        let size = CGSize(width: 155, height: 155)
         return size
     }
     

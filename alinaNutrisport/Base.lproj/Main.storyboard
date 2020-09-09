@@ -711,13 +711,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upperCircleGreen" translatesAutoresizingMaskIntoConstraints="NO" id="Rea-SK-f5G">
-                                <rect key="frame" x="-122" y="-81" width="658" height="359"/>
+                                <rect key="frame" x="-122" y="-175" width="658" height="359"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="359" id="HFV-LN-uep"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBR-vX-yUd">
-                                <rect key="frame" x="122.5" y="175" width="169" height="169"/>
+                                <rect key="frame" x="122.5" y="124" width="169" height="169"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="engraneVerde" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-Qk-Tq5">
                                         <rect key="frame" x="40" y="40" width="89" height="89"/>
@@ -744,16 +744,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configuración" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOL-8k-Bin">
-                                <rect key="frame" x="117" y="90" width="180" height="36"/>
+                                <rect key="frame" x="117" y="90" width="180" height="15"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="SEG-c1-2uZ"/>
+                                    <constraint firstAttribute="height" constant="15" id="SEG-c1-2uZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JT6-Lp-ThI">
-                                <rect key="frame" x="45" y="368" width="324" height="309"/>
+                                <rect key="frame" x="45" y="317" width="324" height="309"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notificaciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQZ-dK-yVF">
                                         <rect key="frame" x="8" y="8" width="251" height="25"/>
@@ -795,15 +795,6 @@
                                         <rect key="frame" x="8" y="137" width="251" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="R0d-TE-hg1"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Versión BETA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXa-TN-XZJ">
-                                        <rect key="frame" x="8" y="180" width="308" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="bcg-95-LI1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -852,14 +843,44 @@
                                             <action selector="contact:" destination="jEy-H8-Enl" eventType="touchUpInside" id="4G0-Yn-AMA"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaE-yy-ZyF">
+                                        <rect key="frame" x="8" y="213" width="308" height="2"/>
+                                        <color key="backgroundColor" name="Main Green"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Envíanos un correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gef-au-h7r">
+                                        <rect key="frame" x="8" y="180" width="251" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="dZJ-Bd-LjO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pagina_verde" translatesAutoresizingMaskIntoConstraints="NO" id="Zp5-1k-FW7">
+                                        <rect key="frame" x="267" y="180" width="47" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="47" id="6Ak-hI-x2u"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Versión BETA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXa-TN-XZJ">
+                                        <rect key="frame" x="8" y="223" width="308" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="bcg-95-LI1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Gef-au-h7r" firstAttribute="trailing" secondItem="AY3-lx-WG3" secondAttribute="trailing" id="1Az-u9-oyW"/>
                                     <constraint firstAttribute="trailing" secondItem="CtI-lJ-krr" secondAttribute="trailing" constant="10" id="1GM-ac-uh9"/>
                                     <constraint firstItem="9u1-Y7-abX" firstAttribute="top" secondItem="zgf-ct-jXj" secondAttribute="bottom" constant="8" id="1oV-zF-Bic"/>
                                     <constraint firstItem="scr-UM-Dye" firstAttribute="leading" secondItem="AY3-lx-WG3" secondAttribute="leading" id="1uw-gF-rtC"/>
                                     <constraint firstItem="sOm-lI-Dfd" firstAttribute="trailing" secondItem="pXY-Kf-eaK" secondAttribute="trailing" id="2Bv-eU-PM6"/>
                                     <constraint firstItem="cES-wF-qPt" firstAttribute="trailing" secondItem="T8u-TS-6Rp" secondAttribute="trailing" id="3Zh-OE-sDG"/>
                                     <constraint firstItem="CtI-lJ-krr" firstAttribute="leading" secondItem="JT6-Lp-ThI" secondAttribute="leading" constant="8" id="5n0-0V-I8o"/>
+                                    <constraint firstItem="Gef-au-h7r" firstAttribute="leading" secondItem="DaE-yy-ZyF" secondAttribute="leading" id="65O-Us-9g7"/>
                                     <constraint firstAttribute="trailing" secondItem="nOL-2d-WTE" secondAttribute="trailing" constant="10" id="6nL-lu-9Yq"/>
                                     <constraint firstItem="fxG-nF-hmD" firstAttribute="leading" secondItem="zgf-ct-jXj" secondAttribute="leading" id="7Om-3P-IiS"/>
                                     <constraint firstItem="AY3-lx-WG3" firstAttribute="top" secondItem="scr-UM-Dye" secondAttribute="bottom" constant="8" id="7jU-ja-UoX"/>
@@ -880,9 +901,11 @@
                                     <constraint firstItem="9u1-Y7-abX" firstAttribute="trailing" secondItem="AY3-lx-WG3" secondAttribute="trailing" id="MIy-3b-bkU"/>
                                     <constraint firstItem="nOL-2d-WTE" firstAttribute="trailing" secondItem="cES-wF-qPt" secondAttribute="trailing" id="MzJ-Tw-Eaa"/>
                                     <constraint firstItem="scr-UM-Dye" firstAttribute="trailing" secondItem="u2D-Jf-eGJ" secondAttribute="trailing" id="PKC-s1-O51"/>
+                                    <constraint firstItem="Gef-au-h7r" firstAttribute="bottom" secondItem="Zp5-1k-FW7" secondAttribute="bottom" id="Plf-Yd-s0C"/>
+                                    <constraint firstItem="DaE-yy-ZyF" firstAttribute="top" secondItem="Gef-au-h7r" secondAttribute="bottom" constant="8" id="Q9A-JY-ze0"/>
                                     <constraint firstItem="sOm-lI-Dfd" firstAttribute="leading" secondItem="YQZ-dK-yVF" secondAttribute="trailing" constant="8" id="Qjr-oa-Xyc"/>
                                     <constraint firstItem="AY3-lx-WG3" firstAttribute="bottom" secondItem="T8u-TS-6Rp" secondAttribute="bottom" id="RHB-xZ-gKa"/>
-                                    <constraint firstItem="yXa-TN-XZJ" firstAttribute="top" secondItem="u2D-Jf-eGJ" secondAttribute="bottom" constant="8" id="RlY-Kx-BAX"/>
+                                    <constraint firstItem="Gef-au-h7r" firstAttribute="top" secondItem="Zp5-1k-FW7" secondAttribute="top" id="TiQ-P3-7kG"/>
                                     <constraint firstAttribute="trailing" secondItem="Kos-zt-rA6" secondAttribute="trailing" constant="10" id="UjK-pc-fkd"/>
                                     <constraint firstItem="9u1-Y7-abX" firstAttribute="top" secondItem="cES-wF-qPt" secondAttribute="top" id="VL4-xi-Usk"/>
                                     <constraint firstItem="fxG-nF-hmD" firstAttribute="top" secondItem="nOL-2d-WTE" secondAttribute="top" id="W7Y-Jv-zPz"/>
@@ -890,8 +913,10 @@
                                     <constraint firstItem="nOL-2d-WTE" firstAttribute="leading" secondItem="cES-wF-qPt" secondAttribute="leading" id="WeJ-Ot-NQf"/>
                                     <constraint firstItem="u2D-Jf-eGJ" firstAttribute="top" secondItem="AY3-lx-WG3" secondAttribute="bottom" constant="8" id="XM9-FE-HVI"/>
                                     <constraint firstItem="pXY-Kf-eaK" firstAttribute="trailing" secondItem="zgf-ct-jXj" secondAttribute="trailing" id="YMB-ML-I2v"/>
+                                    <constraint firstAttribute="bottom" secondItem="yXa-TN-XZJ" secondAttribute="bottom" constant="61" id="Yeb-SK-Jbh"/>
                                     <constraint firstItem="AY3-lx-WG3" firstAttribute="top" secondItem="T8u-TS-6Rp" secondAttribute="top" id="Z7D-zE-dQB"/>
                                     <constraint firstItem="Kos-zt-rA6" firstAttribute="top" secondItem="zgf-ct-jXj" secondAttribute="bottom" constant="5" id="a50-59-MKX"/>
+                                    <constraint firstItem="DaE-yy-ZyF" firstAttribute="trailing" secondItem="yXa-TN-XZJ" secondAttribute="trailing" id="bj4-gP-zdT"/>
                                     <constraint firstAttribute="height" constant="309" id="cWh-Ta-TdP"/>
                                     <constraint firstItem="scr-UM-Dye" firstAttribute="top" secondItem="9u1-Y7-abX" secondAttribute="bottom" constant="8" id="cs4-w4-gx3"/>
                                     <constraint firstItem="sOm-lI-Dfd" firstAttribute="trailing" secondItem="JT6-Lp-ThI" secondAttribute="trailingMargin" id="e1H-eu-2RO"/>
@@ -902,14 +927,18 @@
                                     <constraint firstItem="u2D-Jf-eGJ" firstAttribute="trailing" secondItem="yXa-TN-XZJ" secondAttribute="trailing" id="iUn-DR-Due"/>
                                     <constraint firstItem="zgf-ct-jXj" firstAttribute="top" secondItem="fxG-nF-hmD" secondAttribute="bottom" constant="8" id="lFV-63-X9z"/>
                                     <constraint firstItem="AY3-lx-WG3" firstAttribute="top" secondItem="JT6-Lp-ThI" secondAttribute="top" constant="137" id="mLv-uX-rq2"/>
+                                    <constraint firstItem="Gef-au-h7r" firstAttribute="top" secondItem="u2D-Jf-eGJ" secondAttribute="bottom" constant="8" id="n0O-E6-hCM"/>
+                                    <constraint firstItem="Zp5-1k-FW7" firstAttribute="leading" secondItem="T8u-TS-6Rp" secondAttribute="leading" id="nFq-kh-45B"/>
                                     <constraint firstItem="hfJ-zt-u7G" firstAttribute="leading" secondItem="JT6-Lp-ThI" secondAttribute="leading" constant="8" id="nll-C7-Pwv"/>
                                     <constraint firstItem="cES-wF-qPt" firstAttribute="leading" secondItem="T8u-TS-6Rp" secondAttribute="leading" id="q6E-AU-z1W"/>
+                                    <constraint firstItem="yXa-TN-XZJ" firstAttribute="top" secondItem="DaE-yy-ZyF" secondAttribute="bottom" constant="8" id="s2s-Mk-8M2"/>
                                     <constraint firstItem="pXY-Kf-eaK" firstAttribute="leading" secondItem="fxG-nF-hmD" secondAttribute="leading" id="sQq-E2-86Y"/>
                                     <constraint firstItem="9u1-Y7-abX" firstAttribute="leading" secondItem="scr-UM-Dye" secondAttribute="leading" id="tcY-HI-CsL"/>
-                                    <constraint firstAttribute="bottom" secondItem="yXa-TN-XZJ" secondAttribute="bottom" constant="104" id="u2s-Ma-hbu"/>
                                     <constraint firstAttribute="trailing" secondItem="hfJ-zt-u7G" secondAttribute="trailing" constant="8" id="u7F-fL-E0Q"/>
                                     <constraint firstItem="YQZ-dK-yVF" firstAttribute="top" secondItem="JT6-Lp-ThI" secondAttribute="topMargin" id="uHj-Lc-C4Z"/>
                                     <constraint firstItem="fxG-nF-hmD" firstAttribute="bottom" secondItem="nOL-2d-WTE" secondAttribute="bottom" id="vdF-my-4OK"/>
+                                    <constraint firstItem="u2D-Jf-eGJ" firstAttribute="leading" secondItem="Gef-au-h7r" secondAttribute="leading" id="vuv-35-Upd"/>
+                                    <constraint firstItem="DaE-yy-ZyF" firstAttribute="top" secondItem="JT6-Lp-ThI" secondAttribute="top" constant="213" id="wLI-pq-XTG"/>
                                     <constraint firstItem="u2D-Jf-eGJ" firstAttribute="top" secondItem="hfJ-zt-u7G" secondAttribute="bottom" constant="6" id="wzr-W4-heD"/>
                                     <constraint firstItem="YQZ-dK-yVF" firstAttribute="leading" secondItem="pXY-Kf-eaK" secondAttribute="leading" id="y9j-vO-g1l"/>
                                     <constraint firstItem="9u1-Y7-abX" firstAttribute="top" secondItem="JT6-Lp-ThI" secondAttribute="top" constant="94" id="ySc-4w-nIZ"/>
@@ -918,11 +947,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Rea-SK-f5G" firstAttribute="top" secondItem="UN5-HM-cHe" secondAttribute="top" constant="-81" id="2yC-nX-rse"/>
+                            <constraint firstItem="Rea-SK-f5G" firstAttribute="top" secondItem="UN5-HM-cHe" secondAttribute="top" constant="-175" id="2yC-nX-rse"/>
                             <constraint firstItem="YOL-8k-Bin" firstAttribute="top" secondItem="tDJ-Vx-jcm" secondAttribute="bottom" constant="16" id="2yN-r4-ssq"/>
                             <constraint firstItem="sFd-hJ-SPT" firstAttribute="trailing" secondItem="tDJ-Vx-jcm" secondAttribute="trailing" constant="194" id="3ok-qL-g3q"/>
                             <constraint firstItem="tDJ-Vx-jcm" firstAttribute="leading" secondItem="UN5-HM-cHe" secondAttribute="leadingMargin" id="4Z6-2s-HgS"/>
-                            <constraint firstItem="jBR-vX-yUd" firstAttribute="top" secondItem="sFd-hJ-SPT" secondAttribute="top" constant="131" id="GI9-vu-IWn"/>
+                            <constraint firstItem="jBR-vX-yUd" firstAttribute="top" secondItem="sFd-hJ-SPT" secondAttribute="top" constant="80" id="GI9-vu-IWn"/>
                             <constraint firstItem="YOL-8k-Bin" firstAttribute="leading" secondItem="sFd-hJ-SPT" secondAttribute="leading" constant="117" id="UQH-ta-ai3"/>
                             <constraint firstItem="sFd-hJ-SPT" firstAttribute="trailing" secondItem="JT6-Lp-ThI" secondAttribute="trailing" constant="45" id="cdn-G0-LRL"/>
                             <constraint firstItem="tDJ-Vx-jcm" firstAttribute="top" secondItem="sFd-hJ-SPT" secondAttribute="top" id="ePu-f5-t2g"/>
@@ -1509,7 +1538,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zR-Rx-kIZ">
-                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1518,7 +1547,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="66t-kL-RtX">
-                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1683,7 +1712,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eZd-oY-ma7">
-                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1692,7 +1721,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rb2-DG-8sh">
-                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1725,7 +1754,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JVD-YX-wrO">
-                                                        <rect key="frame" x="199" y="114" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="113" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1911,7 +1940,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jXf-Iq-nvB">
-                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1920,7 +1949,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qlV-B7-zlg">
-                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1953,7 +1982,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7to-6g-es6">
-                                                        <rect key="frame" x="199" y="114" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="113" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1998,7 +2027,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FPT-kQ-Kys">
-                                                        <rect key="frame" x="199" y="158" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="157" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2021,7 +2050,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="faD-PM-W5b">
-                                                        <rect key="frame" x="199" y="202" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="201" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2246,7 +2275,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2h0-Ma-iDU">
-                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2255,7 +2284,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2p2-wE-A4z">
-                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2288,7 +2317,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hkR-uf-kYR">
-                                                        <rect key="frame" x="199" y="114" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="113" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2928,7 +2957,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4r4-bN-dtJ">
-                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2937,7 +2966,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bXf-Og-csl">
-                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3102,7 +3131,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gLK-i1-WfF">
-                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3111,7 +3140,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kB6-yh-BaG">
-                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3144,7 +3173,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qX9-Ok-SvO">
-                                                        <rect key="frame" x="199" y="113" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="114" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3329,7 +3358,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gsZ-lc-Mj7">
-                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3338,7 +3367,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0OE-Y6-dW4">
-                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3371,7 +3400,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLH-5i-Gdc">
-                                                        <rect key="frame" x="199" y="113" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="114" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3416,7 +3445,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EAO-ej-Z3I">
-                                                        <rect key="frame" x="199" y="157" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="158" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3439,7 +3468,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qwk-4P-VmF">
-                                                        <rect key="frame" x="199" y="201" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="202" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3665,7 +3694,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGk-jW-R4B">
-                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3674,7 +3703,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HmD-NE-Tsl">
-                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3707,7 +3736,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Q4-42-oFm">
-                                                        <rect key="frame" x="199" y="113" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="114" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3939,6 +3968,7 @@
         <image name="iconos-usuario" width="400" height="400"/>
         <image name="leaf.arrow.circlepath" catalog="system" width="121" height="128"/>
         <image name="logoAlinaNutrisport" width="1000" height="1000"/>
+        <image name="pagina_verde" width="600" height="599"/>
         <image name="upperCircle" width="1200" height="689"/>
         <image name="upperCircleGreen" width="1200" height="689"/>
         <namedColor name="Main Blue">
