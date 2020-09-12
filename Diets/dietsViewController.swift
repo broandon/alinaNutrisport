@@ -9,7 +9,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class dietsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource  {
+class dietsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, dietButtonAction {
     
     @IBOutlet weak var dietsCollectionView: UICollectionView!
     @IBOutlet weak var logoBackground: UIView!
@@ -66,11 +66,11 @@ class dietsViewController: UIViewController, UICollectionViewDelegate, UICollect
             
             if let dictionary = json as? Dictionary<String, Any> {
                 for d in dictionary["data"] as! [Dictionary<String, Any>] {
-                    print(d)
                     self.Diets.append(d)
                 }
             }
             DispatchQueue.main.async {
+                
                 if self.Diets.count > 0 {
                     self.dietsCollectionView.reloadData()
                 }
@@ -79,47 +79,58 @@ class dietsViewController: UIViewController, UICollectionViewDelegate, UICollect
         }.resume()
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Diets.count
+    func showTodaysMenu(idNumber: String) {
+        let myViewController = todayDietPopUpViewController(nibName: "todayDietPopUpViewController", bundle: nil)
+        myViewController.dietID = idNumber
+        myViewController.modalPresentationStyle = .overCurrentContext
+        
+        if #available(iOS 13.0, *) {
+            myViewController.isModalInPresentation = true
+        } else {
+            // Fallback on earlier versions
+        }
+        self.present(myViewController, animated: false, completion: nil)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        let pickedSections = Diets[indexPath.row]
-        let urlToVisit = pickedSections["url"]
-        
+    func showAllMenu(URL: String) {
         let vc = webViewViewController(nibName: "webViewViewController", bundle: nil)
-        vc.urlToVisit = urlToVisit as! String
+        vc.urlToVisit = URL
         self.present(vc, animated: true)
-        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return Diets.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let pickedSections = Diets[indexPath.row]
         let sectionImage = UIImage(named: "manzana")
-        let sectionTitle = pickedSections["nombre"]
+        let sectionTitle = pickedSections["fecha"]
+        let dietID = pickedSections["Id"] as! String
+        let URL = pickedSections["url"] as! String
         let cell = dietsCollectionView.dequeueReusableCell(withReuseIdentifier: reuseDocument, for: indexPath)
+       
         if let cell = cell as? dietsCollectionViewCell {
             DispatchQueue.main.async {
                 cell.image.image = sectionImage
-                    cell.label.text = "Dieta"
-                    cell.label.text = sectionTitle as? String
+                cell.label.text = sectionTitle as? String
             }
+            cell.delegate = self
+            let dietIDInt = Int(dietID)
+            cell.todaysMenuButton.tag = dietIDInt!
+            cell.cellURL = URL
         }
         return cell
     }
     
     @IBAction func getOut(_ sender: Any) {
-        
         self.hero.isEnabled = true
-        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! mainViewController
         newViewController.hero.modalAnimationType = .pageOut(direction: .right)
-        
         self.hero.replaceViewController(with: newViewController)
-        
     }
+    
     @IBAction func sectionChange(_ sender: UISegmentedControl) {
         
         if sender.selectedSegmentIndex == 0 {
@@ -129,9 +140,7 @@ class dietsViewController: UIViewController, UICollectionViewDelegate, UICollect
         if sender.selectedSegmentIndex == 1 {
             dietsCollectionView.alpha = 0
         }
-        
     }
-    
 }
 
 extension dietsViewController: UICollectionViewDelegateFlowLayout {
@@ -154,5 +163,4 @@ extension dietsViewController: UICollectionViewDelegateFlowLayout {
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 50.0
     }
-    
 }

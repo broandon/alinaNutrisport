@@ -16,8 +16,7 @@ class profileViewSwitcher: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var logoBackground: UIView!
     @IBOutlet weak var segmentedIndexControl: UISegmentedControl!
-    
-    
+    @IBOutlet weak var viewTitle: UILabel!
     
     let UserID = UserDefaults.standard.string(forKey: "IDUser")
     var profileImageSaved: String? = ""
@@ -26,6 +25,7 @@ class profileViewSwitcher: UIViewController {
         super.viewDidLoad()
         setupView()
         getInfo()
+        segmentedIndexControl.isHidden = true
         if UserDefaults.standard.bool(forKey: "comingFromProfile") == true {
             segmentedIndexControl.selectedSegmentIndex = 1
             profileImage.image = UIImage(named: "graficas1")
@@ -34,7 +34,8 @@ class profileViewSwitcher: UIViewController {
             self.statisticsProfile.alpha = 2
             self.newInfoview.alpha = 0
             self.profileImage.image = UIImage(named: "graficas1")
-            self.segmentedIndexControl.isHidden = true
+            self.segmentedIndexControl.isHidden = false
+            self.viewTitle.isHidden = true
         }
     }
     
@@ -59,6 +60,8 @@ class profileViewSwitcher: UIViewController {
         profileView.slideInFromBottom()
         statisticsProfile.slideInFromBottom()
         newInfoview.slideInFromBottom()
+        let font = UIFont.systemFont(ofSize: 11)
+        segmentedIndexControl.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
     }
     
     func getInfo() {
@@ -81,6 +84,8 @@ class profileViewSwitcher: UIViewController {
                         if UserDefaults.standard.bool(forKey: "loadImage") == true {
                         self.profileImage.sd_setImage(with: URL(string: imageReal!), completed: nil)
                         UserDefaults.standard.set(false, forKey: "loadImage")
+                            self.segmentedIndexControl.isHidden = true
+                            self.viewTitle.isHidden = false
                         }
                     }
                 }

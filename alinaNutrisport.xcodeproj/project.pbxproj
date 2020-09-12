@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1118C3AC4715FF4AD8C27523 /* Pods_alinaNutrisport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BBF215C661F8070C933008 /* Pods_alinaNutrisport.framework */; };
+		9D23A7B1250B336400218C24 /* todayDietPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23A7AF250B336400218C24 /* todayDietPopUpViewController.swift */; };
+		9D23A7B2250B336400218C24 /* todayDietPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D23A7B0250B336400218C24 /* todayDietPopUpViewController.xib */; };
+		9D23A7B5250B48DF00218C24 /* todaysMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23A7B3250B48DF00218C24 /* todaysMenuTableViewCell.swift */; };
+		9D23A7B6250B48DF00218C24 /* todaysMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D23A7B4250B48DF00218C24 /* todaysMenuTableViewCell.xib */; };
 		9D498C7024B2DC5D00ADF7F2 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */; };
 		9DBD90E52453483E00191361 /* recoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD90E42453483E00191361 /* recoverViewController.swift */; };
 		9DC0956F2458EC1200ED6B59 /* Recover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0956E2458EC1200ED6B59 /* Recover.swift */; };
@@ -57,6 +61,10 @@
 		0061E9C3B53F359BF2496BDB /* Pods-alinaNutrisport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alinaNutrisport.debug.xcconfig"; path = "Target Support Files/Pods-alinaNutrisport/Pods-alinaNutrisport.debug.xcconfig"; sourceTree = "<group>"; };
 		17AF5EC5AF55D858B5354287 /* Pods-alinaNutrisport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alinaNutrisport.release.xcconfig"; path = "Target Support Files/Pods-alinaNutrisport/Pods-alinaNutrisport.release.xcconfig"; sourceTree = "<group>"; };
 		33BBF215C661F8070C933008 /* Pods_alinaNutrisport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alinaNutrisport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D23A7AF250B336400218C24 /* todayDietPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayDietPopUpViewController.swift; sourceTree = "<group>"; };
+		9D23A7B0250B336400218C24 /* todayDietPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = todayDietPopUpViewController.xib; sourceTree = "<group>"; };
+		9D23A7B3250B48DF00218C24 /* todaysMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todaysMenuTableViewCell.swift; sourceTree = "<group>"; };
+		9D23A7B4250B48DF00218C24 /* todaysMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = todaysMenuTableViewCell.xib; sourceTree = "<group>"; };
 		9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		9DBD90E42453483E00191361 /* recoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recoverViewController.swift; sourceTree = "<group>"; };
 		9DC0956E2458EC1200ED6B59 /* Recover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recover.swift; sourceTree = "<group>"; };
@@ -126,6 +134,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9D23A7AD250B32B500218C24 /* Diets */ = {
+			isa = PBXGroup;
+			children = (
+				9D23A7AE250B333B00218C24 /* Today Pop Up */,
+				CF0A403824B4E108008F583B /* dietsViewController.swift */,
+				CF0A403E24B4E27F008F583B /* dietsCollectionViewCell.swift */,
+				CF0A403F24B4E27F008F583B /* dietsCollectionViewCell.xib */,
+			);
+			path = Diets;
+			sourceTree = "<group>";
+		};
+		9D23A7AE250B333B00218C24 /* Today Pop Up */ = {
+			isa = PBXGroup;
+			children = (
+				9D23A7B3250B48DF00218C24 /* todaysMenuTableViewCell.swift */,
+				9D23A7B4250B48DF00218C24 /* todaysMenuTableViewCell.xib */,
+				9D23A7AF250B336400218C24 /* todayDietPopUpViewController.swift */,
+				9D23A7B0250B336400218C24 /* todayDietPopUpViewController.xib */,
+			);
+			path = "Today Pop Up";
+			sourceTree = "<group>";
+		};
 		9D498C6E24B2DC3800ADF7F2 /* profileViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +195,8 @@
 		9DC948672432993B00D65573 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				CFA2A9A324BD107800218C55 /* webViewViewController.swift */,
+				CFA2A9A424BD107800218C55 /* webViewViewController.xib */,
 				9DC948682432996000D65573 /* Extensions.swift */,
 				9DC095702458ED1C00ED6B59 /* baseURL.swift */,
 			);
@@ -177,11 +209,6 @@
 				9DC9486B2432E53300D65573 /* mainViewController.swift */,
 				9DDC26DE2435C1B1002FAC0D /* sectionsCollectionViewCell.swift */,
 				9DDC26DF2435C1B1002FAC0D /* sectionsCollectionViewCell.xib */,
-				CF0A403824B4E108008F583B /* dietsViewController.swift */,
-				CF0A403E24B4E27F008F583B /* dietsCollectionViewCell.swift */,
-				CF0A403F24B4E27F008F583B /* dietsCollectionViewCell.xib */,
-				CFA2A9A324BD107800218C55 /* webViewViewController.swift */,
-				CFA2A9A424BD107800218C55 /* webViewViewController.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -223,6 +250,7 @@
 		CFA22A9C2422850E0036DB71 = {
 			isa = PBXGroup;
 			children = (
+				9D23A7AD250B32B500218C24 /* Diets */,
 				CFA2A9A724BD1A1E00218C55 /* Chat */,
 				CF0A404A24B5068E008F583B /* Documentos */,
 				9D498C6E24B2DC3800ADF7F2 /* profileViewController */,
@@ -327,12 +355,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D23A7B6250B48DF00218C24 /* todaysMenuTableViewCell.xib in Resources */,
 				CFA22AB5242285110036DB71 /* LaunchScreen.storyboard in Resources */,
 				CF0A404924B4FBB0008F583B /* datesTableViewCell.xib in Resources */,
 				CFA22AB2242285110036DB71 /* Assets.xcassets in Resources */,
 				CF0A405824B50A6D008F583B /* personalesTableViewCell.xib in Resources */,
 				CF0A404124B4E27F008F583B /* dietsCollectionViewCell.xib in Resources */,
 				CFA2A9AD24BD1D4C00218C55 /* messageTableViewCell.xib in Resources */,
+				9D23A7B2250B336400218C24 /* todayDietPopUpViewController.xib in Resources */,
 				CF0A405424B50A5C008F583B /* genericosTableViewCell.xib in Resources */,
 				9DDC26E12435C1B1002FAC0D /* sectionsCollectionViewCell.xib in Resources */,
 				CFA2A9A624BD107900218C55 /* webViewViewController.xib in Resources */,
@@ -399,10 +429,12 @@
 				CF0A404524B4F7E0008F583B /* datesViewController.swift in Sources */,
 				9DC948662432928100D65573 /* loginViewController.swift in Sources */,
 				CF24BF1D24D0E480002F4B13 /* statisticsData.swift in Sources */,
+				9D23A7B5250B48DF00218C24 /* todaysMenuTableViewCell.swift in Sources */,
 				CF56A49B24BF852A0060D86A /* Measurements.swift in Sources */,
 				CFA6CE0624CA3F9E0047E870 /* chartsInfo.swift in Sources */,
 				CFA39F5124BE51B500626A6B /* profleOtherViewController.swift in Sources */,
 				CF0A404824B4FBB0008F583B /* datesTableViewCell.swift in Sources */,
+				9D23A7B1250B336400218C24 /* todayDietPopUpViewController.swift in Sources */,
 				CF88053024B8E66B001DD622 /* updatedProfile.swift in Sources */,
 				CFA2A9A524BD107800218C55 /* webViewViewController.swift in Sources */,
 				CF0A405724B50A6D008F583B /* personalesTableViewCell.swift in Sources */,
@@ -566,7 +598,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -588,7 +620,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;

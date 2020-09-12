@@ -11,7 +11,6 @@ import UIKit
 class mainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     //MARK: Outlets
-    
     @IBOutlet weak var logoBackground: UIView!
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var mainCollection: UICollectionView!
@@ -19,21 +18,7 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     let reuseDocument = "sectionsCellStores"
     var Sections : [Dictionary<String, Any>] =
-        [["Titulo": "Perfil", "ID" : "1", "Imagen" : UIImage(named: "perfil")!],
-         
-         ["Titulo": "Consultas", "ID" : "8", "Imagen" : UIImage(named: "seguimientos")!],
-         
-         ["Titulo": "Dietas", "ID" : "2", "Imagen" : UIImage(named: "manzana")!],
-         
-         ["Titulo": "Seguimiento Diario", "ID" : "6", "Imagen" : UIImage(named: "reloj")!],
-         
-         ["Titulo": "Chat", "ID" : "5", "Imagen" : UIImage(named: "chat")!],
-
-         ["Titulo": "Archivos", "ID" : "4", "Imagen" : UIImage(named: "documento")!],
-         
-         ["Titulo": "Citas", "ID" : "3", "Imagen" : UIImage(named: "tabla")!],
-         
-         ["Titulo": "Configuración", "ID" : "7", "Imagen" : UIImage(named: "engrane")!]]
+        [["Titulo": "Perfil", "ID" : "1", "Imagen" : UIImage(named: "perfil")!], ["Titulo": "Consultas", "ID" : "8", "Imagen" : UIImage(named: "seguimientos")!], ["Titulo": "Dietas", "ID" : "2", "Imagen" : UIImage(named: "manzana")!], ["Titulo": "Seguimiento Diario", "ID" : "6", "Imagen" : UIImage(named: "reloj")!], ["Titulo": "Chat", "ID" : "5", "Imagen" : UIImage(named: "chat")!], ["Titulo": "Archivos", "ID" : "4", "Imagen" : UIImage(named: "documento")!], ["Titulo": "Citas", "ID" : "3", "Imagen" : UIImage(named: "tabla")!], ["Titulo": "Configuración", "ID" : "7", "Imagen" : UIImage(named: "engrane")!]]
     
     //MARK: viewDid
     
