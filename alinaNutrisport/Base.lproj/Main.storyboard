@@ -1535,7 +1535,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zR-Rx-kIZ">
-                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1544,7 +1544,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="66t-kL-RtX">
-                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1709,7 +1709,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eZd-oY-ma7">
-                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1718,7 +1718,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rb2-DG-8sh">
-                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1751,7 +1751,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JVD-YX-wrO">
-                                                        <rect key="frame" x="199" y="114" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="113" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1937,7 +1937,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jXf-Iq-nvB">
-                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1946,7 +1946,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qlV-B7-zlg">
-                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1979,7 +1979,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7to-6g-es6">
-                                                        <rect key="frame" x="199" y="114" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="113" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2024,7 +2024,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FPT-kQ-Kys">
-                                                        <rect key="frame" x="199" y="158" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="157" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2047,7 +2047,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="faD-PM-W5b">
-                                                        <rect key="frame" x="199" y="202" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="201" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2272,7 +2272,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2h0-Ma-iDU">
-                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2281,7 +2281,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2p2-wE-A4z">
-                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2314,7 +2314,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hkR-uf-kYR">
-                                                        <rect key="frame" x="199" y="114" width="173" height="19"/>
+                                                        <rect key="frame" x="199" y="113" width="173" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2562,7 +2562,6 @@
                                     <constraint firstAttribute="height" constant="31" id="M5z-RI-khf"/>
                                 </constraints>
                                 <segments>
-                                    <segment title=""/>
                                     <segment title="Graficas de Seguimiento"/>
                                     <segment title="Nuevo Seguimiento"/>
                                 </segments>
@@ -2573,7 +2572,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ajz-u1-Rjj">
                                 <rect key="frame" x="122.5" y="124" width="169" height="169"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FP7-GA-qe4">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FP7-GA-qe4">
                                         <rect key="frame" x="0.0" y="0.0" width="169" height="169"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhd-yc-Lbx">
@@ -2603,9 +2602,6 @@
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpf-Mz-Skm" userLabel="datosDePerfil">
                                 <rect key="frame" x="0.0" y="301" width="414" height="595"/>
-                                <connections>
-                                    <segue destination="JGG-EL-CBn" kind="embed" id="FpL-7r-FKE"/>
-                                </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3Q-R7-gBa" userLabel="statisticsView">
                                 <rect key="frame" x="0.0" y="301" width="414" height="595"/>
@@ -2619,12 +2615,6 @@
                                     <segue destination="vNG-DD-O9A" kind="embed" id="Gbb-fI-DDW"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datos de Perfil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1d-Hz-Ahl">
-                                <rect key="frame" x="20" y="83" width="374" height="33"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -2641,16 +2631,12 @@
                             <constraint firstAttribute="trailing" secondItem="jge-7g-pT7" secondAttribute="trailing" constant="-122" id="RZd-st-koH"/>
                             <constraint firstAttribute="bottom" secondItem="hwN-je-0yn" secondAttribute="bottom" id="TFc-wW-DEW"/>
                             <constraint firstAttribute="bottom" secondItem="bpf-Mz-Skm" secondAttribute="bottom" id="WOU-mY-9k6"/>
-                            <constraint firstItem="u1d-Hz-Ahl" firstAttribute="top" secondItem="COQ-aE-BPE" secondAttribute="top" constant="39" id="aUP-6X-BC1"/>
                             <constraint firstItem="jge-7g-pT7" firstAttribute="leading" secondItem="8ke-e2-WTc" secondAttribute="leading" constant="-122" id="adL-RA-GkN"/>
-                            <constraint firstItem="COQ-aE-BPE" firstAttribute="trailing" secondItem="u1d-Hz-Ahl" secondAttribute="trailing" constant="20" id="eWv-Rw-jW9"/>
                             <constraint firstItem="COQ-aE-BPE" firstAttribute="trailing" secondItem="R0S-8p-tMK" secondAttribute="trailing" constant="20" id="gw5-5c-UIz"/>
                             <constraint firstItem="Ajz-u1-Rjj" firstAttribute="centerX" secondItem="8ke-e2-WTc" secondAttribute="centerX" id="iS8-aG-TjZ"/>
                             <constraint firstItem="r3Q-R7-gBa" firstAttribute="top" secondItem="Ajz-u1-Rjj" secondAttribute="bottom" constant="8" id="m9k-1O-4Ap"/>
-                            <constraint firstItem="Ajz-u1-Rjj" firstAttribute="top" secondItem="u1d-Hz-Ahl" secondAttribute="bottom" constant="8" id="oRo-7x-7B2"/>
                             <constraint firstItem="R0S-8p-tMK" firstAttribute="leading" secondItem="COQ-aE-BPE" secondAttribute="leading" constant="20" id="och-60-krQ"/>
                             <constraint firstItem="bpf-Mz-Skm" firstAttribute="leading" secondItem="COQ-aE-BPE" secondAttribute="leading" id="ooJ-I5-4rl"/>
-                            <constraint firstItem="u1d-Hz-Ahl" firstAttribute="leading" secondItem="COQ-aE-BPE" secondAttribute="leading" constant="20" id="wgA-t9-crg"/>
                             <constraint firstItem="jge-7g-pT7" firstAttribute="top" secondItem="8ke-e2-WTc" secondAttribute="top" constant="-175" id="zaZ-A2-AT4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="COQ-aE-BPE"/>
@@ -2663,7 +2649,6 @@
                         <outlet property="profileView" destination="bpf-Mz-Skm" id="uKL-cd-Cgd"/>
                         <outlet property="segmentedIndexControl" destination="R0S-8p-tMK" id="9qj-WP-nNu"/>
                         <outlet property="statisticsProfile" destination="r3Q-R7-gBa" id="Ado-85-SBr"/>
-                        <outlet property="viewTitle" destination="u1d-Hz-Ahl" id="GKo-WS-IEu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNW-o7-6qb" sceneMemberID="firstResponder"/>
@@ -2824,7 +2809,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WMZ-jS-OCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8763.7681159420299" y="707.47767857142856"/>
+            <point key="canvasLocation" x="8501" y="708"/>
         </scene>
         <!--Statistics Data-->
         <scene sceneID="hr2-OR-quB">
@@ -2964,7 +2949,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4r4-bN-dtJ">
-                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2973,7 +2958,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bXf-Og-csl">
-                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3138,7 +3123,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gLK-i1-WfF">
-                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3147,7 +3132,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kB6-yh-BaG">
-                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3180,7 +3165,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qX9-Ok-SvO">
-                                                        <rect key="frame" x="199" y="113" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="114" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3365,7 +3350,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gsZ-lc-Mj7">
-                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3374,7 +3359,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0OE-Y6-dW4">
-                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3407,7 +3392,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLH-5i-Gdc">
-                                                        <rect key="frame" x="199" y="113" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="114" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3452,7 +3437,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EAO-ej-Z3I">
-                                                        <rect key="frame" x="199" y="157" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="158" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3475,7 +3460,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qwk-4P-VmF">
-                                                        <rect key="frame" x="199" y="201" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="202" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3701,7 +3686,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGk-jW-R4B">
-                                                        <rect key="frame" x="199" y="20" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="21" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3710,7 +3695,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HmD-NE-Tsl">
-                                                        <rect key="frame" x="199" y="69" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="70" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -3743,7 +3728,7 @@
                                                         <color key="backgroundColor" name="Main Green"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Q4-42-oFm">
-                                                        <rect key="frame" x="199" y="113" width="173" height="20"/>
+                                                        <rect key="frame" x="199" y="114" width="173" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>

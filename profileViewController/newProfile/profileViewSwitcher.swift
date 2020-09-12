@@ -16,7 +16,6 @@ class profileViewSwitcher: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var logoBackground: UIView!
     @IBOutlet weak var segmentedIndexControl: UISegmentedControl!
-    @IBOutlet weak var viewTitle: UILabel!
     
     let UserID = UserDefaults.standard.string(forKey: "IDUser")
     var profileImageSaved: String? = ""
@@ -24,24 +23,11 @@ class profileViewSwitcher: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        getInfo()
-        segmentedIndexControl.isHidden = true
-        if UserDefaults.standard.bool(forKey: "comingFromProfile") == true {
-            segmentedIndexControl.selectedSegmentIndex = 1
-            profileImage.image = UIImage(named: "graficas1")
-            UserDefaults.standard.set(false, forKey: "comingFromProfile")
-            self.profileView.alpha = 0
-            self.statisticsProfile.alpha = 2
-            self.newInfoview.alpha = 0
-            self.profileImage.image = UIImage(named: "graficas1")
-            self.segmentedIndexControl.isHidden = false
-            self.viewTitle.isHidden = true
-        }
     }
     
     func setupView() {
-        profileView.alpha = 1
-        statisticsProfile.alpha = 0
+        self.profileImage.image = UIImage(named: "logoAlinaNutrisport")
+        statisticsProfile.alpha = 1
         newInfoview.alpha = 0
         logoBackground?.layer.backgroundColor = UIColor.white.cgColor
         logoBackground?.layer.borderColor = UIColor.lightGray.cgColor
@@ -64,57 +50,18 @@ class profileViewSwitcher: UIViewController {
         segmentedIndexControl.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
     }
     
-    func getInfo() {
-        let url = URL(string: http.baseURL())!
-        var request = URLRequest(url: url)
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
-        request.httpMethod = "POST" // Metodo
-        let postString = "funcion=getUserInfo&id_user="+UserID!
-        request.httpBody = postString.data(using: .utf8)
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            if let data = data {
-                let profileData = try? JSONDecoder().decode(firstProfileInfo.self, from: data)
-                
-                if profileData?.state == "200" {
-                    let imageForProfile = profileData?.data?.info?.imagen
-                    let imageReal = imageForProfile?.removingAllWhitespaces
-                    self.profileImageSaved = imageReal
-                    DispatchQueue.main.async {
-                        if UserDefaults.standard.bool(forKey: "loadImage") == true {
-                        self.profileImage.sd_setImage(with: URL(string: imageReal!), completed: nil)
-                        UserDefaults.standard.set(false, forKey: "loadImage")
-                            self.segmentedIndexControl.isHidden = true
-                            self.viewTitle.isHidden = false
-                        }
-                    }
-                }
-            }
-        }
-        task.resume()
-    }
-    
     @IBAction func viewSwitcher(_ sender: UISegmentedControl) {
         
         if sender.selectedSegmentIndex == 0 {
             UIView.animate(withDuration: 0.4, animations: {
-                self.profileImage.sd_setImage(with: URL(string: self.profileImageSaved ?? ""), completed: nil)
-                self.profileView.alpha = 1
-                self.statisticsProfile.alpha = 0
+                self.profileView.alpha = 0
+                self.statisticsProfile.alpha = 2
                 self.newInfoview.alpha = 0
+                self.profileImage.image = UIImage(named: "logoAlinaNutrisport")
             })
         }
         
         if sender.selectedSegmentIndex == 1 {
-            UIView.animate(withDuration: 0.4, animations: {
-                self.profileView.alpha = 0
-                self.statisticsProfile.alpha = 2
-                self.newInfoview.alpha = 0
-                self.profileImage.image = UIImage(named: "graficas1")
-            })
-        }
-        
-        if sender.selectedSegmentIndex == 2 {
             UIView.animate(withDuration: 0.4, animations: {
                 self.profileView.alpha = 0
                 self.statisticsProfile.alpha = 0
@@ -122,7 +69,6 @@ class profileViewSwitcher: UIViewController {
                 self.profileImage.image = UIImage(named: "fotos1")
             })
         }
-        
     }
     
     @IBAction func getOut(_ sender: Any) {

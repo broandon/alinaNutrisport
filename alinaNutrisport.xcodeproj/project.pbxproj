@@ -12,6 +12,8 @@
 		9D23A7B2250B336400218C24 /* todayDietPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D23A7B0250B336400218C24 /* todayDietPopUpViewController.xib */; };
 		9D23A7B5250B48DF00218C24 /* todaysMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23A7B3250B48DF00218C24 /* todaysMenuTableViewCell.swift */; };
 		9D23A7B6250B48DF00218C24 /* todaysMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D23A7B4250B48DF00218C24 /* todaysMenuTableViewCell.xib */; };
+		9D23A7BD250C781C00218C24 /* anotherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23A7BB250C781C00218C24 /* anotherProfileViewController.swift */; };
+		9D23A7BE250C781C00218C24 /* anotherProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D23A7BC250C781C00218C24 /* anotherProfileViewController.xib */; };
 		9D498C7024B2DC5D00ADF7F2 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */; };
 		9DBD90E52453483E00191361 /* recoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD90E42453483E00191361 /* recoverViewController.swift */; };
 		9DC0956F2458EC1200ED6B59 /* Recover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0956E2458EC1200ED6B59 /* Recover.swift */; };
@@ -65,6 +67,8 @@
 		9D23A7B0250B336400218C24 /* todayDietPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = todayDietPopUpViewController.xib; sourceTree = "<group>"; };
 		9D23A7B3250B48DF00218C24 /* todaysMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todaysMenuTableViewCell.swift; sourceTree = "<group>"; };
 		9D23A7B4250B48DF00218C24 /* todaysMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = todaysMenuTableViewCell.xib; sourceTree = "<group>"; };
+		9D23A7BB250C781C00218C24 /* anotherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = anotherProfileViewController.swift; sourceTree = "<group>"; };
+		9D23A7BC250C781C00218C24 /* anotherProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = anotherProfileViewController.xib; sourceTree = "<group>"; };
 		9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		9DBD90E42453483E00191361 /* recoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recoverViewController.swift; sourceTree = "<group>"; };
 		9DC0956E2458EC1200ED6B59 /* Recover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recover.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 				CF0A404624B4FBB0008F583B /* datesTableViewCell.swift */,
 				CF0A404724B4FBB0008F583B /* datesTableViewCell.xib */,
 				CFA39F5024BE51B500626A6B /* profleOtherViewController.swift */,
+				9D23A7BB250C781C00218C24 /* anotherProfileViewController.swift */,
+				9D23A7BC250C781C00218C24 /* anotherProfileViewController.xib */,
 			);
 			path = profileViewController;
 			sourceTree = "<group>";
@@ -366,6 +372,7 @@
 				CF0A405424B50A5C008F583B /* genericosTableViewCell.xib in Resources */,
 				9DDC26E12435C1B1002FAC0D /* sectionsCollectionViewCell.xib in Resources */,
 				CFA2A9A624BD107900218C55 /* webViewViewController.xib in Resources */,
+				9D23A7BE250C781C00218C24 /* anotherProfileViewController.xib in Resources */,
 				CFA22AB02422850E0036DB71 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +437,7 @@
 				9DC948662432928100D65573 /* loginViewController.swift in Sources */,
 				CF24BF1D24D0E480002F4B13 /* statisticsData.swift in Sources */,
 				9D23A7B5250B48DF00218C24 /* todaysMenuTableViewCell.swift in Sources */,
+				9D23A7BD250C781C00218C24 /* anotherProfileViewController.swift in Sources */,
 				CF56A49B24BF852A0060D86A /* Measurements.swift in Sources */,
 				CFA6CE0624CA3F9E0047E870 /* chartsInfo.swift in Sources */,
 				CFA39F5124BE51B500626A6B /* profleOtherViewController.swift in Sources */,
