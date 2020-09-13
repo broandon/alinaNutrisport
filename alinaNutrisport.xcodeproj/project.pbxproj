@@ -14,6 +14,11 @@
 		9D23A7B6250B48DF00218C24 /* todaysMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D23A7B4250B48DF00218C24 /* todaysMenuTableViewCell.xib */; };
 		9D23A7BD250C781C00218C24 /* anotherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23A7BB250C781C00218C24 /* anotherProfileViewController.swift */; };
 		9D23A7BE250C781C00218C24 /* anotherProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D23A7BC250C781C00218C24 /* anotherProfileViewController.xib */; };
+		9D23A7C5250DC11700218C24 /* tracking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D23A7C4250DC11700218C24 /* tracking.storyboard */; };
+		9D23A7C7250DCC9D00218C24 /* trackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23A7C6250DCC9D00218C24 /* trackingViewController.swift */; };
+		9D23A7C9250DD3B600218C24 /* dailyTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23A7C8250DD3B600218C24 /* dailyTrackingViewController.swift */; };
+		9D23A7CC250DD74E00218C24 /* dailyInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23A7CA250DD74E00218C24 /* dailyInfoTableViewCell.swift */; };
+		9D23A7CD250DD74E00218C24 /* dailyInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D23A7CB250DD74E00218C24 /* dailyInfoTableViewCell.xib */; };
 		9D498C7024B2DC5D00ADF7F2 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */; };
 		9DBD90E52453483E00191361 /* recoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD90E42453483E00191361 /* recoverViewController.swift */; };
 		9DC0956F2458EC1200ED6B59 /* Recover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0956E2458EC1200ED6B59 /* Recover.swift */; };
@@ -69,6 +74,11 @@
 		9D23A7B4250B48DF00218C24 /* todaysMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = todaysMenuTableViewCell.xib; sourceTree = "<group>"; };
 		9D23A7BB250C781C00218C24 /* anotherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = anotherProfileViewController.swift; sourceTree = "<group>"; };
 		9D23A7BC250C781C00218C24 /* anotherProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = anotherProfileViewController.xib; sourceTree = "<group>"; };
+		9D23A7C4250DC11700218C24 /* tracking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = tracking.storyboard; sourceTree = "<group>"; };
+		9D23A7C6250DCC9D00218C24 /* trackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trackingViewController.swift; sourceTree = "<group>"; };
+		9D23A7C8250DD3B600218C24 /* dailyTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dailyTrackingViewController.swift; sourceTree = "<group>"; };
+		9D23A7CA250DD74E00218C24 /* dailyInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dailyInfoTableViewCell.swift; sourceTree = "<group>"; };
+		9D23A7CB250DD74E00218C24 /* dailyInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dailyInfoTableViewCell.xib; sourceTree = "<group>"; };
 		9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		9DBD90E42453483E00191361 /* recoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recoverViewController.swift; sourceTree = "<group>"; };
 		9DC0956E2458EC1200ED6B59 /* Recover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recover.swift; sourceTree = "<group>"; };
@@ -158,6 +168,18 @@
 				9D23A7B0250B336400218C24 /* todayDietPopUpViewController.xib */,
 			);
 			path = "Today Pop Up";
+			sourceTree = "<group>";
+		};
+		9D23A7BF250DAA0400218C24 /* Nutrition Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				9D23A7C4250DC11700218C24 /* tracking.storyboard */,
+				9D23A7C6250DCC9D00218C24 /* trackingViewController.swift */,
+				9D23A7C8250DD3B600218C24 /* dailyTrackingViewController.swift */,
+				9D23A7CA250DD74E00218C24 /* dailyInfoTableViewCell.swift */,
+				9D23A7CB250DD74E00218C24 /* dailyInfoTableViewCell.xib */,
+			);
+			path = "Nutrition Tracking";
 			sourceTree = "<group>";
 		};
 		9D498C6E24B2DC3800ADF7F2 /* profileViewController */ = {
@@ -256,6 +278,7 @@
 		CFA22A9C2422850E0036DB71 = {
 			isa = PBXGroup;
 			children = (
+				9D23A7BF250DAA0400218C24 /* Nutrition Tracking */,
 				9D23A7AD250B32B500218C24 /* Diets */,
 				CFA2A9A724BD1A1E00218C55 /* Chat */,
 				CF0A404A24B5068E008F583B /* Documentos */,
@@ -282,8 +305,8 @@
 		CFA22AA72422850E0036DB71 /* alinaNutrisport */ = {
 			isa = PBXGroup;
 			children = (
-				CFA22AA82422850E0036DB71 /* AppDelegate.swift */,
 				CFA22AAE2422850E0036DB71 /* Main.storyboard */,
+				CFA22AA82422850E0036DB71 /* AppDelegate.swift */,
 				CFA22AB1242285110036DB71 /* Assets.xcassets */,
 				CFA22AB3242285110036DB71 /* LaunchScreen.storyboard */,
 				CFA22AB6242285110036DB71 /* Info.plist */,
@@ -372,8 +395,10 @@
 				CF0A405424B50A5C008F583B /* genericosTableViewCell.xib in Resources */,
 				9DDC26E12435C1B1002FAC0D /* sectionsCollectionViewCell.xib in Resources */,
 				CFA2A9A624BD107900218C55 /* webViewViewController.xib in Resources */,
+				9D23A7C5250DC11700218C24 /* tracking.storyboard in Resources */,
 				9D23A7BE250C781C00218C24 /* anotherProfileViewController.xib in Resources */,
 				CFA22AB02422850E0036DB71 /* Main.storyboard in Resources */,
+				9D23A7CD250DD74E00218C24 /* dailyInfoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DDC26E02435C1B1002FAC0D /* sectionsCollectionViewCell.swift in Sources */,
+				9D23A7C7250DCC9D00218C24 /* trackingViewController.swift in Sources */,
 				9DBD90E52453483E00191361 /* recoverViewController.swift in Sources */,
 				CF24BF1924D0D786002F4B13 /* profileViewSwitcher.swift in Sources */,
 				CF24BF1B24D0DB7C002F4B13 /* profileData.swift in Sources */,
@@ -456,11 +482,13 @@
 				CF0A405324B50A5C008F583B /* genericosTableViewCell.swift in Sources */,
 				CFA2A9A924BD1A3600218C55 /* chatViewController.swift in Sources */,
 				CF88052E24B8DE87001DD622 /* profileInfo.swift in Sources */,
+				9D23A7CC250DD74E00218C24 /* dailyInfoTableViewCell.swift in Sources */,
 				CF0A404024B4E27F008F583B /* dietsCollectionViewCell.swift in Sources */,
 				CF24BF1F24D0ECF5002F4B13 /* newInfoData.swift in Sources */,
 				9DC095712458ED1C00ED6B59 /* baseURL.swift in Sources */,
 				9D498C7024B2DC5D00ADF7F2 /* profileViewController.swift in Sources */,
 				9DC0956F2458EC1200ED6B59 /* Recover.swift in Sources */,
+				9D23A7C9250DD3B600218C24 /* dailyTrackingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,7 +634,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -628,7 +656,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;

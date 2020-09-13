@@ -84,12 +84,12 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             myViewController.hero.modalAnimationType = .zoomSlide(direction: .left)
             self.hero.replaceViewController(with: myViewController)
             return
-//            UserDefaults.standard.set(true, forKey: "loadImage")
-//            self.hero.isEnabled = true
-//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileViewSwitcher") as! profileViewSwitcher
-//            newViewController.hero.modalAnimationType = .pageIn(direction: .left)
-//            self.hero.replaceViewController(with: newViewController)
+            //            UserDefaults.standard.set(true, forKey: "loadImage")
+            //            self.hero.isEnabled = true
+            //            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            //            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileViewSwitcher") as! profileViewSwitcher
+            //            newViewController.hero.modalAnimationType = .pageIn(direction: .left)
+            //            self.hero.replaceViewController(with: newViewController)
         }
         
         if sectionID == "2" {
@@ -139,6 +139,14 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileViewSwitcher") as! profileViewSwitcher
             UserDefaults.standard.set(true, forKey: "comingFromProfile")
             newViewController.hero.modalAnimationType = .pageIn(direction: .left)
+            self.hero.replaceViewController(with: newViewController)
+        }
+        
+        if sectionID == "6" {
+            self.hero.isEnabled = true
+            let storyBoard: UIStoryboard = UIStoryboard(name: "tracking", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "trackingViewController") as! trackingViewController
+            newViewController.hero.modalAnimationType = .zoomSlide(direction: .left)
             self.hero.replaceViewController(with: newViewController)
         }
     }
