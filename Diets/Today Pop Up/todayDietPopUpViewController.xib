@@ -34,13 +34,13 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZe-PC-oJx">
-                            <rect key="frame" x="20" y="140" width="374" height="621"/>
+                            <rect key="frame" x="20" y="100" width="374" height="696"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJu-IB-bhV">
-                                    <rect key="frame" x="19" y="64" width="337" height="540"/>
+                                    <rect key="frame" x="19" y="64" width="337" height="615"/>
                                     <subviews>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SRV-9Y-qR7">
-                                            <rect key="frame" x="8" y="74" width="321" height="458"/>
+                                            <rect key="frame" x="8" y="74" width="321" height="533"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </tableView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menú del Día" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXd-ua-wgs">
@@ -92,10 +92,10 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="hZe-PC-oJx" secondAttribute="trailing" constant="20" id="AJf-ei-jKs"/>
                         <constraint firstItem="RIP-cM-Xhm" firstAttribute="top" secondItem="G15-Ce-aKc" secondAttribute="top" id="AmE-2s-Qjz"/>
-                        <constraint firstItem="hZe-PC-oJx" firstAttribute="top" secondItem="G15-Ce-aKc" secondAttribute="top" constant="140" id="CUV-fe-asx"/>
+                        <constraint firstItem="hZe-PC-oJx" firstAttribute="top" secondItem="G15-Ce-aKc" secondAttribute="top" constant="100" id="CUV-fe-asx"/>
                         <constraint firstItem="hZe-PC-oJx" firstAttribute="leading" secondItem="G15-Ce-aKc" secondAttribute="leading" constant="20" id="GeE-iw-NCM"/>
                         <constraint firstAttribute="trailing" secondItem="RIP-cM-Xhm" secondAttribute="trailing" id="JsA-UD-qkz"/>
-                        <constraint firstAttribute="bottom" secondItem="hZe-PC-oJx" secondAttribute="bottom" constant="135" id="Wbv-eQ-nHU"/>
+                        <constraint firstAttribute="bottom" secondItem="hZe-PC-oJx" secondAttribute="bottom" constant="100" id="Wbv-eQ-nHU"/>
                         <constraint firstAttribute="bottom" secondItem="RIP-cM-Xhm" secondAttribute="bottom" id="cxt-3n-B1e"/>
                         <constraint firstItem="RIP-cM-Xhm" firstAttribute="leading" secondItem="G15-Ce-aKc" secondAttribute="leading" id="zJu-Jy-2je"/>
                     </constraints>

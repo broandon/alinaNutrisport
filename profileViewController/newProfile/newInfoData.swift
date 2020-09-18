@@ -36,6 +36,7 @@ class newInfoData: UIViewController {
     @IBOutlet weak var subaescapularTF: UITextField!
     @IBOutlet weak var suprailiacoTF: UITextField!
     @IBOutlet weak var musloTF: UITextField!
+    @IBOutlet weak var sexImage: UIImageView!
     
     //Fourth Section
     @IBOutlet weak var cinturaTF: UITextField!
@@ -73,8 +74,14 @@ class newInfoData: UIViewController {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
             if let data = data {
-                let msrmnts = try? JSONDecoder().decode(profileMeasurementsMeasurementsData.self, from: data)
+                let msrmnts = try? JSONDecoder().decode(updatedSepUserMeasurements.self, from: data)
                 DispatchQueue.main.async {
+                    if msrmnts?.data?.info?.sexo == "1" {
+                        self.sexImage.image = UIImage(named: "medias_alina_hombre")
+                    }
+                    if msrmnts?.data?.info?.sexo == "2" {
+                        self.sexImage.image = UIImage(named: "medias_alina_mujer")
+                    }
                     self.pesoTF.text = msrmnts?.data?.info?.peso
                     self.alturaTF.text = msrmnts?.data?.info?.altura
                     self.pGrasaTF.text = msrmnts?.data?.info?.pGrasa
@@ -87,13 +94,6 @@ class newInfoData: UIViewController {
                     self.evaluacionFisica.text = msrmnts?.data?.info?.evFisica
                     self.edadMetabolica.text = msrmnts?.data?.info?.edadMetabolica
                     self.pesoEsperado.text = msrmnts?.data?.info?.pesoEsperado
-                    self.tricepsTF.text = msrmnts?.data?.info?.tricepsGrasa
-                    self.bicepsTF.text = msrmnts?.data?.info?.bicepsGrasa
-                    self.abdominalTF.text = msrmnts?.data?.info?.abdominalGrasa
-                    self.pantorrilaTF.text = msrmnts?.data?.info?.pantorrillaGrasa
-                    self.subaescapularTF.text = msrmnts?.data?.info?.subescopularGrasa
-                    self.suprailiacoTF.text = msrmnts?.data?.info?.suprailiacoGrasa
-                    self.musloTF.text = msrmnts?.data?.info?.musloGrasa
                     self.cinturaTF.text = msrmnts?.data?.info?.cinturaPerimetro
                     self.abdomenTF.text = msrmnts?.data?.info?.abdomenPerimetro
                     self.caderaTF.text = msrmnts?.data?.info?.cinturaPerimetro

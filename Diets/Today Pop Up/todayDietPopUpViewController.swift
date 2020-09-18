@@ -8,6 +8,13 @@
 
 import UIKit
 
+class planet {
+    var size: CGFloat
+    init(size: CGFloat) {
+        self.size = size
+    }
+}
+
 class todayDietPopUpViewController: UIViewController {
     
     //MARK: Outlets
@@ -22,7 +29,7 @@ class todayDietPopUpViewController: UIViewController {
     var Info : Dictionary<String, Any> = [:]
     var dietID : String = ""
     var date : String = ""
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getDate()
@@ -68,18 +75,19 @@ class todayDietPopUpViewController: UIViewController {
             guard let data = data, error == nil, response != nil else {
                 return
             }
-            let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            
+            let json = try? JSONSerialization.jsonObject(with: data, options: [])
             
             if let dictionary = json as? Dictionary<String, Any> {
+                
                 if let data = dictionary["data"] {
+                    print(data)
                     self.Info = data as! Dictionary<String, Any>
                     self.Info.removeValue(forKey: "Id")
-                    print(self.Info.count)
-                    print(self.Info)
-                    print(self.Info.values)
                 }
             }
             DispatchQueue.main.async {
+                
                 if self.Info.count > 0 {
                     self.tableView.reloadData()
                 }
@@ -99,10 +107,8 @@ extension todayDietPopUpViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         var Keys = Array(self.Info.keys)[indexPath.row]
         var Values = Array(self.Info.values)[indexPath.row]
-        
         func detectWinner() -> String{
             switch (Keys){
             case ("antes_ejercicio"): return "Antes Ejercicio"
@@ -119,9 +125,7 @@ extension todayDietPopUpViewController: UITableViewDelegate, UITableViewDataSour
                 return "Comida"
             }
         }
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseDocument, for: indexPath) as! todaysMenuTableViewCell
-        
         cell.titleForCell.text = detectWinner()
         cell.descriptionForCell.text = Values as! String
         
@@ -130,15 +134,6 @@ extension todayDietPopUpViewController: UITableViewDelegate, UITableViewDataSour
         } else {
             cell.backgroundColor = #colorLiteral(red: 0.3993706107, green: 0.7283234, blue: 0.9620903134, alpha: 1)
         }
-        
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//      //  let document = Info[indexPath.row]
-//        let url = document["url"] as! String
-//        let varstring = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-//        let urlvarstring = URL(string: varstring!)
-//        UIApplication.shared.openURL(urlvarstring!)
-//    }
 }

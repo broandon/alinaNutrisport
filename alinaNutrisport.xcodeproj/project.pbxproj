@@ -19,6 +19,7 @@
 		9D23A7C9250DD3B600218C24 /* dailyTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23A7C8250DD3B600218C24 /* dailyTrackingViewController.swift */; };
 		9D23A7CC250DD74E00218C24 /* dailyInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23A7CA250DD74E00218C24 /* dailyInfoTableViewCell.swift */; };
 		9D23A7CD250DD74E00218C24 /* dailyInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D23A7CB250DD74E00218C24 /* dailyInfoTableViewCell.xib */; };
+		9D3392EA2510F698000BC69C /* measurements2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3392E92510F698000BC69C /* measurements2.swift */; };
 		9D498C7024B2DC5D00ADF7F2 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */; };
 		9DBD90E52453483E00191361 /* recoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD90E42453483E00191361 /* recoverViewController.swift */; };
 		9DC0956F2458EC1200ED6B59 /* Recover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0956E2458EC1200ED6B59 /* Recover.swift */; };
@@ -79,6 +80,7 @@
 		9D23A7C8250DD3B600218C24 /* dailyTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dailyTrackingViewController.swift; sourceTree = "<group>"; };
 		9D23A7CA250DD74E00218C24 /* dailyInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dailyInfoTableViewCell.swift; sourceTree = "<group>"; };
 		9D23A7CB250DD74E00218C24 /* dailyInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dailyInfoTableViewCell.xib; sourceTree = "<group>"; };
+		9D3392E92510F698000BC69C /* measurements2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = measurements2.swift; sourceTree = "<group>"; };
 		9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		9DBD90E42453483E00191361 /* recoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recoverViewController.swift; sourceTree = "<group>"; };
 		9DC0956E2458EC1200ED6B59 /* Recover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recover.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				CF88052F24B8E66B001DD622 /* updatedProfile.swift */,
 				CF56A49A24BF852A0060D86A /* Measurements.swift */,
 				CFA6CE0524CA3F9E0047E870 /* chartsInfo.swift */,
+				9D3392E92510F698000BC69C /* measurements2.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D3392EA2510F698000BC69C /* measurements2.swift in Sources */,
 				9DDC26E02435C1B1002FAC0D /* sectionsCollectionViewCell.swift in Sources */,
 				9D23A7C7250DCC9D00218C24 /* trackingViewController.swift in Sources */,
 				9DBD90E52453483E00191361 /* recoverViewController.swift in Sources */,
@@ -634,7 +638,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -656,7 +660,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;

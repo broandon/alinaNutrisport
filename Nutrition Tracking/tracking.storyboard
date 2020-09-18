@@ -65,11 +65,11 @@
                                     <segue destination="BOm-5b-R2X" kind="embed" id="p9T-kf-1JH"/>
                                 </connections>
                             </containerView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fGP-FE-i8X">
+                            <segmentedControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fGP-FE-i8X">
                                 <rect key="frame" x="20" y="61" width="374" height="31"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Seguimiento Diario"/>
+                                    <segment title="Dieta de la Semana"/>
                                 </segments>
                             </segmentedControl>
                         </subviews>
@@ -113,6 +113,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="595"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gIT-q4-ds4"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kn4-7Z-u5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -148,10 +149,16 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4x7-et-x2u">
                                                         <rect key="frame" x="0.0" y="0.0" width="70" height="59"/>
                                                         <state key="normal" image="previous"/>
+                                                        <connections>
+                                                            <action selector="goToPreviousDate:" destination="BOm-5b-R2X" eventType="touchUpInside" id="R6F-rN-Pxi"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeC-cJ-uCa">
                                                         <rect key="frame" x="70" y="0.0" width="70" height="59"/>
                                                         <state key="normal" image="next"/>
+                                                        <connections>
+                                                            <action selector="goToNextDate:" destination="BOm-5b-R2X" eventType="touchUpInside" id="Mhh-yz-685"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -183,7 +190,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="lUR-4Z-Xdy"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -230,6 +237,7 @@
                             <constraint firstItem="Kel-dx-LYK" firstAttribute="leading" secondItem="xmE-D8-a9m" secondAttribute="leading" id="PKO-kA-UMC"/>
                             <constraint firstAttribute="trailing" secondItem="Kel-dx-LYK" secondAttribute="trailing" id="z13-XF-iO1"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Hx-C0-zG8"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="672"/>

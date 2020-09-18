@@ -109,7 +109,7 @@ class dietsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let dietID = pickedSections["Id"] as! String
         let URL = pickedSections["url"] as! String
         let cell = dietsCollectionView.dequeueReusableCell(withReuseIdentifier: reuseDocument, for: indexPath)
-       
+        
         if let cell = cell as? dietsCollectionViewCell {
             DispatchQueue.main.async {
                 cell.image.image = sectionImage
@@ -159,7 +159,7 @@ extension dietsViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout
-        collectionViewLayout: UICollectionViewLayout,
+                            collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 50.0
     }
