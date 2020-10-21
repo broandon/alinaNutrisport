@@ -30,6 +30,16 @@ class settingsViewController: UIViewController {
         logoBackground.layer.shadowOpacity = 1.0
     }
     
+    @IBAction func goToSettings(_ sender: Any) {
+        
+        if let bundleIdentifier = Bundle.main.bundleIdentifier, let appSettings = URL(string: UIApplication.openSettingsURLString + bundleIdentifier) {
+        
+            if UIApplication.shared.canOpenURL(appSettings) {
+                UIApplication.shared.open(appSettings)
+            }
+        }
+    }
+    
     @IBAction func getTheFuckOut(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! mainViewController

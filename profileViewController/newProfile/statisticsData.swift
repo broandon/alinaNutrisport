@@ -15,22 +15,36 @@ class statisticsData: UIViewController {
     @IBOutlet weak var secondGraphic: LineChartView!
     @IBOutlet weak var thirdGraphic: LineChartView!
     @IBOutlet weak var fourthGraphic: LineChartView!
+    @IBOutlet weak var trackingsTableview: UITableView!
     
+    var trackings: [Dictionary<String, Any>] = []
+    let reuseDocument = "DocumentCell3"
     var chart1Data : [Double] = []
     var chart2Data : [Double] = []
     var chart3Data : [Double] = []
     var chart4Data : [Double] = []
     var datesInfo : [String] = []
+    var number = 0
     
     let UserID = UserDefaults.standard.string(forKey: "IDUser")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
+        setupTableView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         setupCharts()
+    }
+    
+    func setupTableView() {
+        let documentXib = UINib(nibName: "trackingsTableViewCell", bundle: nil)
+        trackingsTableview!.register(documentXib, forCellReuseIdentifier: reuseDocument)
+        trackingsTableview!.delegate = self
+        trackingsTableview!.dataSource = self
+        trackingsTableview!.separatorStyle = .none
+        trackingsTableview!.allowsSelection = true
     }
     
     func getData() {
@@ -45,6 +59,22 @@ class statisticsData: UIViewController {
                 print("error: No data to decode")
                 return
             }
+            
+            
+            let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            
+            if let dictionary = json as? Dictionary<String, Any> {
+                if let data = dictionary["data"] as? Dictionary<String, Any> {
+                    if let graficas = data["Graficas"] {
+                        print(graficas)
+                        for d in data["Graficas"] as! [Dictionary<String, Any>] {
+                            print(d)
+                            self.trackings.append(d)
+                        }
+                    }
+                }
+            }
+            
             guard let userInfo = try? JSONDecoder().decode(graphGraphicsDaa.self, from: data) else {
                 print("Error: Couldn't decode data into info")
                 return
@@ -85,8 +115,12 @@ class statisticsData: UIViewController {
                     }
                 }
             }
-        }
-        task.resume()
+            DispatchQueue.main.async {
+                if self.trackings.count > 0 {
+                    self.trackingsTableview.reloadData()
+                }
+            }
+        }.resume()
     }
     
     func setupCharts() {
@@ -219,4 +253,39 @@ class statisticsData: UIViewController {
         fourthGraphic.extraLeftOffset = 25
     }
     
+}
+
+extension statisticsData: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        trackings.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        60
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let document = trackings[indexPath.row]
+        let fecha  = document["fecha"] as? String ?? ""
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseDocument, for: indexPath)
+        cell.selectionStyle = .none
+        if let cell = cell as? trackingsTableViewCell {
+            DispatchQueue.main.async {
+                cell.date.text = fecha
+                let anotherNumber = self.number + 1
+                self.number = anotherNumber
+                cell.numberOfLabel.text = "\(anotherNumber)"
+            }
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let document = trackings[indexPath.row]
+        let Id  = document["Id"] as? String ?? ""
+        let vc = trackingDetailViewController(nibName: "trackingDetailViewController", bundle: nil)
+        vc.trackingID = Id
+        self.present(vc, animated: true)
+    }
 }

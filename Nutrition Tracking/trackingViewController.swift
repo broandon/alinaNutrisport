@@ -12,6 +12,8 @@ class trackingViewController: UIViewController {
     
     @IBOutlet weak var logoBackground: UIView!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var secondView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,4 +49,16 @@ class trackingViewController: UIViewController {
         self.hero.replaceViewController(with: newViewController)
     }
     
+    @IBAction func segmentControl(_ sender: UISegmentedControl) {
+        
+        if sender.selectedSegmentIndex == 0 {
+            firstView?.alpha = 1
+            secondView?.alpha = 0
+        }
+        
+        if sender.selectedSegmentIndex == 1 {
+            firstView?.alpha = 0
+            secondView?.alpha = 1
+        }
+    }
 }

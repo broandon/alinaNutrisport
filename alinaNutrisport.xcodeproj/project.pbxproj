@@ -19,6 +19,11 @@
 		9D23A7C9250DD3B600218C24 /* dailyTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23A7C8250DD3B600218C24 /* dailyTrackingViewController.swift */; };
 		9D23A7CC250DD74E00218C24 /* dailyInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23A7CA250DD74E00218C24 /* dailyInfoTableViewCell.swift */; };
 		9D23A7CD250DD74E00218C24 /* dailyInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D23A7CB250DD74E00218C24 /* dailyInfoTableViewCell.xib */; };
+		9D2F8EFF253628E7001790A9 /* trackingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F8EFD253628E7001790A9 /* trackingsTableViewCell.swift */; };
+		9D2F8F00253628E7001790A9 /* trackingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D2F8EFE253628E7001790A9 /* trackingsTableViewCell.xib */; };
+		9D2F8F0525367D6E001790A9 /* trackingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F8F0325367D6E001790A9 /* trackingDetailViewController.swift */; };
+		9D2F8F0625367D6E001790A9 /* trackingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D2F8F0425367D6E001790A9 /* trackingDetailViewController.xib */; };
+		9D2F8F09253690FC001790A9 /* newTrackingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F8F08253690FC001790A9 /* newTrackingInfo.swift */; };
 		9D3392EA2510F698000BC69C /* measurements2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3392E92510F698000BC69C /* measurements2.swift */; };
 		9D498C7024B2DC5D00ADF7F2 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */; };
 		9DBD90E52453483E00191361 /* recoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD90E42453483E00191361 /* recoverViewController.swift */; };
@@ -30,6 +35,7 @@
 		9DC9486C2432E53300D65573 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9486B2432E53300D65573 /* mainViewController.swift */; };
 		9DDC26E02435C1B1002FAC0D /* sectionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDC26DE2435C1B1002FAC0D /* sectionsCollectionViewCell.swift */; };
 		9DDC26E12435C1B1002FAC0D /* sectionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DDC26DF2435C1B1002FAC0D /* sectionsCollectionViewCell.xib */; };
+		9DE4A44B253A27E100ED3CE0 /* weekMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE4A44A253A27E100ED3CE0 /* weekMenuViewController.swift */; };
 		CF0A403924B4E108008F583B /* dietsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A403824B4E108008F583B /* dietsViewController.swift */; };
 		CF0A404024B4E27F008F583B /* dietsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A403E24B4E27F008F583B /* dietsCollectionViewCell.swift */; };
 		CF0A404124B4E27F008F583B /* dietsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A403F24B4E27F008F583B /* dietsCollectionViewCell.xib */; };
@@ -80,6 +86,11 @@
 		9D23A7C8250DD3B600218C24 /* dailyTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dailyTrackingViewController.swift; sourceTree = "<group>"; };
 		9D23A7CA250DD74E00218C24 /* dailyInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dailyInfoTableViewCell.swift; sourceTree = "<group>"; };
 		9D23A7CB250DD74E00218C24 /* dailyInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dailyInfoTableViewCell.xib; sourceTree = "<group>"; };
+		9D2F8EFD253628E7001790A9 /* trackingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trackingsTableViewCell.swift; sourceTree = "<group>"; };
+		9D2F8EFE253628E7001790A9 /* trackingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = trackingsTableViewCell.xib; sourceTree = "<group>"; };
+		9D2F8F0325367D6E001790A9 /* trackingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trackingDetailViewController.swift; sourceTree = "<group>"; };
+		9D2F8F0425367D6E001790A9 /* trackingDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = trackingDetailViewController.xib; sourceTree = "<group>"; };
+		9D2F8F08253690FC001790A9 /* newTrackingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newTrackingInfo.swift; sourceTree = "<group>"; };
 		9D3392E92510F698000BC69C /* measurements2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = measurements2.swift; sourceTree = "<group>"; };
 		9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		9DBD90E42453483E00191361 /* recoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recoverViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +102,7 @@
 		9DC9486B2432E53300D65573 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		9DDC26DE2435C1B1002FAC0D /* sectionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sectionsCollectionViewCell.swift; sourceTree = "<group>"; };
 		9DDC26DF2435C1B1002FAC0D /* sectionsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sectionsCollectionViewCell.xib; sourceTree = "<group>"; };
+		9DE4A44A253A27E100ED3CE0 /* weekMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weekMenuViewController.swift; sourceTree = "<group>"; };
 		CF0A403824B4E108008F583B /* dietsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dietsViewController.swift; sourceTree = "<group>"; };
 		CF0A403E24B4E27F008F583B /* dietsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dietsCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF0A403F24B4E27F008F583B /* dietsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dietsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -180,6 +192,7 @@
 				9D23A7C8250DD3B600218C24 /* dailyTrackingViewController.swift */,
 				9D23A7CA250DD74E00218C24 /* dailyInfoTableViewCell.swift */,
 				9D23A7CB250DD74E00218C24 /* dailyInfoTableViewCell.xib */,
+				9DE4A44A253A27E100ED3CE0 /* weekMenuViewController.swift */,
 			);
 			path = "Nutrition Tracking";
 			sourceTree = "<group>";
@@ -210,6 +223,7 @@
 				CF56A49A24BF852A0060D86A /* Measurements.swift */,
 				CFA6CE0524CA3F9E0047E870 /* chartsInfo.swift */,
 				9D3392E92510F698000BC69C /* measurements2.swift */,
+				9D2F8F08253690FC001790A9 /* newTrackingInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -274,6 +288,10 @@
 				CF24BF1A24D0DB7C002F4B13 /* profileData.swift */,
 				CF24BF1C24D0E480002F4B13 /* statisticsData.swift */,
 				CF24BF1E24D0ECF5002F4B13 /* newInfoData.swift */,
+				9D2F8EFD253628E7001790A9 /* trackingsTableViewCell.swift */,
+				9D2F8EFE253628E7001790A9 /* trackingsTableViewCell.xib */,
+				9D2F8F0325367D6E001790A9 /* trackingDetailViewController.swift */,
+				9D2F8F0425367D6E001790A9 /* trackingDetailViewController.xib */,
 			);
 			path = newProfile;
 			sourceTree = "<group>";
@@ -391,6 +409,7 @@
 				CFA22AB5242285110036DB71 /* LaunchScreen.storyboard in Resources */,
 				CF0A404924B4FBB0008F583B /* datesTableViewCell.xib in Resources */,
 				CFA22AB2242285110036DB71 /* Assets.xcassets in Resources */,
+				9D2F8F00253628E7001790A9 /* trackingsTableViewCell.xib in Resources */,
 				CF0A405824B50A6D008F583B /* personalesTableViewCell.xib in Resources */,
 				CF0A404124B4E27F008F583B /* dietsCollectionViewCell.xib in Resources */,
 				CFA2A9AD24BD1D4C00218C55 /* messageTableViewCell.xib in Resources */,
@@ -399,6 +418,7 @@
 				9DDC26E12435C1B1002FAC0D /* sectionsCollectionViewCell.xib in Resources */,
 				CFA2A9A624BD107900218C55 /* webViewViewController.xib in Resources */,
 				9D23A7C5250DC11700218C24 /* tracking.storyboard in Resources */,
+				9D2F8F0625367D6E001790A9 /* trackingDetailViewController.xib in Resources */,
 				9D23A7BE250C781C00218C24 /* anotherProfileViewController.xib in Resources */,
 				CFA22AB02422850E0036DB71 /* Main.storyboard in Resources */,
 				9D23A7CD250DD74E00218C24 /* dailyInfoTableViewCell.xib in Resources */,
@@ -454,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D2F8F0525367D6E001790A9 /* trackingDetailViewController.swift in Sources */,
 				9D3392EA2510F698000BC69C /* measurements2.swift in Sources */,
 				9DDC26E02435C1B1002FAC0D /* sectionsCollectionViewCell.swift in Sources */,
 				9D23A7C7250DCC9D00218C24 /* trackingViewController.swift in Sources */,
@@ -466,6 +487,7 @@
 				CF0A404524B4F7E0008F583B /* datesViewController.swift in Sources */,
 				9DC948662432928100D65573 /* loginViewController.swift in Sources */,
 				CF24BF1D24D0E480002F4B13 /* statisticsData.swift in Sources */,
+				9D2F8F09253690FC001790A9 /* newTrackingInfo.swift in Sources */,
 				9D23A7B5250B48DF00218C24 /* todaysMenuTableViewCell.swift in Sources */,
 				9D23A7BD250C781C00218C24 /* anotherProfileViewController.swift in Sources */,
 				CF56A49B24BF852A0060D86A /* Measurements.swift in Sources */,
@@ -478,6 +500,7 @@
 				CF0A405724B50A6D008F583B /* personalesTableViewCell.swift in Sources */,
 				9DC948692432996000D65573 /* Extensions.swift in Sources */,
 				CF0A404324B4EBB5008F583B /* settingsViewController.swift in Sources */,
+				9D2F8EFF253628E7001790A9 /* trackingsTableViewCell.swift in Sources */,
 				CF0A404C24B506B6008F583B /* documentosViewController.swift in Sources */,
 				CF0A404E24B50A2E008F583B /* documentosGenericosViewController.swift in Sources */,
 				CF0A405024B50A3C008F583B /* documentosPersonalesViewController.swift in Sources */,
@@ -487,6 +510,7 @@
 				CFA2A9A924BD1A3600218C55 /* chatViewController.swift in Sources */,
 				CF88052E24B8DE87001DD622 /* profileInfo.swift in Sources */,
 				9D23A7CC250DD74E00218C24 /* dailyInfoTableViewCell.swift in Sources */,
+				9DE4A44B253A27E100ED3CE0 /* weekMenuViewController.swift in Sources */,
 				CF0A404024B4E27F008F583B /* dietsCollectionViewCell.swift in Sources */,
 				CF24BF1F24D0ECF5002F4B13 /* newInfoData.swift in Sources */,
 				9DC095712458ED1C00ED6B59 /* baseURL.swift in Sources */,
@@ -638,7 +662,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -660,7 +684,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;

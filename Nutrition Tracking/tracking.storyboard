@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -65,15 +66,19 @@
                                     <segue destination="BOm-5b-R2X" kind="embed" id="p9T-kf-1JH"/>
                                 </connections>
                             </containerView>
-                            <segmentedControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fGP-FE-i8X">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fGP-FE-i8X">
                                 <rect key="frame" x="20" y="61" width="374" height="31"/>
                                 <segments>
                                     <segment title="Seguimiento Diario"/>
                                     <segment title="Dieta de la Semana"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentControl:" destination="Ufu-NU-LNI" eventType="valueChanged" id="91Y-KT-SiE"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ogp-U5-A1Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="VrW-gP-VFh" firstAttribute="trailing" secondItem="ogp-U5-A1Q" secondAttribute="trailing" id="6P7-7R-QMj"/>
                             <constraint firstAttribute="trailing" secondItem="jle-37-CVO" secondAttribute="trailing" constant="-122" id="7zh-3h-Ipk"/>
@@ -94,31 +99,51 @@
                             <constraint firstItem="VrW-gP-VFh" firstAttribute="top" secondItem="U8b-3r-HIZ" secondAttribute="bottom" constant="8" id="wOU-Jv-BWk"/>
                             <constraint firstItem="jle-37-CVO" firstAttribute="top" secondItem="HxU-Y7-a7m" secondAttribute="top" constant="-175" id="x6V-GO-Ggd"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ogp-U5-A1Q"/>
                     </view>
                     <connections>
+                        <outlet property="firstView" destination="xJy-Nc-JK3" id="Xrk-Fg-alM"/>
                         <outlet property="logoBackground" destination="U8b-3r-HIZ" id="z9Q-dj-eeM"/>
                         <outlet property="profileImage" destination="x5c-hj-2b0" id="xcV-Ox-Iyv"/>
+                        <outlet property="secondView" destination="VrW-gP-VFh" id="FBb-sy-yTL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4B9-y2-9B9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-46.376811594202906" y="-241.07142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Week Menu View Controller-->
         <scene sceneID="Tkc-e5-tPy">
             <objects>
-                <viewController id="mec-F0-Yy6" sceneMemberID="viewController">
+                <viewController id="mec-F0-Yy6" customClass="weekMenuViewController" customModule="alinaNutrisport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d9K-7e-cB4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="595"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-qJ-EcQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="595"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gIT-q4-ds4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hbe-qJ-EcQ" firstAttribute="trailing" secondItem="gIT-q4-ds4" secondAttribute="trailing" id="Gyk-Xo-6VL"/>
+                            <constraint firstItem="hbe-qJ-EcQ" firstAttribute="top" secondItem="d9K-7e-cB4" secondAttribute="top" id="K8i-bw-7JT"/>
+                            <constraint firstItem="hbe-qJ-EcQ" firstAttribute="bottom" secondItem="gIT-q4-ds4" secondAttribute="bottom" id="Lya-Lx-bf7"/>
+                            <constraint firstItem="hbe-qJ-EcQ" firstAttribute="leading" secondItem="gIT-q4-ds4" secondAttribute="leading" id="Mh5-ze-cGG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="hbe-qJ-EcQ" id="2Bd-tS-ICC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kn4-7Z-u5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="572" y="447"/>
+            <point key="canvasLocation" x="571.01449275362324" y="446.98660714285711"/>
         </scene>
         <!--Daily Tracking View Controller-->
         <scene sceneID="wrE-Hi-93H">
@@ -196,7 +221,7 @@
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OJl-5K-gzm">
                                                 <rect key="frame" x="8" y="71" width="358" height="346"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </tableView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -230,14 +255,14 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="7Hx-C0-zG8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Kel-dx-LYK" secondAttribute="bottom" id="Aho-6n-OjX"/>
                             <constraint firstItem="Kel-dx-LYK" firstAttribute="top" secondItem="xmE-D8-a9m" secondAttribute="top" id="EQb-9J-gTy"/>
                             <constraint firstItem="Kel-dx-LYK" firstAttribute="leading" secondItem="xmE-D8-a9m" secondAttribute="leading" id="PKO-kA-UMC"/>
                             <constraint firstAttribute="trailing" secondItem="Kel-dx-LYK" secondAttribute="trailing" id="z13-XF-iO1"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="7Hx-C0-zG8"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="672"/>
@@ -260,5 +285,8 @@
         <image name="previous" width="256" height="256"/>
         <image name="regresar" width="600" height="599"/>
         <image name="upperCircle" width="1200" height="689"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +30,7 @@
                                 <constraint firstAttribute="width" constant="50" id="PuV-rE-b84"/>
                             </constraints>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07U-jY-cy4">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07U-jY-cy4">
                             <rect key="frame" x="8" y="32" width="166" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="FzT-nA-pvh"/>
@@ -61,19 +61,29 @@
                         <wkPreferences key="preferences"/>
                     </wkWebViewConfiguration>
                 </wkWebView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu pagina está cargando..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0A-Yt-h6c">
+                    <rect key="frame" x="73" y="348" width="269" height="147"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="aZg-m5-caz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="36U-6G-MBS"/>
                 <constraint firstItem="axg-yY-ZdI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3LJ-xc-tpJ"/>
                 <constraint firstItem="axg-yY-ZdI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3ch-Qu-2IB"/>
                 <constraint firstItem="aZg-m5-caz" firstAttribute="top" secondItem="axg-yY-ZdI" secondAttribute="bottom" id="76S-7Y-snV"/>
+                <constraint firstItem="i0A-Yt-h6c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="73" id="CYl-Dt-tHQ"/>
                 <constraint firstItem="aZg-m5-caz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="M3u-uv-oYT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="i0A-Yt-h6c" secondAttribute="bottom" constant="313" id="MjG-jU-FHM"/>
                 <constraint firstItem="axg-yY-ZdI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="c3J-c0-wQ6"/>
+                <constraint firstItem="i0A-Yt-h6c" firstAttribute="top" secondItem="axg-yY-ZdI" secondAttribute="bottom" constant="278" id="d3n-si-8E1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i0A-Yt-h6c" secondAttribute="trailing" constant="72" id="hhe-M8-ihB"/>
                 <constraint firstAttribute="bottom" secondItem="aZg-m5-caz" secondAttribute="bottom" id="umA-7y-kce"/>
             </constraints>
             <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="150.66964285714286"/>
         </view>
     </objects>
