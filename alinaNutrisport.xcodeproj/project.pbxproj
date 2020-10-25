@@ -27,6 +27,7 @@
 		9D3392EA2510F698000BC69C /* measurements2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3392E92510F698000BC69C /* measurements2.swift */; };
 		9D498C7024B2DC5D00ADF7F2 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */; };
 		9D8630E825451C940075C507 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D8630E725451C940075C507 /* GoogleService-Info.plist */; };
+		9D8631162545224C0075C507 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8631152545224C0075C507 /* PushNotificationManager.swift */; };
 		9DBD90E52453483E00191361 /* recoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD90E42453483E00191361 /* recoverViewController.swift */; };
 		9DC0956F2458EC1200ED6B59 /* Recover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0956E2458EC1200ED6B59 /* Recover.swift */; };
 		9DC095712458ED1C00ED6B59 /* baseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC095702458ED1C00ED6B59 /* baseURL.swift */; };
@@ -95,6 +96,8 @@
 		9D3392E92510F698000BC69C /* measurements2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = measurements2.swift; sourceTree = "<group>"; };
 		9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		9D8630E725451C940075C507 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D8631132545221D0075C507 /* alinaNutrisport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = alinaNutrisport.entitlements; sourceTree = "<group>"; };
+		9D8631152545224C0075C507 /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
 		9DBD90E42453483E00191361 /* recoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recoverViewController.swift; sourceTree = "<group>"; };
 		9DC0956E2458EC1200ED6B59 /* Recover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recover.swift; sourceTree = "<group>"; };
 		9DC095702458ED1C00ED6B59 /* baseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseURL.swift; sourceTree = "<group>"; };
@@ -246,6 +249,7 @@
 				CFA2A9A424BD107800218C55 /* webViewViewController.xib */,
 				9DC948682432996000D65573 /* Extensions.swift */,
 				9DC095702458ED1C00ED6B59 /* baseURL.swift */,
+				9D8631152545224C0075C507 /* PushNotificationManager.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -328,6 +332,7 @@
 		CFA22AA72422850E0036DB71 /* alinaNutrisport */ = {
 			isa = PBXGroup;
 			children = (
+				9D8631132545221D0075C507 /* alinaNutrisport.entitlements */,
 				CFA22AAE2422850E0036DB71 /* Main.storyboard */,
 				CFA22AA82422850E0036DB71 /* AppDelegate.swift */,
 				CFA22AB1242285110036DB71 /* Assets.xcassets */,
@@ -356,6 +361,7 @@
 			buildConfigurationList = CFA22AB9242285110036DB71 /* Build configuration list for PBXNativeTarget "alinaNutrisport" */;
 			buildPhases = (
 				81C1E8D46699A423B2D38206 /* [CP] Check Pods Manifest.lock */,
+				02AE68E5476A72D176DC7F64 /* [CP] Prepare Artifacts */,
 				CFA22AA12422850E0036DB71 /* Sources */,
 				CFA22AA22422850E0036DB71 /* Frameworks */,
 				CFA22AA32422850E0036DB71 /* Resources */,
@@ -432,6 +438,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		02AE68E5476A72D176DC7F64 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-alinaNutrisport/Pods-alinaNutrisport-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-alinaNutrisport/Pods-alinaNutrisport-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-alinaNutrisport/Pods-alinaNutrisport-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		81C1E8D46699A423B2D38206 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,6 +519,7 @@
 				9D23A7BD250C781C00218C24 /* anotherProfileViewController.swift in Sources */,
 				CF56A49B24BF852A0060D86A /* Measurements.swift in Sources */,
 				CFA6CE0624CA3F9E0047E870 /* chartsInfo.swift in Sources */,
+				9D8631162545224C0075C507 /* PushNotificationManager.swift in Sources */,
 				CFA39F5124BE51B500626A6B /* profleOtherViewController.swift in Sources */,
 				CF0A404824B4FBB0008F583B /* datesTableViewCell.swift in Sources */,
 				9D23A7B1250B336400218C24 /* todayDietPopUpViewController.swift in Sources */,
@@ -665,8 +689,9 @@
 			baseConfigurationReference = 0061E9C3B53F359BF2496BDB /* Pods-alinaNutrisport.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = alinaNutrisport/alinaNutrisport.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -687,8 +712,9 @@
 			baseConfigurationReference = 17AF5EC5AF55D858B5354287 /* Pods-alinaNutrisport.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = alinaNutrisport/alinaNutrisport.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;

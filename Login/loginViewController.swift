@@ -20,6 +20,10 @@ class loginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgotAccount: UIButton!
     
+    let pushManager = PushNotificationManager(userID: "currently_logged_in_user_id")
+    let UserID = UserDefaults.standard.string(forKey: "IDUser")
+
+    
     //MARK: viewDid
     
     override func viewDidLoad() {
@@ -28,6 +32,37 @@ class loginViewController: UIViewController {
     }
     
     //MARK: Funcs
+    
+    func sendToken() {
+        let currentToken = pushManager.getToken()
+        let url = URL(string: "http://alinanutrisport.com.mx/sistema/webservice/controller_last.php")!
+        var request = URLRequest(url: url)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
+        request.httpMethod = "POST" // Metodo
+        let string1 = "funcion=sendToken&id_user="+UserID!
+        let string2 = "&token="+currentToken
+        let string3 = "&type_device=1"
+        let postString = string1+string2+string3
+        request.httpBody = postString.data(using: .utf8)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil, response != nil else {
+                return
+            }
+            let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            
+            if let dictionary = json as? Dictionary<String, Any> {
+                if let state = dictionary["state"] {
+                    print(state)
+                    let stateNumber = state as! String
+                    
+                    if stateNumber == "200" {
+                        print("Token was accepted correctly")
+                    }
+                }
+            }
+        }.resume()
+    }
+    
     
     func setupView() {
         greenIconsBacgrounds2.layer.cornerRadius = greenIconsBacgrounds2.bounds.height / 2

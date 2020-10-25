@@ -16,6 +16,9 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var mainCollection: UICollectionView!
     @IBOutlet weak var upperCircle: UIImageView!
     
+    let UserID = UserDefaults.standard.string(forKey: "IDUser")
+    let pushManager = PushNotificationManager(userID: "currently_logged_in_user_id")
+    
     let reuseDocument = "sectionsCellStores"
     var Sections : [Dictionary<String, Any>] =
         [["Titulo": "Perfil", "ID" : "1", "Imagen" : UIImage(named: "perfil")!], ["Titulo": "Consultas", "ID" : "8", "Imagen" : UIImage(named: "seguimientos")!], ["Titulo": "Dietas", "ID" : "2", "Imagen" : UIImage(named: "manzana")!], ["Titulo": "Seguimiento Diario", "ID" : "6", "Imagen" : UIImage(named: "reloj")!], ["Titulo": "Chat", "ID" : "5", "Imagen" : UIImage(named: "chat")!], ["Titulo": "Archivos", "ID" : "4", "Imagen" : UIImage(named: "documento")!], ["Titulo": "Citas", "ID" : "3", "Imagen" : UIImage(named: "tabla")!], ["Titulo": "Configuración", "ID" : "7", "Imagen" : UIImage(named: "engrane")!]]
@@ -31,9 +34,41 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     //MARK: Funcs
     
+    func sendToken() {
+        let currentToken = pushManager.getToken()
+        let url = URL(string: "http://alinanutrisport.com.mx/sistema/webservice/controller_last.php")!
+        var request = URLRequest(url: url)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
+        request.httpMethod = "POST" // Metodo
+        let string1 = "funcion=sendToken&id_user="+UserID!
+        let string2 = "&token="+currentToken
+        let string3 = "&type_device=1"
+        let postString = string1+string2+string3
+        request.httpBody = postString.data(using: .utf8)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil, response != nil else {
+                return
+            }
+            let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            
+            if let dictionary = json as? Dictionary<String, Any> {
+                
+                if let state = dictionary["state"] {
+                    let stateNumber = state as! String
+                    
+                    if stateNumber == "200" {
+                        print("Token was accepted correctly")
+                    }
+                }
+            }
+        }.resume()
+    }
+    
     func loginStatusCheck() {
         if UserDefaults.standard.bool(forKey: "LoggedStatus") == false {
             resetRoot()
+        } else {
+            sendToken()
         }
     }
     
