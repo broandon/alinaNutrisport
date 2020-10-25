@@ -12,6 +12,7 @@ class settingsViewController: UIViewController {
     
     @IBOutlet weak var logoBackground: UIView!
     @IBOutlet weak var imagenBackground: UIImageView!
+    let UserID = UserDefaults.standard.string(forKey: "IDUser")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,36 @@ class settingsViewController: UIViewController {
         logoBackground.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         logoBackground.layer.shadowOpacity = 1.0
     }
+    
+    func sendToken() {
+        let url = URL(string: "http://alinanutrisport.com.mx/sistema/webservice/controller_last.php")!
+        var request = URLRequest(url: url)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
+        request.httpMethod = "POST" // Metodo
+        let string1 = "funcion=sendToken&id_user="+UserID!
+        let string2 = "&token="
+        let string3 = "&type_device=1"
+        let postString = string1+string2+string3
+        request.httpBody = postString.data(using: .utf8)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil, response != nil else {
+                return
+            }
+            let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            
+            if let dictionary = json as? Dictionary<String, Any> {
+                if let state = dictionary["state"] {
+                    print(state)
+                    let stateNumber = state as! String
+                    
+                    if stateNumber == "200" {
+                        print("Token was deleted correctly")
+                    }
+                }
+            }
+        }.resume()
+    }
+
     
     @IBAction func goToSettings(_ sender: Any) {
         
@@ -74,6 +105,8 @@ class settingsViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
         alert.addAction(UIAlertAction(title: "Cerrar Sesión", style: .destructive, handler: { action in
+            
+            self.sendToken()
             
             DispatchQueue.main.async {
                 UserDefaults.standard.set(false, forKey: "LoggedStatus")

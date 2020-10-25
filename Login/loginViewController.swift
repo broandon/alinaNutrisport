@@ -22,7 +22,6 @@ class loginViewController: UIViewController {
     
     let pushManager = PushNotificationManager(userID: "currently_logged_in_user_id")
     let UserID = UserDefaults.standard.string(forKey: "IDUser")
-
     
     //MARK: viewDid
     
