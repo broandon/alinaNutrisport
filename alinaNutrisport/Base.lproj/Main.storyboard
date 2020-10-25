@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -807,8 +807,8 @@
                                         <color key="textColor" systemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u2D-Jf-eGJ">
-                                        <rect key="frame" x="8" y="170" width="308" height="2"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2D-Jf-eGJ">
+                                        <rect key="frame" x="8" y="170" width="308" height="1"/>
                                         <color key="backgroundColor" name="Main Green"/>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconos-seguridad" translatesAutoresizingMaskIntoConstraints="NO" id="nOL-2d-WTE">
@@ -817,8 +817,9 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconos-telefono" translatesAutoresizingMaskIntoConstraints="NO" id="cES-wF-qPt">
                                         <rect key="frame" x="267" y="94" width="47" height="25"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pagina_verde" translatesAutoresizingMaskIntoConstraints="NO" id="T8u-TS-6Rp">
-                                        <rect key="frame" x="267" y="137" width="47" height="25"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="T8u-TS-6Rp">
+                                        <rect key="frame" x="267" y="138.5" width="47" height="21.5"/>
+                                        <color key="tintColor" red="0.3802107871" green="0.69512027499999995" blue="0.0056698024270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtI-lJ-krr">
                                         <rect key="frame" x="8" y="48" width="306" height="31"/>
@@ -875,6 +876,12 @@
                                             <action selector="goToSettings:" destination="jEy-H8-Enl" eventType="touchUpInside" id="Tsk-CR-5ZQ"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1e-Oz-gB9">
+                                        <rect key="frame" x="0.0" y="129" width="324" height="41"/>
+                                        <connections>
+                                            <action selector="sendMailAction:" destination="jEy-H8-Enl" eventType="touchUpInside" id="6NQ-qW-6i8"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="YQZ-dK-yVF" firstAttribute="top" secondItem="FU6-eq-zNL" secondAttribute="top" id="0Ki-PD-uSW"/>
@@ -892,6 +899,7 @@
                                     <constraint firstItem="AY3-lx-WG3" firstAttribute="top" secondItem="JT6-Lp-ThI" secondAttribute="top" constant="137" id="Bvf-6v-HCE"/>
                                     <constraint firstItem="fxG-nF-hmD" firstAttribute="leading" secondItem="zgf-ct-jXj" secondAttribute="leading" id="CJg-Td-0zb"/>
                                     <constraint firstItem="AY3-lx-WG3" firstAttribute="top" secondItem="scr-UM-Dye" secondAttribute="bottom" constant="8" id="DfW-5t-wIL"/>
+                                    <constraint firstItem="j1e-Oz-gB9" firstAttribute="leading" secondItem="JT6-Lp-ThI" secondAttribute="leading" id="EKf-Qg-zhJ"/>
                                     <constraint firstItem="zgf-ct-jXj" firstAttribute="trailing" secondItem="scr-UM-Dye" secondAttribute="trailing" id="FWj-gl-JKY"/>
                                     <constraint firstItem="Gef-au-h7r" firstAttribute="bottom" secondItem="Zp5-1k-FW7" secondAttribute="bottom" id="FeR-n4-O1X"/>
                                     <constraint firstItem="yXa-TN-XZJ" firstAttribute="top" secondItem="DaE-yy-ZyF" secondAttribute="bottom" constant="8" id="FgW-Md-GTP"/>
@@ -900,6 +908,7 @@
                                     <constraint firstItem="scr-UM-Dye" firstAttribute="leading" secondItem="AY3-lx-WG3" secondAttribute="leading" id="It2-Wm-vaU"/>
                                     <constraint firstItem="AY3-lx-WG3" firstAttribute="trailing" secondItem="Gef-au-h7r" secondAttribute="trailing" id="JwD-zQ-Bxu"/>
                                     <constraint firstItem="pXY-Kf-eaK" firstAttribute="top" secondItem="YQZ-dK-yVF" secondAttribute="bottom" constant="8" id="KGI-At-Ud3"/>
+                                    <constraint firstAttribute="trailing" secondItem="j1e-Oz-gB9" secondAttribute="trailing" id="KPb-5e-t0v"/>
                                     <constraint firstItem="fxG-nF-hmD" firstAttribute="top" secondItem="nOL-2d-WTE" secondAttribute="top" id="Lyd-l9-A3i"/>
                                     <constraint firstItem="YQZ-dK-yVF" firstAttribute="trailing" secondItem="fxG-nF-hmD" secondAttribute="trailing" id="NYu-Vo-hgp"/>
                                     <constraint firstItem="nOL-2d-WTE" firstAttribute="leading" secondItem="cES-wF-qPt" secondAttribute="leading" id="Nwc-UQ-kFz"/>
@@ -933,6 +942,7 @@
                                     <constraint firstItem="AY3-lx-WG3" firstAttribute="top" secondItem="T8u-TS-6Rp" secondAttribute="top" id="cbg-eh-MdH"/>
                                     <constraint firstItem="u2D-Jf-eGJ" firstAttribute="leading" secondItem="Gef-au-h7r" secondAttribute="leading" id="dAG-i6-DD4"/>
                                     <constraint firstItem="xxv-ii-CO9" firstAttribute="top" secondItem="JT6-Lp-ThI" secondAttribute="top" id="dHK-zR-a6d"/>
+                                    <constraint firstItem="u2D-Jf-eGJ" firstAttribute="top" secondItem="j1e-Oz-gB9" secondAttribute="bottom" id="dUO-SQ-NWL"/>
                                     <constraint firstItem="9u1-Y7-abX" firstAttribute="top" secondItem="zgf-ct-jXj" secondAttribute="bottom" constant="8" id="dcK-wb-f3t"/>
                                     <constraint firstItem="pXY-Kf-eaK" firstAttribute="trailing" secondItem="JT6-Lp-ThI" secondAttribute="trailingMargin" id="del-Ne-h4T"/>
                                     <constraint firstItem="Kos-zt-rA6" firstAttribute="trailing" secondItem="cES-wF-qPt" secondAttribute="trailing" id="ePY-r3-7hD"/>
@@ -950,6 +960,7 @@
                                     <constraint firstItem="CtI-lJ-krr" firstAttribute="leading" secondItem="fxG-nF-hmD" secondAttribute="leading" id="w7b-L7-Upe"/>
                                     <constraint firstAttribute="trailing" secondItem="xxv-ii-CO9" secondAttribute="trailing" id="wHP-kA-gJa"/>
                                     <constraint firstItem="9u1-Y7-abX" firstAttribute="centerY" secondItem="Kos-zt-rA6" secondAttribute="centerY" id="xgB-EV-28R"/>
+                                    <constraint firstItem="j1e-Oz-gB9" firstAttribute="top" secondItem="scr-UM-Dye" secondAttribute="bottom" id="ynV-mC-nZV"/>
                                     <constraint firstItem="nOL-2d-WTE" firstAttribute="trailing" secondItem="cES-wF-qPt" secondAttribute="trailing" id="zdl-jh-qXc"/>
                                 </constraints>
                             </view>
@@ -3835,6 +3846,7 @@
         <image name="chat" width="600" height="599"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="configuracion" width="600" height="599"/>
+        <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="forTheSwitchApple" width="300" height="300"/>
         <image name="forTheSwitchDocLogo" width="300" height="300"/>
         <image name="forTheSwitchTable" width="500" height="500"/>
@@ -3844,7 +3856,6 @@
         <image name="iconos-usuario" width="400" height="400"/>
         <image name="leaf.arrow.circlepath" catalog="system" width="121" height="128"/>
         <image name="logoAlinaNutrisport" width="1000" height="1000"/>
-        <image name="pagina_verde" width="600" height="599"/>
         <image name="regresar" width="600" height="599"/>
         <image name="settings_verde" width="600" height="599"/>
         <image name="upperCircle" width="1200" height="689"/>

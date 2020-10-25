@@ -12,8 +12,6 @@ target 'alinaNutrisport' do
   pod 'FSCalendar'
   pod 'DateTimePicker'
   pod 'YNExpandableCell'
-  pod 'Firebase/Core'
-  pod 'Firebase/Messaging'
   pod 'ExpandableCell'
   pod 'Hero'
   pod 'IQKeyboardManagerSwift'
@@ -21,5 +19,13 @@ target 'alinaNutrisport' do
   pod 'NVActivityIndicatorView'
   pod 'BetterSegmentedControl', '~> 1.3'
   pod 'Charts'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/AdMob'
+  pod 'Firebase/Database'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Firestore'
 
 end

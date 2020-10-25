@@ -26,6 +26,7 @@
 		9D2F8F09253690FC001790A9 /* newTrackingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F8F08253690FC001790A9 /* newTrackingInfo.swift */; };
 		9D3392EA2510F698000BC69C /* measurements2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3392E92510F698000BC69C /* measurements2.swift */; };
 		9D498C7024B2DC5D00ADF7F2 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */; };
+		9D8630E825451C940075C507 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D8630E725451C940075C507 /* GoogleService-Info.plist */; };
 		9DBD90E52453483E00191361 /* recoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD90E42453483E00191361 /* recoverViewController.swift */; };
 		9DC0956F2458EC1200ED6B59 /* Recover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0956E2458EC1200ED6B59 /* Recover.swift */; };
 		9DC095712458ED1C00ED6B59 /* baseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC095702458ED1C00ED6B59 /* baseURL.swift */; };
@@ -93,6 +94,7 @@
 		9D2F8F08253690FC001790A9 /* newTrackingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newTrackingInfo.swift; sourceTree = "<group>"; };
 		9D3392E92510F698000BC69C /* measurements2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = measurements2.swift; sourceTree = "<group>"; };
 		9D498C6F24B2DC5D00ADF7F2 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		9D8630E725451C940075C507 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9DBD90E42453483E00191361 /* recoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recoverViewController.swift; sourceTree = "<group>"; };
 		9DC0956E2458EC1200ED6B59 /* Recover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recover.swift; sourceTree = "<group>"; };
 		9DC095702458ED1C00ED6B59 /* baseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseURL.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				CFA22AB1242285110036DB71 /* Assets.xcassets */,
 				CFA22AB3242285110036DB71 /* LaunchScreen.storyboard */,
 				CFA22AB6242285110036DB71 /* Info.plist */,
+				9D8630E725451C940075C507 /* GoogleService-Info.plist */,
 			);
 			path = alinaNutrisport;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				9D23A7B2250B336400218C24 /* todayDietPopUpViewController.xib in Resources */,
 				CF0A405424B50A5C008F583B /* genericosTableViewCell.xib in Resources */,
 				9DDC26E12435C1B1002FAC0D /* sectionsCollectionViewCell.xib in Resources */,
+				9D8630E825451C940075C507 /* GoogleService-Info.plist in Resources */,
 				CFA2A9A624BD107900218C55 /* webViewViewController.xib in Resources */,
 				9D23A7C5250DC11700218C24 /* tracking.storyboard in Resources */,
 				9D2F8F0625367D6E001790A9 /* trackingDetailViewController.xib in Resources */,
@@ -662,7 +666,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -684,7 +688,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = alinaNutrisport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;

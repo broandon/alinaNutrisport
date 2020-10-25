@@ -34,7 +34,7 @@ class dailyTrackingViewController: UIViewController, addAndSubstractFood {
         tableView!.delegate = self
         tableView!.dataSource = self
         tableView!.separatorStyle = .none
-        tableView!.allowsSelection = true
+        tableView!.allowsSelection = false
     }
     
     func setupView() {

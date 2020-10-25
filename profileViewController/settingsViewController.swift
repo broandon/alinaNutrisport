@@ -33,7 +33,7 @@ class settingsViewController: UIViewController {
     @IBAction func goToSettings(_ sender: Any) {
         
         if let bundleIdentifier = Bundle.main.bundleIdentifier, let appSettings = URL(string: UIApplication.openSettingsURLString + bundleIdentifier) {
-        
+            
             if UIApplication.shared.canOpenURL(appSettings) {
                 UIApplication.shared.open(appSettings)
             }
@@ -56,24 +56,40 @@ class settingsViewController: UIViewController {
     }
     
     @IBAction func contact(_ sender: Any) {
-        let urlToVisit = "http://alinanutrisport.com.mx"
-        
-        let vc = webViewViewController(nibName: "webViewViewController", bundle: nil)
-        vc.urlToVisit = urlToVisit
-        self.present(vc, animated: true)
+        if let url = URL(string: "tel:2225902838") {
+            UIApplication.shared.open(url)
+        }
     }
+    
+    @IBAction func sendMailAction(_ sender: Any) {
+        if let url = URL(string: "mailto:contacto@alinanutrisport.com") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
     
     @IBAction func closeSession(_ sender: Any) {
         
-        UserDefaults.standard.set(false, forKey: "LoggedStatus")
+        let alert = UIAlertController(title: "Cerrar sesión", message: "¿De verdad quieres cerrar tu sesión? Tendras que escribir tu contraseña nuevamente.", preferredStyle: .alert)
         
-        self.hero.isEnabled = true
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cerrar Sesión", style: .destructive, handler: { action in
+            
+            DispatchQueue.main.async {
+                UserDefaults.standard.set(false, forKey: "LoggedStatus")
+                
+                self.hero.isEnabled = true
+                
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginViewController") as! loginViewController
+                newViewController.hero.modalAnimationType = .zoomSlide(direction: .up)
+                
+                self.hero.replaceViewController(with: newViewController)
+            }
+            
+        }))
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginViewController") as! loginViewController
-        newViewController.hero.modalAnimationType = .zoomSlide(direction: .up)
-        
-        self.hero.replaceViewController(with: newViewController)
+        self.present(alert, animated: true)
         
     }
     
