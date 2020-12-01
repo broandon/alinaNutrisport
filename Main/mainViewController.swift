@@ -30,6 +30,37 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         loginStatusCheck()
         setupView()
         setupCollectionview()
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if launchedBefore  {
+            print("Not first launch.")
+        } else {
+            print("First launch, setting UserDefault.")
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+                
+                let alert = UIAlertController(title: "Nueva versión.", message: "Si esta es una nueva versión de la app cierra la sesión para evitar algunos errores.", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
+                alert.addAction(UIAlertAction(title: "Cerrar Sesión", style: .destructive, handler: { action in
+                    
+                    
+                    DispatchQueue.main.async {
+                        UserDefaults.standard.set(false, forKey: "LoggedStatus")
+                        
+                        self.hero.isEnabled = true
+                        
+                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginViewController") as! loginViewController
+                        newViewController.hero.modalAnimationType = .zoomSlide(direction: .up)
+                        
+                        self.hero.replaceViewController(with: newViewController)
+                    }
+                    
+                }))
+                
+                self.present(alert, animated: true)
+                
+
+        }
     }
     
     //MARK: Funcs
